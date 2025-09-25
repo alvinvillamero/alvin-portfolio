@@ -267,7 +267,7 @@
       <div class="relative w-full h-full p-[2px] bg-gradient-to-br from-[#5300A6] to-[#BA24FF] rounded-[2rem] shadow-[0_0_30px_rgba(138,43,226,0.2)] backdrop-blur-sm overflow-hidden">
         <div class="w-full h-full rounded-[1.95rem] bg-black overflow-hidden">
           <img
-            src="/img/pic.jpg"
+            src="@/assets/img/pic.jpg"
     alt="Profile"
             class="w-full h-[120%] object-cover object-top -translate-y-[10%]"
           />
@@ -684,7 +684,7 @@
           <!-- Project 1 -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
             <div class="aspect-video overflow-hidden">
-              <img src="/img/project1.jpg" alt="Doctor Appointment Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="@/assets/img/pic.jpg" alt="Doctor Appointment Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
@@ -705,7 +705,7 @@
           <!-- Project 2 -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
             <div class="aspect-video overflow-hidden">
-              <img src="/img/project2.jpg" alt="Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="@/assets/img/pic.jpg" alt="Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
@@ -726,7 +726,7 @@
           <!-- Project 3 -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
             <div class="aspect-video overflow-hidden">
-              <img src="/img/project1.jpg" alt="E-commerce Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="@/assets/img/pic.jpg" alt="E-commerce Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
@@ -747,7 +747,7 @@
           <!-- Project 4 -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
             <div class="aspect-video overflow-hidden">
-              <img src="/img/project2.jpg" alt="Social Media Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="@/assets/img/pic.jpg" alt="Social Media Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
@@ -1201,37 +1201,37 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/OVH.png" alt="OVH" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/OVH.png" alt="OVH" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">OVH</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/godaddy.png" alt="GoDaddy" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/godaddy.png" alt="GoDaddy" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">GoDaddy</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/namecheap.png" alt="Namecheap" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/namecheap.png" alt="Namecheap" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Namecheap</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/bluehost.png" alt="BlueHost" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/bluehost.png" alt="BlueHost" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">BlueHost</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/cpanel.png" alt="cPanel" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/cpanel.png" alt="cPanel" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">cPanel</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/hostgator.png" alt="HostGator" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/hostgator.png" alt="HostGator" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">HostGator</span>
               </a>
@@ -1244,43 +1244,43 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/wordpress.png" alt="WordPress" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/wordpress.png" alt="WordPress" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">WordPress</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/kajabi.png" alt="Kajabi" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/kajabi.png" alt="Kajabi" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Kajabi</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/gohighlevel.png" alt="GoHighLevel" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/gohighlevel.png" alt="GoHighLevel" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">GoHighLevel</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/clickfunnels.png" alt="ClickFunnels" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/clickfunnels.png" alt="ClickFunnels" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">ClickFunnels</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/firebase.png" alt="Firebase" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/firebase.png" alt="Firebase" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Firebase</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/mysql.png" alt="MySQL" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/mysql.png" alt="MySQL" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">MySQL</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/meta.png" alt="Meta" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/meta.png" alt="Meta" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Meta</span>
               </a>
@@ -1293,13 +1293,13 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/mailchimp.png" alt="Mailchimp" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/mailchimp.png" alt="Mailchimp" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Mailchimp</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/active campaign.png" alt="Active Campaign" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/active campaign.png" alt="Active Campaign" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Active Campaign</span>
               </a>
@@ -1312,31 +1312,31 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/canva.png" alt="Canva" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/canva.png" alt="Canva" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Canva</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/illustrator.png" alt="Illustrator" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/illustrator.png" alt="Illustrator" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Illustrator</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/photoshop.png" alt="Photoshop" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/photoshop.png" alt="Photoshop" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Photoshop</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/premiere pro.png" alt="Premiere Pro" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/premiere pro.png" alt="Premiere Pro" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Premiere Pro</span>
               </a>
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="/img/portfolio logos/capcut.png" alt="CapCut" class="w-full h-full object-contain" />
+                  <img src="@/assets/img/portfolio-logos/capcut.png" alt="CapCut" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">CapCut</span>
               </a>
