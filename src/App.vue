@@ -216,17 +216,6 @@
       </a>
     </div>
     <div class="flex items-center space-x-4">
-      <a 
-        href="https://drive.google.com/file/d/1caOzNy7nxAuExabEMaDAtaSQzdzwG5W9" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#5300A6] to-[#BA24FF] hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
-      >
-        <span>Download CV</span>
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 12.586L7.707 10.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L12 12.586V4a1 1 0 00-2 0v8.586z"/>
-        </svg>
-      </a>
       <div class="flex space-x-4">
         <a href="#" class="text-gray-400 hover:text-white transition-colors">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
