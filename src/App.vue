@@ -645,19 +645,20 @@
         <!-- Project Categories -->
         <div class="flex flex-col items-center gap-6 mb-12">
           <div class="flex flex-wrap justify-center gap-3">
-            <button class="px-6 py-2 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] rounded-lg text-sm font-medium text-white hover:opacity-90 transition-opacity">
-              All Projects
+            <button 
+              v-for="category in projectCategories" 
+              :key="category.id"
+              @click="setActiveCategory(category.id)"
+              :class="[
+                'px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300',
+                activeProjectCategory === category.id
+                  ? 'bg-gradient-to-r from-[#5300A6] to-[#BA24FF] text-white hover:opacity-90'
+                  : 'bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-pink-400/20'
+              ]"
+            >
+              {{ category.label }}
             </button>
-            <button class="px-6 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:border-pink-400/20 transition-colors">
-              Web Development
-            </button>
-            <button class="px-6 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:border-pink-400/20 transition-colors">
-              UI/UX Design
-            </button>
-            <button class="px-6 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-medium text-gray-400 hover:text-white hover:border-pink-400/20 transition-colors">
-              Digital Marketing
-            </button>
-        </div>
+          </div>
           
           <a 
             href="https://drive.google.com/drive/folders/1WaEBY9yw_RxpQrTHA3QmRkfUxh44b0Wg" 
@@ -678,6 +679,46 @@
 
         <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 gap-8">
+          <template v-for="project in filteredProjects" :key="project.id">
+            <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+              <div :class="[
+                'grid gap-2 p-2',
+                project.images.length > 2 ? 'grid-cols-3' : project.images.length === 2 ? 'grid-cols-2' : 'grid-cols-1'
+              ]">
+                <div 
+                  v-for="image in project.images" 
+                  :key="image"
+                  class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg"
+                  @click="openImageModal(`/src/assets/img/my projects/websites/${image}`)"
+                >
+                  <img 
+                    :src="`/src/assets/img/my projects/websites/${image}`" 
+                    :alt="project.title" 
+                    class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-3 mb-3">
+                  <span 
+                    v-for="tag in project.tags" 
+                    :key="tag"
+                    class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400"
+                  >
+                    {{ tag }}
+                  </span>
+                </div>
+                <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">{{ project.title }}</h3>
+                <p class="text-sm text-gray-400 mb-4">{{ project.description }}</p>
+                <div class="flex items-center gap-4">
+                  <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                  <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </template>
           <!-- Trading Signals -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
             <div class="grid grid-cols-3 gap-2 p-2">
@@ -1667,6 +1708,109 @@ const selectedImage = ref(null)
 const isModalOpen = ref(false)
 
 const sections = ['experience', 'skills', 'services', 'portfolio', 'contact']
+const activeProjectCategory = ref('all')
+
+const projectCategories = [
+  { id: 'all', label: 'All Projects' },
+  { id: 'web', label: 'Web Development' },
+  { id: 'trading', label: 'Trading Platforms' },
+  { id: 'business', label: 'Business & Corporate' },
+  { id: 'social', label: 'Social Media' }
+]
+
+const projects = [
+  {
+    id: 'trading-signals',
+    title: 'Trading Signals',
+    description: 'Provides trading signals and automated bots for forex, crypto, and stocks markets.',
+    category: 'trading',
+    images: ['tradingsignals.jpg', 'tradingsignals-funnel.jpg', 'tradingsignals-old.jpg'],
+    tags: ['Forex', 'Crypto', 'Stocks']
+  },
+  {
+    id: 'volume-day-trader',
+    title: 'Volume Day Trader',
+    description: 'Offers Wyckoff method–based indicators and a community of active day traders.',
+    category: 'trading',
+    images: ['volumedaytrader.jpg', 'volumedaytrader-funnel.jpg'],
+    tags: ['Wyckoff Method', 'Day Trading']
+  },
+  {
+    id: 'kopii-ai',
+    title: 'Kopii AI',
+    description: 'AI-driven trading platform born in Asia, blending hedge fund expertise with deep learning.',
+    category: 'trading',
+    images: ['kopii ai.jpg'],
+    tags: ['AI Trading', 'Deep Learning']
+  },
+  {
+    id: 'global-grid',
+    title: 'Global Grid Solutions',
+    description: 'Delivers digital outsourcing services specializing in BPO and virtual assistance.',
+    category: 'business',
+    images: ['globalgridsolutions.jpg'],
+    tags: ['BPO', 'Virtual Assistance']
+  },
+  {
+    id: 'asia-offshore',
+    title: 'Asia Offshore Banking',
+    description: 'Assists with setting up offshore and private bank accounts across Asia.',
+    category: 'business',
+    images: ['asiaoffshorebanking.jpg'],
+    tags: ['Offshore Banking', 'Financial Services']
+  },
+  {
+    id: 'adv-rangers',
+    title: 'ADV Rangers',
+    description: 'Organizes guided dirt bike tour packages across Cambodia's trails and countryside.',
+    category: 'web',
+    images: ['advrangers.jpg'],
+    tags: ['Adventure Tours', 'Dirt Bikes']
+  },
+  {
+    id: 'jv-holdings',
+    title: 'JV Holdings Corp',
+    description: 'A visionary holding company driving growth through strategic acquisitions.',
+    category: 'business',
+    images: ['jvholdingscorp.jpg'],
+    tags: ['Holdings', 'Investment']
+  },
+  {
+    id: 'nieruchomosci',
+    title: 'Nieruchomości w Kambodży',
+    description: 'Polish-language platform dedicated to real estate investment opportunities in Cambodia.',
+    category: 'web',
+    images: ['nieruchomosciwkambodzy.jpg'],
+    tags: ['Real Estate', 'Investment']
+  },
+  {
+    id: 'tomasz-rozmus',
+    title: 'Tomasz Rozmus',
+    description: 'Expert in stock and crypto markets; advisor on Asian opportunities.',
+    category: 'web',
+    images: ['tomaszrozmus.jpg'],
+    tags: ['Trading', 'Advisory']
+  },
+  {
+    id: 'trading-financial',
+    title: 'Trading Financial Markets',
+    description: 'Education hub focused on trading strategies for forex, crypto, and global equities.',
+    category: 'trading',
+    images: ['tradingfinancialmarkets.jpg'],
+    tags: ['Education', 'Trading']
+  }
+]
+
+const filteredProjects = computed(() => {
+  if (activeProjectCategory.value === 'all') {
+    return projects
+  }
+  return projects.filter(project => project.category === activeProjectCategory.value)
+})
+
+const setActiveCategory = (category) => {
+  activeProjectCategory.value = category
+}
 
 const openImageModal = (imagePath) => {
   selectedImage.value = imagePath
