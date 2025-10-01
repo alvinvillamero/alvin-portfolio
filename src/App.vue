@@ -678,18 +678,27 @@
 
         <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 gap-8">
-          <!-- Project 1 -->
+          <!-- Trading Signals -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
-            <div class="aspect-video overflow-hidden">
-              <img src="@/assets/img/pic.jpg" alt="Doctor Appointment Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="grid grid-cols-3 gap-2 p-2">
+              <div class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg" @click="openImageModal('/src/assets/img/my projects/websites/tradingsignals.jpg')">
+                <img src="/src/assets/img/my projects/websites/tradingsignals.jpg" alt="Trading Signals Platform" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg" @click="openImageModal('/src/assets/img/my projects/websites/tradingsignals-funnel.jpg')">
+                <img src="/src/assets/img/my projects/websites/tradingsignals-funnel.jpg" alt="Trading Signals Funnel" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg" @click="openImageModal('/src/assets/img/my projects/websites/tradingsignals-old.jpg')">
+                <img src="/src/assets/img/my projects/websites/tradingsignals-old.jpg" alt="Trading Signals Old Version" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+              </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Web App</span>
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">UI/UX</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Forex</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Crypto</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Stocks</span>
               </div>
-              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Healthcare Platform</h3>
-              <p class="text-sm text-gray-400 mb-4">A modern appointment scheduling platform for healthcare providers, featuring real-time availability and patient management.</p>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Trading Signals</h3>
+              <p class="text-sm text-gray-400 mb-4">Provides trading signals and automated bots for forex, crypto, and stocks markets, delivering actionable insights for traders.</p>
               <div class="flex items-center gap-4">
                 <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
                 <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
@@ -699,18 +708,23 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
+          <!-- Volume Day Trader -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
-            <div class="aspect-video overflow-hidden">
-              <img src="@/assets/img/pic.jpg" alt="Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="grid grid-cols-2 gap-2 p-2">
+              <div class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg" @click="openImageModal('/src/assets/img/my projects/websites/volumedaytrader.jpg')">
+                <img src="/src/assets/img/my projects/websites/volumedaytrader.jpg" alt="Volume Day Trader" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg" @click="openImageModal('/src/assets/img/my projects/websites/volumedaytrader-funnel.jpg')">
+                <img src="/src/assets/img/my projects/websites/volumedaytrader-funnel.jpg" alt="Volume Day Trader Funnel" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+              </div>
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Dashboard</span>
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Analytics</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Wyckoff Method</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Day Trading</span>
               </div>
-              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Analytics Platform</h3>
-              <p class="text-sm text-gray-400 mb-4">A comprehensive analytics dashboard providing real-time insights and data visualization for crypto markets.</p>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Volume Day Trader</h3>
+              <p class="text-sm text-gray-400 mb-4">Offers Wyckoff method–based indicators and a community of active day traders, providing specialized tools for volume analysis.</p>
               <div class="flex items-center gap-4">
                 <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
                 <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
@@ -720,18 +734,18 @@
             </div>
           </div>
 
-          <!-- Project 3 -->
+          <!-- Kopii AI -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
-            <div class="aspect-video overflow-hidden">
-              <img src="@/assets/img/pic.jpg" alt="E-commerce Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/kopii%20ai.jpg" alt="Kopii AI" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">E-commerce</span>
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Web App</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">AI Trading</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Deep Learning</span>
               </div>
-              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">E-commerce Solution</h3>
-              <p class="text-sm text-gray-400 mb-4">A full-featured e-commerce platform with inventory management, payment processing, and analytics.</p>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Kopii AI</h3>
+              <p class="text-sm text-gray-400 mb-4">AI-driven trading platform born in Asia, blending hedge fund expertise with deep learning for consistent, automated trading performance.</p>
               <div class="flex items-center gap-4">
                 <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
                 <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
@@ -741,18 +755,144 @@
             </div>
           </div>
 
-          <!-- Project 4 -->
+          <!-- Global Grid Solutions -->
           <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
-            <div class="aspect-video overflow-hidden">
-              <img src="@/assets/img/pic.jpg" alt="Social Media Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/globalgridsolutions.jpg" alt="Global Grid Solutions" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-3 mb-3">
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Social Media</span>
-                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Marketing</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">BPO</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Virtual Assistance</span>
               </div>
-              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Marketing Dashboard</h3>
-              <p class="text-sm text-gray-400 mb-4">A comprehensive social media management platform with analytics, scheduling, and content planning.</p>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Global Grid Solutions</h3>
+              <p class="text-sm text-gray-400 mb-4">Delivers digital outsourcing services specializing in BPO and virtual assistance, providing comprehensive business support solutions.</p>
+              <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Asia Offshore Banking -->
+          <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer bg-black/20" @click="openImageModal('/src/assets/img/my projects/websites/asiaoffshorebanking.jpg')">
+              <img src="/src/assets/img/my projects/websites/asiaoffshorebanking.jpg" alt="Asia Offshore Banking" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Offshore Banking</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Financial Services</span>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Asia Offshore Banking</h3>
+              <p class="text-sm text-gray-400 mb-4">Assists with setting up offshore and private bank accounts across Asia, providing comprehensive banking solutions and guidance.</p>
+              <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADV Rangers -->
+          <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/advrangers.jpg" alt="ADV Rangers" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Adventure Tours</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Dirt Bikes</span>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">ADV Rangers</h3>
+              <p class="text-sm text-gray-400 mb-4">Organizes guided dirt bike tour packages across Cambodia's trails and countryside, offering unique adventure experiences.</p>
+              <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- JV Holdings Corp -->
+          <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/jvholdingscorp.jpg" alt="JV Holdings Corp" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Holdings</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Investment</span>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">JV Holdings Corp</h3>
+              <p class="text-sm text-gray-400 mb-4">A visionary holding company driving growth through strategic acquisitions and innovative subsidiaries.</p>
+              <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nieruchomości w Kambodży -->
+          <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/nieruchomosciwkambodzy.jpg" alt="Nieruchomości w Kambodży" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Real Estate</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Investment</span>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Nieruchomości w Kambodży</h3>
+              <p class="text-sm text-gray-400 mb-4">Polish-language platform dedicated to real estate investment opportunities in Cambodia.</p>
+              <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tomasz Rozmus -->
+          <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/tomaszrozmus.jpg" alt="Tomasz Rozmus" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Trading</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Advisory</span>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Tomasz Rozmus</h3>
+              <p class="text-sm text-gray-400 mb-4">Expert in stock and crypto markets; advisor on Asian opportunities including real estate, crypto/fiat transfers, and private banking solutions.</p>
+              <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
+                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trading Financial Markets -->
+          <div class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
+            <div class="aspect-[16/10] overflow-hidden cursor-pointer" @click="openImageModal('/src/assets/img/my projects/websites/' + $event.target.src.split('/').pop())">
+              <img src="/src/assets/img/my projects/websites/tradingfinancialmarkets.jpg" alt="Trading Financial Markets" class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Education</span>
+                <span class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400">Trading</span>
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">Trading Financial Markets</h3>
+              <p class="text-sm text-gray-400 mb-4">Education hub focused on trading strategies for forex, crypto, and global equities markets.</p>
               <div class="flex items-center gap-4">
                 <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
                 <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
@@ -1492,6 +1632,27 @@
         </div>
       </div>
     </footer>
+    <!-- Image Modal -->
+    <div v-if="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95" @click="closeImageModal">
+      <div class="relative max-w-7xl w-full max-h-[90vh] bg-[#0B0B13] rounded-xl overflow-hidden">
+        <button 
+          @click="closeImageModal" 
+          class="absolute top-4 right-4 text-white/80 hover:text-white bg-black/20 hover:bg-black/40 rounded-full p-2 transition-colors z-10"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <div class="w-full h-full flex items-center justify-center bg-black/20">
+          <img 
+            :src="selectedImage" 
+            :alt="selectedImage?.split('/').pop() || 'Project Image'" 
+            class="max-w-full max-h-[85vh] object-contain"
+            @click.stop
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -1502,8 +1663,20 @@ import { onMounted, onUnmounted, ref } from 'vue'
 
 const isMenuOpen = ref(false)
 const activeSection = ref('home')
+const selectedImage = ref(null)
+const isModalOpen = ref(false)
 
 const sections = ['experience', 'skills', 'services', 'portfolio', 'contact']
+
+const openImageModal = (imagePath) => {
+  selectedImage.value = imagePath
+  isModalOpen.value = true
+}
+
+const closeImageModal = () => {
+  selectedImage.value = null
+  isModalOpen.value = false
+}
 
 const checkActiveSection = () => {
   const scrollPosition = window.scrollY + 300 // Offset for better trigger point
