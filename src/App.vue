@@ -1,7 +1,7 @@
 <template>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <div class="bg-[#0B0B13] text-white min-h-screen font-poppins selection:bg-pink-500/30">
+  <div class="bg-[#0B0B13] text-white min-h-screen font-poppins selection:bg-pink-500/30 overflow-x-hidden w-full">
     <!-- Header -->
     <header class="sticky top-0 z-50 w-full bg-[#0B0B13]/80 border-b border-white/10 backdrop-blur-md" data-aos="fade-down">
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
@@ -69,94 +69,107 @@
       </nav>
 
         <!-- Mobile Navigation Button -->
-        <div class="flex items-center gap-4 md:hidden">
+        <div class="flex items-center gap-3 md:hidden">
           <a 
             href="#contact"
-            class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] px-5 py-2 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 active:scale-[0.98]"
+            class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] px-4 py-2 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 active:scale-[0.98]"
           >
-  Book a Call
+            Book a Call
           </a>
           <button 
-            @click="isMenuOpen = !isMenuOpen" 
-            class="text-2xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-colors"
+            @click="toggleMenu"
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+            aria-label="Toggle menu"
           >
-            <span v-if="!isMenuOpen">☰</span>
-            <span v-else>✕</span>
-</button>
+            <svg 
+              class="w-6 h-6 transition-transform duration-300"
+              :class="{ 'rotate-90': isMenuOpen }"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                v-if="!isMenuOpen"
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+              <path 
+                v-else
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div v-if="isMenuOpen" class="fixed inset-0 bg-[#0B0B13]/95 backdrop-blur-md z-40 md:hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-12">
+      <div 
+        v-if="isMenuOpen" 
+        class="fixed inset-0 bg-[#0B0B13] z-40 md:hidden"
+        @click="closeMenu"
+      >
+        <div 
+          class="flex flex-col items-center justify-center min-h-screen p-8 space-y-8 bg-[#0B0B13]"
+          @click.stop
+        >
           <a 
-            @click="isMenuOpen = false" 
-            href="#experience" 
-            class="relative text-3xl hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-            :class="{ 'text-pink-400': activeSection === 'experience' }"
+            v-for="section in ['experience', 'services', 'skills', 'portfolio', 'contact']"
+            :key="section"
+            :href="'#' + section"
+            @click="closeMenu"
+            class="relative text-2xl font-medium hover:text-pink-400 transition-all duration-300 hover:scale-[1.02] py-2"
+            :class="{ 'text-pink-400': activeSection === section }"
           >
-            Experience
+            {{ section.charAt(0).toUpperCase() + section.slice(1) }}
             <span 
-              class="absolute -bottom-3 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-              :class="{ '!scale-x-100': activeSection === 'experience' }"
+              class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
+              :class="{ '!scale-x-100': activeSection === section }"
             ></span>
           </a>
-          <a 
-            @click="isMenuOpen = false" 
-            href="#services" 
-            class="relative text-3xl hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-            :class="{ 'text-pink-400': activeSection === 'services' }"
-          >
-            Services
-            <span 
-              class="absolute -bottom-3 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-              :class="{ '!scale-x-100': activeSection === 'services' }"
-            ></span>
-          </a>
-          <a 
-            @click="isMenuOpen = false" 
-            href="#skills" 
-            class="relative text-3xl hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-            :class="{ 'text-pink-400': activeSection === 'skills' }"
-          >
-            Skills
-            <span 
-              class="absolute -bottom-3 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-              :class="{ '!scale-x-100': activeSection === 'skills' }"
-            ></span>
-          </a>
-          <a 
-            @click="isMenuOpen = false" 
-            href="#contact" 
-            class="relative text-3xl hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-            :class="{ 'text-pink-400': activeSection === 'contact' }"
-          >
-            Contact
-            <span 
-              class="absolute -bottom-3 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-              :class="{ '!scale-x-100': activeSection === 'contact' }"
-            ></span>
-          </a>
+          <div class="w-full h-px bg-white/10 my-4"></div>
+          <div class="flex items-center gap-4">
+            <a 
+              href="#" 
+              class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V9H9V17ZM7.694 7.717C6.923 7.717 6.408 7.203 6.408 6.517C6.408 5.831 6.922 5.317 7.779 5.317C8.55 5.317 9.065 5.831 9.065 6.517C9.065 7.203 8.551 7.717 7.694 7.717ZM18 17H15.558V12.577C15.558 11.432 14.767 11.077 14.362 11.077C13.957 11.077 13.014 11.315 13.014 12.577C13.014 12.815 13.014 17 13.014 17H10.477V9H13.014V10.017C13.419 9.305 14.249 9 15.478 9C16.707 9 18 9.871 18 12.577V17Z"/>
+              </svg>
+            </a>
+            <a 
+              href="#" 
+              class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C19.1375 20.1625 22 16.4125 22 12C22 6.475 17.525 2 12 2Z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </header>
 
-  <!-- Hero Section -->
-<section class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-24 space-y-10 md:space-y-0" data-aos="fade-up">
-  <div class="max-w-2xl space-y-8">
-    <div class="flex flex-wrap gap-3">
-      <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+    <!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-16 md:py-24 space-y-10 md:space-y-0" data-aos="fade-up">
+  <div class="max-w-2xl space-y-6 md:space-y-8">
+    <div class="flex flex-wrap gap-2 sm:gap-3">
+      <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
         <span class="text-pink-400 font-medium">Web Developer</span>
       </div>
-      <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm">
+      <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
         <span class="text-pink-400 font-medium">Digital Marketing Specialist</span>
       </div>
     </div>
     <div>
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6">
         <span class="text-white">Web </span><span class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] bg-clip-text text-transparent">Developer</span>
-    </h1>
-      <p class="text-gray-400 text-lg leading-relaxed max-w-xl">
+      </h1>
+      <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
         Experienced web developer specializing in full-stack development and digital marketing. Building modern, user-focused websites and applications that deliver measurable results.
       </p>
     </div>
@@ -676,7 +689,7 @@
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-full">
           <div v-for="project in filteredProjects" :key="project.id" class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-pink-400/20 transition-all duration-300">
             <div class="p-2">
               <div 
@@ -686,23 +699,24 @@
                 <img 
                   :src="`/img/projects/websites/${project.images[0]}`" 
                   :alt="project.title" 
+                  loading="lazy"
                   class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-3 mb-3">
+            <div class="p-4 sm:p-6">
+              <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
                 <span 
                   v-for="tag in project.tags" 
                   :key="tag"
-                  class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400"
+                  class="px-2 sm:px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-pink-400"
                 >
                   {{ tag }}
                 </span>
               </div>
-              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">{{ project.title }}</h3>
-              <p class="text-sm text-gray-400 mb-4">{{ project.description }}</p>
-              <div class="flex items-center gap-4">
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">{{ project.title }}</h3>
+              <p class="text-sm text-gray-400 mb-4 line-clamp-2 sm:line-clamp-none">{{ project.description }}</p>
+              <div class="flex items-center gap-3 sm:gap-4">
                 <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
                 <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -1298,17 +1312,17 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-32 px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
+    <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <!-- Background Gradient -->
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
       
       <div class="relative">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-          <p class="text-gray-400 max-w-2xl">Ready to bring your digital vision to life? Let's discuss how we can work together to create something extraordinary.</p>
+        <div class="flex flex-col items-center text-center mb-10 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Let's Connect</h2>
+          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Ready to bring your digital vision to life? Let's discuss how we can work together to create something extraordinary.</p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
           <!-- Contact Info -->
           <div class="space-y-6">
             <!-- Email Card -->
@@ -1617,6 +1631,20 @@ const closeImageModal = () => {
   isModalOpen.value = false
 }
 
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+  document.body.style.overflow = ''
+}
+
 const checkActiveSection = () => {
   const scrollPosition = window.scrollY + 300 // Offset for better trigger point
 
@@ -1670,6 +1698,15 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#app {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 /* Smooth scrolling for browsers that support it */
@@ -1684,6 +1721,22 @@ body {
   will-change: transform, opacity;
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Grid containers */
+.grid {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Prevent text overflow */
+p, h1, h2, h3, h4, h5, h6, span {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 @keyframes fadeIn {
