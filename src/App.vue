@@ -681,10 +681,10 @@
             <div class="p-2">
               <div 
                 class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg"
-                @click="openImageModal(`/src/assets/img/my projects/websites/${project.images[0]}`)"
+                @click="openImageModal(`/img/projects/websites/${project.images[0]}`)"
               >
                 <img 
-                  :src="`/src/assets/img/my projects/websites/${project.images[0]}`" 
+                  :src="`/img/projects/websites/${project.images[0]}`" 
                   :alt="project.title" 
                   class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500"
                 />
