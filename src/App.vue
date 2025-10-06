@@ -1248,6 +1248,30 @@
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Meta</span>
               </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-orange-500 rounded text-white font-bold text-lg">Git</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Git</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-blue-500 rounded text-white font-bold text-xs">React</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">React.js</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-green-500 rounded text-white font-bold text-sm">Vue</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Vue</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-purple-500 rounded text-white font-bold text-xs">Vite</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Vite</span>
+              </a>
             </div>
           </div>
 
@@ -1266,6 +1290,12 @@
                   <img src="@/assets/img/portfolio-logos/active campaign.png" alt="Active Campaign" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Active Campaign</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-purple-600 rounded text-white font-bold text-xs">Make</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Make.com</span>
               </a>
             </div>
           </div>
@@ -1303,6 +1333,50 @@
                   <img src="@/assets/img/portfolio-logos/capcut.png" alt="CapCut" class="w-full h-full object-contain" />
                 </div>
                 <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">CapCut</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Development -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-semibold text-white text-center">Development</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-green-600 rounded text-white font-bold text-xs">Android</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Android Java</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-cyan-500 rounded text-white font-bold text-xs">TS</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">TypeScript</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-teal-500 rounded text-white font-bold text-xs">TW</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">TailwindCSS</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- AI & Automation -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-semibold text-white text-center">AI & Automation</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-green-500 rounded text-white font-bold text-xs">GPT</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">ChatGPT</span>
+              </a>
+              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
+                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
+                  <div class="w-full h-full flex items-center justify-center bg-blue-600 rounded text-white font-bold text-xs">Cursor</div>
+                </div>
+                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Cursor AI</span>
               </a>
             </div>
           </div>
@@ -1412,21 +1486,53 @@
           <!-- Contact Form -->
           <div class="bg-white/5 p-8 rounded-xl border border-white/10">
             <h3 class="text-lg font-semibold text-white mb-6">Send a Message</h3>
-            <form class="space-y-6">
+            <form class="space-y-6" @submit.prevent="sendEmail">
               <div>
                 <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-400/40 transition-colors" placeholder="Your name">
+                <input 
+                  v-model="formData.name"
+                  type="text" 
+                  class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-400/40 transition-colors" 
+                  placeholder="Your name"
+                  required
+                >
               </div>
               <div>
                 <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                <input type="email" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-400/40 transition-colors" placeholder="your@email.com">
+                <input 
+                  v-model="formData.email"
+                  type="email" 
+                  class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-400/40 transition-colors" 
+                  placeholder="your@email.com"
+                  required
+                >
               </div>
               <div>
                 <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-400/40 transition-colors" placeholder="Your message"></textarea>
+                <textarea 
+                  v-model="formData.message"
+                  rows="4" 
+                  class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-pink-400/40 transition-colors" 
+                  placeholder="Your message"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" class="w-full bg-gradient-to-r from-[#5300A6] to-[#BA24FF] text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity">
-                Send Message
+              
+              <!-- Form Status Message -->
+              <div v-if="formStatus.message" :class="[
+                'text-sm p-3 rounded-lg',
+                formStatus.type === 'success' ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'
+              ]">
+                {{ formStatus.message }}
+              </div>
+
+              <button 
+                type="submit" 
+                class="w-full bg-gradient-to-r from-[#5300A6] to-[#BA24FF] text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all disabled:opacity-50"
+                :disabled="isSubmitting"
+              >
+                <span v-if="!isSubmitting">Send Message</span>
+                <span v-else>Sending...</span>
               </button>
             </form>
           </div>
@@ -1487,6 +1593,7 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { onMounted, onUnmounted, ref, computed } from 'vue'
+import emailjs from '@emailjs/browser'
 
 const isMenuOpen = ref(false)
 const activeSection = ref('home')
@@ -1677,6 +1784,46 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', checkActiveSection)
 })
+
+// Contact form
+const formData = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+const isSubmitting = ref(false)
+const formStatus = ref({ type: '', message: '' })
+
+const sendEmail = async () => {
+  if (!formData.value.name || !formData.value.email || !formData.value.message) {
+    formStatus.value = { type: 'error', message: 'Please fill in all fields.' }
+    return
+  }
+
+  isSubmitting.value = true
+  formStatus.value = { type: '', message: '' }
+
+  try {
+    await emailjs.send(
+      'service_YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+      'template_YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      {
+        from_name: formData.value.name,
+        from_email: formData.value.email,
+        message: formData.value.message,
+        to_email: 'al.villamero@gmail.com'
+      },
+      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+    )
+
+    formStatus.value = { type: 'success', message: 'Message sent successfully!' }
+    formData.value = { name: '', email: '', message: '' }
+  } catch (error) {
+    formStatus.value = { type: 'error', message: 'Failed to send message. Please try again.' }
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>
 
 
