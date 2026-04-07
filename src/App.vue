@@ -173,22 +173,22 @@
         <span class="text-pink-400 font-medium">AI-powered web & systems</span>
       </div>
       <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
-        <span class="text-pink-400 font-medium">Full-stack digital delivery</span>
+        <span class="text-pink-400 font-medium">Video, marketing &amp; social — team</span>
       </div>
     </div>
     <div>
       <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 leading-[1.1]">
-        <span class="text-white">AI-powered digital </span><span class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] bg-clip-text text-transparent">web & systems expert</span>
+        <span class="text-white">AI-powered digital </span><span class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] bg-clip-text text-transparent">web &amp; systems expert</span>
       </h1>
       <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
-        I design and ship modern websites, integrations, and reliable systems—with AI woven into how we plan, build, and optimize. A dedicated team of video editors, digital marketing experts, and social media specialists backs the full client journey, so you get execution, not just strategy.
+        I lead websites, integrations, and dependable systems—using AI where it speeds research, build, and QA without cutting corners. Video editors, digital marketing experts, and social specialists on our team handle creative and growth work, so you get one accountable partner from scope to launch.
       </p>
     </div>
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4">
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Web apps &amp; sites</span>
+          <span>Websites &amp; web apps</span>
         </div>
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
@@ -196,11 +196,11 @@
         </div>
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>AI-enabled workflows</span>
+          <span>AI-assisted delivery</span>
         </div>
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Video, marketing &amp; social (team)</span>
+          <span>Creative &amp; growth (team)</span>
         </div>
       </div>
       <div class="flex flex-col sm:flex-row gap-4">
@@ -312,7 +312,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Professional Experience</h2>
-          <p class="text-gray-400 max-w-2xl">A track record of success in IT infrastructure, digital marketing, and technical support across international organizations.</p>
+          <p class="text-gray-400 max-w-2xl">IT infrastructure, systems support, and digital growth across global teams—foundations for the AI-powered web and systems work I lead today, with specialists covering video, marketing, and social when projects need scale.</p>
         </div>
         
         <div class="space-y-12">
@@ -531,7 +531,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Professional Services</h2>
-          <p class="text-gray-400 max-w-2xl">End-to-end digital delivery: I own web, systems, and AI-enabled solutions, while my team covers video production, digital marketing, and social—so clients get one coordinated partner instead of juggling vendors.</p>
+          <p class="text-gray-400 max-w-2xl">One engagement model: I own technical delivery—web, systems, and AI-assisted execution—while our team covers video production, digital marketing, and social. Clients work with a single lead instead of coordinating separate vendors.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
@@ -546,7 +546,7 @@
         </div>
               <div>
                 <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">UI/UX Design</h3>
-                <p class="text-sm text-gray-400 mb-4">Creating intuitive and engaging user experiences that drive results.</p>
+                <p class="text-sm text-gray-400 mb-4">Product-minded UX and interfaces that stay clear as your site or system grows.</p>
                 <ul class="space-y-2">
                   <li class="flex items-center gap-2 text-sm text-gray-400">
                     <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
@@ -575,7 +575,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Web Development</h3>
-                <p class="text-sm text-gray-400 mb-4">Building modern, high-performance web applications.</p>
+                <p class="text-sm text-gray-400 mb-4">Fast, maintainable sites and apps—custom stacks, no-code, or hybrid as the project demands.</p>
                 <ul class="space-y-2">
                   <li class="flex items-center gap-2 text-sm text-gray-400">
                     <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
@@ -604,7 +604,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Video Production</h3>
-                <p class="text-sm text-gray-400 mb-4">Creating engaging video content for multiple platforms.</p>
+                <p class="text-sm text-gray-400 mb-4">Editing and motion for ads, social, and funnels—delivered by our video team under unified direction.</p>
                 <ul class="space-y-2">
                   <li class="flex items-center gap-2 text-sm text-gray-400">
                     <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
@@ -633,7 +633,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Digital Marketing</h3>
-                <p class="text-sm text-gray-400 mb-4">Driving growth through strategic digital marketing.</p>
+                <p class="text-sm text-gray-400 mb-4">Paid and organic growth, email, and analytics—run by marketing specialists aligned with your build.</p>
                 <ul class="space-y-2">
                   <li class="flex items-center gap-2 text-sm text-gray-400">
                     <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
@@ -662,7 +662,7 @@
               </div>
               <div class="flex-1">
                 <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Web Systems &amp; AI-Assisted Delivery</h3>
-                <p class="text-sm text-gray-400 mb-4">Architecture, integrations, and smarter workflows—using AI where it saves time and improves outcomes, without cutting corners on quality or security.</p>
+                <p class="text-sm text-gray-400 mb-4">Architecture, integrations, and automation—AI assists planning, implementation, and QA; you still get engineering judgment and secure defaults.</p>
                 <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2">
                   <li class="flex items-center gap-2 text-sm text-gray-400">
                     <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
@@ -678,7 +678,7 @@
                   </li>
                   <li class="flex items-center gap-2 text-sm text-gray-400">
                     <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Single point of contact for your build</span>
+                    <span>One technical lead for your build</span>
                   </li>
                 </ul>
               </div>
@@ -694,7 +694,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
-          <p class="text-gray-400 max-w-2xl">Sites and systems shipped with clients—screenshots below, with live links added as each project goes public.</p>
+          <p class="text-gray-400 max-w-2xl">Selected sites and systems from client work—preview below; live URLs appear on each card when you publish them.</p>
         </div>
 
         <!-- Project Categories -->
@@ -790,7 +790,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Core Expertise</h2>
-          <p class="text-gray-400 max-w-2xl">AI-powered web and systems leadership, plus a network team for video, paid and organic marketing, and social—built for operators who want shipping speed and accountable delivery.</p>
+          <p class="text-gray-400 max-w-2xl">Deep on web, systems, and AI-assisted delivery on my side; video editing, digital marketing, and social execution through our specialist team—built for leaders who want shipping speed and clear ownership.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
@@ -803,7 +803,7 @@
                 </svg>
         </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Web Development</h3>
+                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Web &amp; Systems Development</h3>
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
                     <div class="h-1 w-full bg-white/5 rounded">
@@ -861,7 +861,7 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Digital Marketing & Creative</h3>
+                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Digital Marketing &amp; Creative</h3>
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
                     <div class="h-1 w-full bg-white/5 rounded">
@@ -919,7 +919,7 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Technical Support</h3>
+                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Systems, IT &amp; Support</h3>
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
                     <div class="h-1 w-full bg-white/5 rounded">
@@ -1040,8 +1040,8 @@
       
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Education & Experience</h2>
-          <p class="text-gray-400 max-w-2xl">A foundation of formal education combined with hands-on experience and continuous learning.</p>
+          <h2 class="text-3xl font-bold mb-4">Education &amp; Experience</h2>
+          <p class="text-gray-400 max-w-2xl">BS Information Technology plus ongoing work in web, systems, and AI-assisted tooling—alongside certifications that support both technical delivery and creative collaboration with our team.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-12">
@@ -1207,8 +1207,8 @@
       
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">List of Tools</h2>
-          <p class="text-gray-400 max-w-2xl">Comprehensive suite of professional tools and platforms I work with to deliver exceptional results.</p>
+          <h2 class="text-3xl font-bold mb-4">Tools &amp; Platforms</h2>
+          <p class="text-gray-400 max-w-2xl">Hosting, creative, development, and AI tooling I use for web and systems work—overlapping where needed with the stack our video, marketing, and social team runs for clients.</p>
         </div>
 
         <div class="grid gap-12">
@@ -1392,7 +1392,7 @@
 
           <!-- Development -->
           <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">Development</h3>
+            <h3 class="text-2xl font-semibold text-white text-center">Web &amp; Systems</h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
                 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
@@ -1446,7 +1446,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-10 sm:mb-16">
           <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Let's Connect</h2>
-          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Ready to bring your digital vision to life? Let's discuss how we can work together to create something extraordinary.</p>
+          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Share your site, system, or campaign goals. We will align technical scope with you and route video, marketing, and social through our team as needed.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
@@ -1597,7 +1597,10 @@
   <footer class="text-center py-8 border-t border-white/10 opacity-0 animate-fadeIn">
       <div class="max-w-7xl mx-auto px-8">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p class="text-[15px] text-gray-400">© 2026 <span class="font-medium text-white">Alvin Villamero</span> – All rights reserved.</p>
+          <div class="text-center md:text-left">
+            <p class="text-[15px] text-gray-400"><span class="font-medium text-white">© 2026 Alvin Villamero.</span> AI-powered web &amp; systems; video, marketing &amp; social with our team.</p>
+            <p class="text-xs text-gray-500 mt-1">All rights reserved.</p>
+          </div>
           <div class="flex items-center gap-6">
             <a href="#" class="text-gray-400 hover:text-white transition-colors">
               <svg class="w-6 h-6 social-icon" viewBox="0 0 24 24" fill="currentColor">
