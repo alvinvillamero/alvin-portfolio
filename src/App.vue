@@ -37,6 +37,17 @@
               ></span>
             </a>
             <a 
+              href="#portfolio" 
+              class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
+              :class="{ 'text-pink-400': activeSection === 'portfolio' }"
+            >
+              Portfolio
+              <span 
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
+                :class="{ '!scale-x-100': activeSection === 'portfolio' }"
+              ></span>
+            </a>
+            <a 
               href="#skills" 
               class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
               :class="{ 'text-pink-400': activeSection === 'skills' }"
@@ -118,7 +129,7 @@
           @click.stop
         >
           <a 
-            v-for="section in ['experience', 'services', 'skills', 'portfolio', 'contact']"
+            v-for="section in ['experience', 'services', 'portfolio', 'skills', 'contact']"
             :key="section"
             :href="'#' + section"
             @click="closeMenu"
@@ -159,37 +170,37 @@
   <div class="max-w-2xl space-y-6 md:space-y-8">
     <div class="flex flex-wrap gap-2 sm:gap-3">
       <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
-        <span class="text-pink-400 font-medium">Web Developer</span>
+        <span class="text-pink-400 font-medium">AI-powered web & systems</span>
       </div>
       <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
-        <span class="text-pink-400 font-medium">Digital Marketing Specialist</span>
+        <span class="text-pink-400 font-medium">Full-stack digital delivery</span>
       </div>
     </div>
     <div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6">
-        <span class="text-white">Web </span><span class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] bg-clip-text text-transparent">Developer</span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 leading-[1.1]">
+        <span class="text-white">AI-powered digital </span><span class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] bg-clip-text text-transparent">web & systems expert</span>
       </h1>
       <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
-        Experienced web developer specializing in full-stack development and digital marketing. Building modern, user-focused websites and applications that deliver measurable results.
+        I design and ship modern websites, integrations, and reliable systems—with AI woven into how we plan, build, and optimize. A dedicated team of video editors, digital marketing experts, and social media specialists backs the full client journey, so you get execution, not just strategy.
       </p>
     </div>
     <div class="space-y-6">
       <div class="flex flex-wrap gap-4">
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Modern Web Development</span>
+          <span>Web apps &amp; sites</span>
         </div>
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>No-Code Solutions</span>
+          <span>Systems &amp; integrations</span>
         </div>
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Digital Marketing</span>
+          <span>AI-enabled workflows</span>
         </div>
         <div class="flex items-center gap-2 text-sm text-gray-400">
           <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Creative Design</span>
+          <span>Video, marketing &amp; social (team)</span>
         </div>
       </div>
       <div class="flex flex-col sm:flex-row gap-4">
@@ -520,7 +531,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Professional Services</h2>
-          <p class="text-gray-400 max-w-2xl">Delivering innovative solutions that combine technical expertise with creative excellence to help businesses thrive in the digital age.</p>
+          <p class="text-gray-400 max-w-2xl">End-to-end digital delivery: I own web, systems, and AI-enabled solutions, while my team covers video production, digital marketing, and social—so clients get one coordinated partner instead of juggling vendors.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
@@ -640,6 +651,39 @@
               </div>
             </div>
           </div>
+
+          <!-- Web systems & AI -->
+          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300 md:col-span-2">
+            <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-10">
+              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform shrink-0">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Web Systems &amp; AI-Assisted Delivery</h3>
+                <p class="text-sm text-gray-400 mb-4">Architecture, integrations, and smarter workflows—using AI where it saves time and improves outcomes, without cutting corners on quality or security.</p>
+                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2">
+                  <li class="flex items-center gap-2 text-sm text-gray-400">
+                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
+                    <span>APIs, automation &amp; internal tools</span>
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-gray-400">
+                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
+                    <span>Performance, reliability &amp; observability</span>
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-gray-400">
+                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
+                    <span>AI-assisted research, content &amp; QA</span>
+                  </li>
+                  <li class="flex items-center gap-2 text-sm text-gray-400">
+                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
+                    <span>Single point of contact for your build</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -650,7 +694,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
-          <p class="text-gray-400 max-w-2xl">A selection of my recent work showcasing web development, design, and digital solutions.</p>
+          <p class="text-gray-400 max-w-2xl">Sites and systems shipped with clients—screenshots below, with live links added as each project goes public.</p>
         </div>
 
         <!-- Project Categories -->
@@ -717,10 +761,19 @@
               <h3 class="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">{{ project.title }}</h3>
               <p class="text-sm text-gray-400 mb-4 line-clamp-2 sm:line-clamp-none">{{ project.description }}</p>
               <div class="flex items-center gap-3 sm:gap-4">
-                <a href="#" class="text-sm font-medium text-white hover:text-pink-400 transition-colors">View Project</a>
-                <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
+                <a
+                  v-if="project.url"
+                  :href="project.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm font-medium text-white hover:text-pink-400 transition-colors inline-flex items-center gap-1"
+                >
+                  Visit live site
+                  <svg class="w-4 h-4 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+                <span v-else class="text-sm text-gray-500">Live link coming soon</span>
               </div>
             </div>
           </div>
@@ -737,7 +790,7 @@
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-16">
           <h2 class="text-3xl font-bold mb-4">Core Expertise</h2>
-          <p class="text-gray-400 max-w-2xl">Full-stack web developer and digital marketing specialist with a proven track record in creating engaging digital experiences and driving online growth.</p>
+          <p class="text-gray-400 max-w-2xl">AI-powered web and systems leadership, plus a network team for video, paid and organic marketing, and social—built for operators who want shipping speed and accountable delivery.</p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
@@ -1544,7 +1597,7 @@
   <footer class="text-center py-8 border-t border-white/10 opacity-0 animate-fadeIn">
       <div class="max-w-7xl mx-auto px-8">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-          <p class="text-[15px] text-gray-400">© 2025 <span class="font-medium text-white">Alvin Villamero</span> – All rights reserved.</p>
+          <p class="text-[15px] text-gray-400">© 2026 <span class="font-medium text-white">Alvin Villamero</span> – All rights reserved.</p>
           <div class="flex items-center gap-6">
             <a href="#" class="text-gray-400 hover:text-white transition-colors">
               <svg class="w-6 h-6 social-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -1600,7 +1653,7 @@ const activeSection = ref('home')
 const selectedImage = ref(null)
 const isModalOpen = ref(false)
 
-const sections = ['experience', 'skills', 'services', 'portfolio', 'contact']
+const sections = ['experience', 'services', 'portfolio', 'skills', 'contact']
 const activeProjectCategory = ref('all')
 
 const projectCategories = [
