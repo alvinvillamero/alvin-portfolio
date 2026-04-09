@@ -1738,7 +1738,7 @@ const githubProjects = [
     title: 'This portfolio',
     description: 'This site: Vue 3, Vite, Tailwind, EmailJS—source and deployment config in the repo.',
     githubUrl: 'https://github.com/alvinvillamero/alvin-portfolio',
-    homepage: 'https://alvin-portfolio.vercel.app',
+    homepage: 'https://my-portfolio-liart-iota-44.vercel.app',
     language: 'Vue'
   }
 ]

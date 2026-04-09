@@ -1,6 +1,6 @@
 # Alvin Villamero Portfolio
 
-[![Vercel Deployment Status](https://vercel.com/alvinvillamero/alvin-portfolio/badge)](https://alvin-portfolio.vercel.app)
+[![Vercel Deployment Status](https://vercel.com/alvinvillamero/alvin-portfolio/badge)](https://my-portfolio-liart-iota-44.vercel.app)
 
 A modern, responsive portfolio website built with Vue 3 and Tailwind CSS.
 
@@ -65,7 +65,7 @@ alvin-portfolio/
 
 ## Deployment
 
-This project is deployed on Vercel. The production version can be found at [insert your Vercel URL here].
+This project is deployed on Vercel. The production version can be found at [https://my-portfolio-liart-iota-44.vercel.app](https://my-portfolio-liart-iota-44.vercel.app).
 
 ## License
 
@@ -74,6 +74,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 Alvin Villamero
-- Website: [Your website URL]
+- Website: https://my-portfolio-liart-iota-44.vercel.app
 - LinkedIn: [Your LinkedIn profile]
-- GitHub: [Your GitHub profile]
+- GitHub: https://github.com/alvinvillamero
