@@ -15,6 +15,17 @@
         <nav class="hidden md:flex items-center gap-14">
           <div class="flex items-center gap-8 lg:gap-10 text-sm font-medium tracking-wide">
             <a 
+              href="#about" 
+              class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'about' }"
+            >
+              About
+              <span 
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
+                :class="{ '!scale-x-100': activeSection === 'about' }"
+              ></span>
+            </a>
+            <a 
               href="#services" 
               class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
               :class="{ 'text-white': activeSection === 'services' }"
@@ -72,7 +83,7 @@
           </div>
           
           <a 
-            href="#contact"
+            href="#booking"
             class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] px-7 py-2.5 rounded-full text-base font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
           >
             Book a Discovery Call
@@ -82,7 +93,7 @@
         <!-- Mobile Navigation Button -->
         <div class="flex items-center gap-3 md:hidden">
           <a 
-            href="#contact"
+            href="#booking"
             class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] px-4 py-2 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 active:scale-[0.98]"
           >
             Book a Discovery Call
@@ -166,30 +177,39 @@
     </header>
 
     <!-- Hero -->
-    <section class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-12 md:pt-24 md:pb-20 gap-14 lg:gap-12" data-aos="fade-up">
-      <div class="max-w-xl lg:max-w-2xl space-y-7">
-        <p class="text-xs sm:text-sm font-medium tracking-[0.18em] uppercase text-violet-300/80">AI systems · automation · product implementation</p>
-        <h1 class="text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-white leading-[1.15]">
-          AI-powered systems that reduce manual work and keep your business running smoothly
+    <section class="relative isolate overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-24 right-0 h-[420px] w-[420px] rounded-full bg-violet-600/15 blur-[100px]"></div>
+        <div class="absolute top-32 -left-20 h-[320px] w-[320px] rounded-full bg-cyan-500/10 blur-[90px]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] opacity-60"></div>
+      </div>
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16" data-aos="fade-up">
+      <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
+        <p class="text-xs sm:text-sm font-medium tracking-[0.18em] uppercase text-violet-300/90">AI systems · automation · product implementation</p>
+        <h1 class="text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-white leading-[1.18]">
+          <span class="text-white">AI-powered systems that reduce </span>
+          <span class="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">manual work</span>
+          <span class="text-white"> and keep your business </span>
+          <span class="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">running smoothly</span>
         </h1>
-        <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+        <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
           I help businesses turn messy workflows, repetitive tasks, and early-stage ideas into structured AI systems, automations, and tools that actually work in day-to-day operations.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
           <a
-            href="#contact"
-            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-violet-900/25"
+            href="#booking"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-all shadow-lg shadow-violet-900/30 ring-1 ring-white/10"
           >
             Book a Discovery Call
           </a>
           <a
             href="#portfolio"
-            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-white/12 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-white/14 text-white text-sm font-medium hover:bg-white/[0.07] hover:border-white/25 transition-colors"
           >
             View Case Studies
           </a>
         </div>
-        <p class="text-sm text-gray-600">Remote · Philippines · <a href="mailto:al.villamero@gmail.com" class="text-gray-500 hover:text-violet-300 transition-colors">al.villamero@gmail.com</a></p>
+        <p class="text-sm text-gray-500">Remote · Philippines · <a href="mailto:al.villamero@gmail.com" class="text-gray-400 hover:text-violet-300 transition-colors">al.villamero@gmail.com</a></p>
       </div>
 
       <!-- System / dashboard mockup (no portrait) -->
@@ -245,6 +265,7 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- Trust -->
@@ -264,6 +285,51 @@
       </div>
     </section>
 
+    <!-- About -->
+    <section id="about" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28" data-aos="fade-up">
+      <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 lg:gap-16 items-center">
+        <div class="relative mx-auto w-full max-w-[340px] lg:max-w-none lg:mx-0">
+          <div class="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-violet-600/40 via-fuchsia-500/15 to-cyan-500/20 blur-xl opacity-80"></div>
+          <div class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 ring-1 ring-white/10 bg-[#0f2744]">
+            <img
+              src="@/assets/img/pic.jpg"
+              alt="Alvin Villamero"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+              width="400"
+              height="500"
+            />
+            <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/70 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="space-y-5">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300/80">About me</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
+            Systems-first builder for teams that need <span class="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">real execution</span>
+          </h2>
+          <p class="text-gray-400 text-base leading-relaxed">
+            I&apos;m Alvin—based in Davao City, Philippines, working remotely with founders and operators worldwide. I focus on AI-powered systems, automations, chatbots, and product implementation so day-to-day work gets lighter, not louder.
+          </p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Background in IT and digital delivery for international teams; I scope for security, maintainability, and how your people actually use the tools—not just a slick demo.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a
+              href="#booking"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-violet-900/20"
+            >
+              Book a Discovery Call
+            </a>
+            <a
+              href="#portfolio"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/14 text-gray-200 text-sm font-medium hover:bg-white/[0.06] transition-colors"
+            >
+              See selected work
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Services -->
     <section id="services" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
@@ -549,8 +615,8 @@
         <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need an AI system, chatbot, or product built for your business?</h2>
         <p class="text-gray-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
-          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Send Your Idea</a>
+          <a href="#booking" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
+          <a href="#message" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Send Your Idea</a>
         </div>
       </div>
     </section>
@@ -577,14 +643,26 @@
 
 
     <!-- Contact -->
-    <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <!-- Background Gradient -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
+    <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28" data-aos="fade-up">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent pointer-events-none"></div>
       
       <div class="relative">
-        <div class="flex flex-col items-center text-center mb-10 sm:mb-16">
+        <!-- Calendly booking -->
+        <div id="booking" class="scroll-mt-28 mb-16 md:mb-24">
+          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Book a discovery call</h2>
+            <p class="text-gray-400 text-sm sm:text-base">Choose a 30-minute slot. You&apos;ll get a calendar invite from Calendly—same link works from the header &quot;Book a Discovery Call&quot; button.</p>
+          </div>
+          <div
+            ref="calendlyEl"
+            class="w-full min-w-[320px] min-h-[700px] rounded-2xl overflow-hidden border border-white/10 bg-[#0d2137]/80 shadow-xl shadow-black/20"
+            style="min-height: 700px;"
+          ></div>
+        </div>
+
+        <div class="flex flex-col items-center text-center mb-10 sm:mb-14 pt-4 border-t border-white/[0.06]">
           <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Start a project conversation</h2>
-          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Describe the workflow pain, the product idea, or the automation you want. I will reply with a sensible next step—systems and AI implementation first; execution support from our team only if it fits.</p>
+          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Prefer email? Describe the workflow pain, the product idea, or the automation you want. I will reply with a sensible next step—systems and AI implementation first; execution support from our team only if it fits.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
@@ -675,7 +753,7 @@
           </div>
 
           <!-- Contact Form -->
-          <div class="bg-white/5 p-8 rounded-xl border border-white/10">
+          <div id="message" class="scroll-mt-28 bg-white/5 p-8 rounded-xl border border-white/10">
             <h3 class="text-lg font-semibold text-white mb-6">Send a Message</h3>
             <form class="space-y-6" @submit.prevent="sendEmail">
               <div>
@@ -738,13 +816,15 @@
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
           <a href="mailto:al.villamero@gmail.com" class="hover:text-violet-300 transition-colors">al.villamero@gmail.com</a>
           <a href="#contact" class="hover:text-violet-300 transition-colors">Contact</a>
-          <a href="#contact" class="hover:text-violet-300 transition-colors">Book a call</a>
+          <a href="#booking" class="hover:text-violet-300 transition-colors">Book a call</a>
         </div>
         <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
+          <a href="#about" class="hover:text-gray-300 transition-colors">About</a>
           <a href="#services" class="hover:text-gray-300 transition-colors">What we build</a>
           <a href="#portfolio" class="hover:text-gray-300 transition-colors">Work</a>
           <a href="#process" class="hover:text-gray-300 transition-colors">Process</a>
           <a href="#team" class="hover:text-gray-300 transition-colors">Team</a>
+          <a href="#booking" class="hover:text-gray-300 transition-colors">Calendar</a>
         </nav>
       </div>
     </footer>
@@ -775,17 +855,22 @@
 <script setup>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { onMounted, onUnmounted, ref, computed } from 'vue'
+import { onMounted, onUnmounted, ref, computed, nextTick } from 'vue'
 import emailjs from '@emailjs/browser'
+
+const CALENDLY_URL = 'https://calendly.com/al-villamero/30min'
 
 const isMenuOpen = ref(false)
 const activeSection = ref('home')
 const selectedImage = ref(null)
 const isModalOpen = ref(false)
+const calendlyEl = ref(null)
+const calendlyReady = ref(false)
 
-const sections = ['trust', 'services', 'problems', 'portfolio', 'process', 'team', 'why', 'contact', 'background']
+const sections = ['trust', 'about', 'services', 'problems', 'portfolio', 'process', 'team', 'why', 'contact', 'background']
 
 const mobileNavItems = [
+  { id: 'about', label: 'About' },
   { id: 'services', label: 'What we build' },
   { id: 'portfolio', label: 'Work' },
   { id: 'process', label: 'Process' },
@@ -1042,6 +1127,40 @@ const checkActiveSection = () => {
   })
 }
 
+const initCalendlyWidget = () => {
+  const el = calendlyEl.value
+  if (!el || calendlyReady.value) return
+  const Calendly = window.Calendly
+  if (!Calendly?.initInlineWidget) return
+  el.innerHTML = ''
+  Calendly.initInlineWidget({
+    url: CALENDLY_URL,
+    parentElement: el,
+  })
+  calendlyReady.value = true
+}
+
+const loadCalendlyScript = () => {
+  if (window.Calendly?.initInlineWidget) {
+    initCalendlyWidget()
+    return
+  }
+  const existing = document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')
+  if (existing) {
+    if (window.Calendly?.initInlineWidget) {
+      initCalendlyWidget()
+    } else {
+      existing.addEventListener('load', initCalendlyWidget, { once: true })
+    }
+    return
+  }
+  const script = document.createElement('script')
+  script.src = 'https://assets.calendly.com/assets/external/widget.js'
+  script.async = true
+  script.onload = () => initCalendlyWidget()
+  document.body.appendChild(script)
+}
+
 onMounted(() => {
   AOS.init({
     duration: 1000,
@@ -1055,10 +1174,18 @@ onMounted(() => {
 
   window.addEventListener('scroll', checkActiveSection)
   checkActiveSection() // Initial check
+
+  nextTick(() => {
+    loadCalendlyScript()
+  })
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', checkActiveSection)
+  if (calendlyEl.value) {
+    calendlyEl.value.innerHTML = ''
+  }
+  calendlyReady.value = false
 })
 
 // Contact form
