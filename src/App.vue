@@ -1,9 +1,9 @@
 <template>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <div class="bg-[#0B0B13] text-white min-h-screen font-poppins selection:bg-pink-500/30 overflow-x-hidden w-full">
+  <div class="bg-[#0a1628] text-white min-h-screen font-poppins selection:bg-violet-500/25 overflow-x-hidden w-full">
     <!-- Header -->
-    <header class="sticky top-0 z-50 w-full bg-[#0B0B13]/80 border-b border-white/10 backdrop-blur-md" data-aos="fade-down">
+    <header class="sticky top-0 z-50 w-full bg-[#0a1628]/90 border-b border-white/[0.06] backdrop-blur-md" data-aos="fade-down">
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
         <a href="#" class="group">
           <div class="text-3xl font-bold tracking-tight text-white transform transition-transform duration-300 group-hover:scale-[1.02]">
@@ -13,24 +13,13 @@
       
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-14">
-          <div class="flex items-center gap-10 text-base font-medium">
-            <a 
-              href="#experience" 
-              class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-              :class="{ 'text-pink-400': activeSection === 'experience' }"
-            >
-              Experience
-              <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-                :class="{ '!scale-x-100': activeSection === 'experience' }"
-              ></span>
-            </a>
+          <div class="flex items-center gap-8 lg:gap-10 text-sm font-medium tracking-wide">
             <a 
               href="#services" 
-              class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-              :class="{ 'text-pink-400': activeSection === 'services' }"
+              class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'services' }"
             >
-              Services
+              What we build
               <span 
                 class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'services' }"
@@ -38,30 +27,41 @@
             </a>
             <a 
               href="#portfolio" 
-              class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-              :class="{ 'text-pink-400': activeSection === 'portfolio' }"
+              class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'portfolio' }"
             >
-              Portfolio
+              Work
               <span 
                 class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'portfolio' }"
               ></span>
             </a>
             <a 
-              href="#skills" 
-              class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-              :class="{ 'text-pink-400': activeSection === 'skills' }"
+              href="#process" 
+              class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'process' }"
             >
-              Skills
+              Process
               <span 
                 class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-                :class="{ '!scale-x-100': activeSection === 'skills' }"
+                :class="{ '!scale-x-100': activeSection === 'process' }"
+              ></span>
+            </a>
+            <a 
+              href="#team" 
+              class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'team' }"
+            >
+              Team
+              <span 
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
+                :class="{ '!scale-x-100': activeSection === 'team' }"
               ></span>
             </a>
             <a 
               href="#contact" 
-              class="relative py-2 hover:text-pink-400 transition-all duration-300 hover:scale-[1.02]"
-              :class="{ 'text-pink-400': activeSection === 'contact' }"
+              class="relative py-2 text-gray-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'contact' }"
             >
               Contact
               <span 
@@ -121,25 +121,25 @@
       <!-- Mobile Menu -->
       <div 
         v-if="isMenuOpen" 
-        class="fixed inset-0 bg-[#0B0B13] z-40 md:hidden"
+        class="fixed inset-0 bg-[#0a1628] z-40 md:hidden"
         @click="closeMenu"
       >
         <div 
-          class="flex flex-col items-center justify-center min-h-screen p-8 space-y-8 bg-[#0B0B13]"
+          class="flex flex-col items-center justify-center min-h-screen p-8 space-y-8 bg-[#0a1628]"
           @click.stop
         >
           <a 
-            v-for="section in ['experience', 'services', 'portfolio', 'skills', 'contact']"
-            :key="section"
-            :href="'#' + section"
+            v-for="item in mobileNavItems"
+            :key="item.id"
+            :href="'#' + item.id"
             @click="closeMenu"
             class="relative text-2xl font-medium hover:text-pink-400 transition-all duration-300 hover:scale-[1.02] py-2"
-            :class="{ 'text-pink-400': activeSection === section }"
+            :class="{ 'text-pink-400': activeSection === item.id }"
           >
-            {{ section.charAt(0).toUpperCase() + section.slice(1) }}
+            {{ item.label }}
             <span 
               class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-[#5300A6] to-[#BA24FF] transform scale-x-0 transition-transform duration-300"
-              :class="{ '!scale-x-100': activeSection === section }"
+              :class="{ '!scale-x-100': activeSection === item.id }"
             ></span>
           </a>
           <div class="w-full h-px bg-white/10 my-4"></div>
@@ -165,536 +165,135 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-<section class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 py-16 md:py-24 space-y-10 md:space-y-0" data-aos="fade-up">
-  <div class="max-w-2xl space-y-6 md:space-y-8">
-    <div class="flex flex-wrap gap-2 sm:gap-3">
-      <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
-        <span class="text-pink-400 font-medium">AI-powered web & systems</span>
-      </div>
-      <div class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm">
-        <span class="text-pink-400 font-medium">Video, marketing &amp; social — team</span>
-      </div>
-    </div>
-    <div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 leading-[1.1]">
-        <span class="text-white">AI-powered digital </span><span class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] bg-clip-text text-transparent">web &amp; systems expert</span>
-      </h1>
-      <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
-        I lead websites, integrations, and dependable systems—using AI where it speeds research, build, and QA without cutting corners. Video editors, digital marketing experts, and social specialists on our team handle creative and growth work, so you get one accountable partner from scope to launch.
-      </p>
-    </div>
-    <div class="space-y-6">
-      <div class="flex flex-wrap gap-4">
-        <div class="flex items-center gap-2 text-sm text-gray-400">
-          <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Websites &amp; web apps</span>
+    <!-- Hero -->
+    <section class="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-12 md:pt-24 md:pb-16 gap-12 lg:gap-16" data-aos="fade-up">
+      <div class="max-w-2xl space-y-8">
+        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-violet-300/90">AI systems · automation · implementation</p>
+        <h1 class="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12]">
+          AI-powered systems for businesses that want
+          <span class="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent"> less manual work</span>
+          and better execution
+        </h1>
+        <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
+          I help companies design and implement AI-powered systems, internal tools, chatbots, and automations that cut repetitive work, speed up response times, and simplify operations—then bring in execution support when you need more than engineering.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-violet-900/30"
+          >
+            Book a discovery call
+          </a>
+          <a
+            href="#portfolio"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors"
+          >
+            See selected work
+          </a>
         </div>
-        <div class="flex items-center gap-2 text-sm text-gray-400">
-          <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Systems &amp; integrations</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-400">
-          <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>AI-assisted delivery</span>
-        </div>
-        <div class="flex items-center gap-2 text-sm text-gray-400">
-          <span class="w-1.5 h-1.5 rounded-full bg-pink-400/40"></span>
-          <span>Creative &amp; growth (team)</span>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+          <span class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/80"></span>
+            Remote · Philippines
+          </span>
+          <a href="mailto:al.villamero@gmail.com" class="hover:text-violet-300 transition-colors">al.villamero@gmail.com</a>
         </div>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a 
-          href="https://drive.google.com/file/d/1caOzNy7nxAuExabEMaDAtaSQzdzwG5W9" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#BA24FF] text-white font-medium hover:opacity-90 transition-opacity"
-        >
-          <span>Download CV</span>
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 12.586L7.707 10.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L12 12.586V4a1 1 0 00-2 0v8.586z"/>
-          </svg>
-        </a>
-        <a href="#portfolio" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/5 text-white font-medium border border-white/10 hover:bg-white/10 transition-colors group">
-          View Portfolio
-          <svg class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 pt-4">
-      <div class="flex items-center gap-2 text-gray-400">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM10 5C8.9 5 8 5.9 8 7C8 8.1 8.9 9 10 9C11.1 9 12 8.1 12 7C12 5.9 11.1 5 10 5ZM10 15.3C12.33 15.3 14.3 14.33 15 13C15 11.67 11.67 11 10 11C8.33 11 5 11.67 5 13C5.7 14.33 7.67 15.3 10 15.3Z"/>
-        </svg>
-        <span>Davao City, Philippines</span>
-        <span class="text-pink-400/40">•</span>
-        <span class="text-sm">Remote Available</span>
-      </div>
-      <a href="mailto:al.villamero@gmail.com" class="flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M17.3333 2.5H2.66667C1.75 2.5 1 3.25 1 4.16667V15.8333C1 16.75 1.75 17.5 2.66667 17.5H17.3333C18.25 17.5 19 16.75 19 15.8333V4.16667C19 3.25 18.25 2.5 17.3333 2.5ZM17.3333 15.8333H2.66667V4.16667L10 10L17.3333 4.16667V15.8333ZM10 8.33333L2.66667 2.5H17.3333L10 8.33333Z"/>
-        </svg>
-        <span>al.villamero@gmail.com</span>
-      </a>
-    </div>
-    <div class="flex items-center space-x-4">
-      <div class="flex space-x-4">
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V9H9V17ZM7.694 7.717C6.923 7.717 6.408 7.203 6.408 6.517C6.408 5.831 6.922 5.317 7.779 5.317C8.55 5.317 9.065 5.831 9.065 6.517C9.065 7.203 8.551 7.717 7.694 7.717ZM18 17H15.558V12.577C15.558 11.432 14.767 11.077 14.362 11.077C13.957 11.077 13.014 11.315 13.014 12.577C13.014 12.815 13.014 17 13.014 17H10.477V9H13.014V10.017C13.419 9.305 14.249 9 15.478 9C16.707 9 18 9.871 18 12.577V17Z"/>
-          </svg>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C19.1375 20.1625 22 16.4125 22 12C22 6.475 17.525 2 12 2Z"/>
-          </svg>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM4 12C4 11.39 4.08 10.79 4.21 10.22L8 14V15C8 16.1 8.9 17 10 17V19.93C6.55 19.2 4 15.91 4 12ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="flex space-x-10 pt-10">
-      <div>
-        <p class="text-3xl font-bold text-white">5+</p>
-        <p class="text-sm text-gray-400">Years Experience</p>
-      </div>
-      <div>
-        <p class="text-3xl font-bold text-white">40+</p>
-        <p class="text-sm text-gray-400">Projects Completed</p>
-      </div>
-      <div>
-        <p class="text-3xl font-bold text-white">18+</p>
-        <p class="text-sm text-gray-400">Happy Clients</p>
-      </div>
-    </div>
-  </div>
-  <div class="relative w-[400px] h-[400px] animate-pulse-slow">
-    <!-- Glow Effects -->
-    <div class="absolute -inset-4 bg-[#BA24FF] opacity-20 blur-2xl rounded-full"></div>
-    <div class="absolute -inset-4 bg-[#5300A6] opacity-20 blur-2xl rounded-full"></div>
-    
-    <!-- Main Container -->
-    <div class="relative w-full h-full">
-      <!-- Decorative Corner Elements -->
-      <div class="absolute -top-2 -right-2 w-24 h-24 border-t-2 border-r-2 border-[#BA24FF] rounded-tr-3xl opacity-60"></div>
-      <div class="absolute -bottom-2 -left-2 w-24 h-24 border-b-2 border-l-2 border-[#5300A6] rounded-bl-3xl opacity-60"></div>
-      
-      <!-- Image Container -->
-      <div class="relative w-full h-full p-[2px] bg-gradient-to-br from-[#5300A6] to-[#BA24FF] rounded-[2rem] shadow-[0_0_30px_rgba(138,43,226,0.2)] backdrop-blur-sm overflow-hidden">
-        <div class="w-full h-full rounded-[1.95rem] bg-black overflow-hidden">
+      <div class="relative w-full max-w-[min(100%,380px)] aspect-square shrink-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-violet-600/30 to-fuchsia-600/20 rounded-3xl blur-3xl opacity-70"></div>
+        <div class="relative w-full h-full rounded-3xl border border-white/10 overflow-hidden bg-[#0f2744]/80">
           <img
             src="@/assets/img/pic.jpg"
-    alt="Profile"
-            class="w-full h-[120%] object-cover object-top -translate-y-[10%]"
+            alt="Alvin Villamero"
+            class="w-full h-full object-cover object-top scale-[1.02]"
           />
-        </div>
-        
-        <!-- Overlay Effects -->
-        <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
-      </div>
-    </div>
-</div>
-
-</section>
-
-
-
-    <!-- Experience -->
-    <section id="experience" class="py-32 px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <!-- Background Gradient -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
-      
-      <div class="relative">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Professional Experience</h2>
-          <p class="text-gray-400 max-w-2xl">IT infrastructure, systems support, and digital growth across global teams—foundations for the AI-powered web and systems work I lead today, with specialists covering video, marketing, and social when projects need scale.</p>
-        </div>
-        
-        <div class="space-y-12">
-          <!-- Red Jasper Studio -->
-          <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex flex-col md:flex-row justify-between mb-6">
-              <div>
-                <h3 class="text-xl font-semibold text-white mb-2">Digital Marketing Associate</h3>
-                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm">
-                  <span class="text-pink-400 font-medium">Red Jasper Studio, LLC</span>
-                  <span class="text-gray-500 hidden sm:inline">•</span>
-                  <span class="text-gray-400">Delaware, US (Remote)</span>
-                </div>
-              </div>
-              <p class="text-gray-400 text-sm mt-2 md:mt-0 font-medium">March 2023 - July 2025</p>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm">
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Developed and executed comprehensive social media strategies, resulting in 40% increase in engagement</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Created and optimized video content for multiple platforms, improving view retention by 25%</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Managed website maintenance and updates, ensuring 99.9% uptime and optimal performance</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Implemented email marketing campaigns with 28% average open rate and 12% click-through rate</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Designed and developed responsive websites using modern frameworks and best practices</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Sheikh Ahmed -->
-          <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex flex-col md:flex-row justify-between mb-6">
-              <div>
-                <h3 class="text-xl font-semibold text-white mb-2">IT Support Specialist</h3>
-                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm">
-                  <span class="text-pink-400 font-medium">Sheikh Ahmed Bin Faisal Al Qassimi</span>
-                  <span class="text-gray-500 hidden sm:inline">•</span>
-                  <span class="text-gray-400">Dubai, UAE</span>
-                </div>
-              </div>
-              <p class="text-gray-400 text-sm mt-2 md:mt-0 font-medium">August 2022 - February 2023</p>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm">
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Led IT support operations, achieving 95% first-contact resolution rate for user requests</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Implemented new IT policies and security measures, reducing security incidents by 40%</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Managed user access and authentication systems for 200+ employees</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Developed comprehensive technical documentation and user guides</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Pullman Hotels -->
-          <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex flex-col md:flex-row justify-between mb-6">
-              <div>
-                <h3 class="text-xl font-semibold text-white mb-2">IT Solution Officer</h3>
-                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm">
-                  <span class="text-pink-400 font-medium">Pullman Hotels and Resorts</span>
-                  <span class="text-gray-500 hidden sm:inline">•</span>
-                  <span class="text-gray-400">Dubai, UAE</span>
-                </div>
-              </div>
-              <p class="text-gray-400 text-sm mt-2 md:mt-0 font-medium">October 2021 - July 2022</p>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm">
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Managed and optimized hotel-wide IT infrastructure, including PABX and network systems</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Implemented and maintained IPTV and Chromecast systems across 250+ rooms</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Coordinated AV setups for high-profile corporate events and conferences</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Provided technical support to guests and staff, maintaining 98% satisfaction rate</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Shepherd My Lambs -->
-          <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex flex-col md:flex-row justify-between mb-6">
-              <div>
-                <h3 class="text-xl font-semibold text-white mb-2">IT Specialist</h3>
-                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm">
-                  <span class="text-pink-400 font-medium">Shepherd My Lambs Christian College</span>
-                  <span class="text-gray-500 hidden sm:inline">•</span>
-                  <span class="text-gray-400">Philippines</span>
-                </div>
-              </div>
-              <p class="text-gray-400 text-sm mt-2 md:mt-0 font-medium">July 2020 - April 2021</p>
-            </div>
-            <ul class="space-y-3 text-gray-300 text-sm">
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Established comprehensive security system with CCTV and access control integration</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Managed Office 365 deployment and administration for 50+ staff members</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Created and maintained digital marketing materials, increasing online engagement by 35%</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-pink-400/40 mt-1.5">
-                  <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                    <circle cx="4" cy="4" r="3"/>
-                  </svg>
-                </span>
-                <span>Provided technical support and training to faculty and administrative staff</span>
-              </li>
-            </ul>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent opacity-90"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 border-t border-white/5">
+            <p class="text-xs font-medium text-violet-200/90 uppercase tracking-wider">Focus</p>
+            <p class="text-sm text-white font-medium mt-1">Operations-first AI systems &amp; product implementation</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Trust -->
+    <section id="trust" class="border-y border-white/[0.06] bg-black/20">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 py-10 sm:py-12">
+        <div class="grid grid-cols-3 gap-6 sm:gap-10 text-center">
+          <div>
+            <p class="text-2xl sm:text-3xl font-bold text-white tabular-nums">5+</p>
+            <p class="text-xs sm:text-sm text-gray-500 mt-1">Years shipping systems</p>
+          </div>
+          <div>
+            <p class="text-2xl sm:text-3xl font-bold text-white tabular-nums">40+</p>
+            <p class="text-xs sm:text-sm text-gray-500 mt-1">Builds &amp; integrations</p>
+          </div>
+          <div>
+            <p class="text-2xl sm:text-3xl font-bold text-white tabular-nums">18+</p>
+            <p class="text-xs sm:text-sm text-gray-500 mt-1">Teams &amp; clients served</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Services -->
-    <section id="services" class="py-32 px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <!-- Background Gradient -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
-      
+    <section id="services" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Professional Services</h2>
-          <p class="text-gray-400 max-w-2xl">One engagement model: I own technical delivery—web, systems, and AI-assisted execution—while our team covers video production, digital marketing, and social. Clients work with a single lead instead of coordinating separate vendors.</p>
+        <div class="max-w-3xl mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">What I build</h2>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            I help businesses turn messy workflows and ideas into <span class="text-gray-300">AI-powered systems, automations, and digital products</span>—with clear ownership from concept to working implementation.
+          </p>
         </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- UI/UX Design -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                </svg>
-        </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">UI/UX Design</h3>
-                <p class="text-sm text-gray-400 mb-4">Product-minded UX and interfaces that stay clear as your site or system grows.</p>
-                <ul class="space-y-2">
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>User-Centered Design</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Interface Prototyping</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Responsive Layouts</span>
-                  </li>
-                </ul>
-        </div>
-            </div>
-          </div>
-          
-          <!-- Web Development -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Web Development</h3>
-                <p class="text-sm text-gray-400 mb-4">Fast, maintainable sites and apps—custom stacks, no-code, or hybrid as the project demands.</p>
-                <ul class="space-y-2">
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Custom Web Applications</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Frontend & Backend Development</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Performance Optimization</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Video Production -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Video Production</h3>
-                <p class="text-sm text-gray-400 mb-4">Editing and motion for ads, social, and funnels—delivered by our video team under unified direction.</p>
-                <ul class="space-y-2">
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Professional Video Editing</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Motion Graphics</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Social Media Content</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Digital Marketing -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Digital Marketing</h3>
-                <p class="text-sm text-gray-400 mb-4">Paid and organic growth, email, and analytics—run by marketing specialists aligned with your build.</p>
-                <ul class="space-y-2">
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Social Media Strategy</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Content Marketing</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Analytics & Optimization</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
 
-          <!-- Web systems & AI -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300 md:col-span-2">
-            <div class="flex flex-col sm:flex-row items-start gap-6 sm:gap-10">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform shrink-0">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors">Web Systems &amp; AI-Assisted Delivery</h3>
-                <p class="text-sm text-gray-400 mb-4">Architecture, integrations, and automation—AI assists planning, implementation, and QA; you still get engineering judgment and secure defaults.</p>
-                <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2">
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>APIs, automation &amp; internal tools</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>Performance, reliability &amp; observability</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>AI-assisted research, content &amp; QA</span>
-                  </li>
-                  <li class="flex items-center gap-2 text-sm text-gray-400">
-                    <span class="w-1 h-1 rounded-full bg-pink-400/40"></span>
-                    <span>One technical lead for your build</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div class="grid md:grid-cols-3 gap-5 md:gap-6 mb-14 md:mb-16">
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
+            <h3 class="text-lg font-semibold text-white mb-3">AI-powered systems</h3>
+            <p class="text-sm text-gray-400 leading-relaxed flex-grow">Internal tools, automations, dashboards, workflow systems, and admin surfaces that reduce manual work and keep operations consistent.</p>
           </div>
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
+            <h3 class="text-lg font-semibold text-white mb-3">AI chatbots</h3>
+            <p class="text-sm text-gray-400 leading-relaxed flex-grow">Lead capture, support, FAQ, and internal assistant bots—scoped for real conversations, escalation paths, and your brand voice.</p>
+          </div>
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
+            <h3 class="text-lg font-semibold text-white mb-3">Concept to product</h3>
+            <p class="text-sm text-gray-400 leading-relaxed flex-grow">From raw ideas to product plans, MVPs, interfaces, and working builds—so ideas become operational systems, not slide decks.</p>
+          </div>
+        </div>
+
+        <div class="mb-14">
+          <h3 class="text-xl font-semibold text-white mb-6">Problems this addresses</h3>
+          <ul class="grid sm:grid-cols-2 gap-3">
+            <li
+              v-for="p in problemsSolved"
+              :key="p"
+              class="flex gap-3 text-sm text-gray-300 border border-white/[0.06] rounded-xl px-4 py-3 bg-black/25"
+            >
+              <span class="text-violet-400 shrink-0 mt-0.5">→</span>
+              <span>{{ p }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-6 md:p-8">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500 mb-2">Secondary — execution support</p>
+          <h3 class="text-xl font-semibold text-white mb-3">When you need more than systems work</h3>
+          <p class="text-sm text-gray-400 max-w-2xl leading-relaxed">
+            Social media management, video editing, graphic design, and admin support—available through our team as <span class="text-gray-300">additional delivery capacity</span>, not the core offer. The main engagement stays systems, automation, and product implementation.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-32 px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
+    <!-- Portfolio / case studies -->
+    <section id="portfolio" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
-        <div class="flex flex-col items-center text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">Portfolio</h2>
-          <p class="text-gray-400 max-w-2xl">Recent code on GitHub, then selected client and product sites—screenshots and live links as noted.</p>
+        <div class="max-w-3xl mb-12 md:mb-14">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Selected work</h2>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Case-style snapshots: problem, build, and tools—plus repos and live demos where available. Deeper case write-ups can be added as we document outcomes with clients.
+          </p>
         </div>
 
         <!-- Recent on GitHub -->
@@ -752,7 +351,7 @@
           </div>
         </div>
 
-        <h3 class="text-xl font-semibold text-white text-center sm:text-left mb-8">Client &amp; product sites</h3>
+        <h3 class="text-lg font-semibold text-gray-200 text-left mb-6">Client &amp; product builds</h3>
 
         <!-- Project Categories -->
         <div class="flex flex-col items-center gap-6 mb-12">
@@ -815,8 +414,13 @@
                   {{ tag }}
                 </span>
               </div>
-              <h3 class="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors">{{ project.title }}</h3>
-              <p class="text-sm text-gray-400 mb-4 line-clamp-2 sm:line-clamp-none">{{ project.description }}</p>
+              <h3 class="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-violet-300 transition-colors">{{ project.title }}</h3>
+              <div v-if="project.problem" class="space-y-2 mb-4 text-xs sm:text-sm">
+                <p class="text-gray-500"><span class="text-gray-400 font-medium">Problem:</span> {{ project.problem }}</p>
+                <p class="text-gray-500"><span class="text-gray-400 font-medium">Solution:</span> {{ project.solution }}</p>
+                <p v-if="project.outcome" class="text-gray-500"><span class="text-gray-400 font-medium">Outcome:</span> {{ project.outcome }}</p>
+              </div>
+              <p v-else class="text-sm text-gray-400 mb-4 line-clamp-2 sm:line-clamp-none">{{ project.description }}</p>
               <div class="flex items-center gap-3 sm:gap-4">
                 <a
                   v-if="project.url"
@@ -842,658 +446,76 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-32 px-8 max-w-6xl mx-auto" data-aos="fade-up">
-      <div class="relative">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Core Expertise</h2>
-          <p class="text-gray-400 max-w-2xl">Deep on web, systems, and AI-assisted delivery on my side; video editing, digital marketing, and social execution through our specialist team—built for leaders who want shipping speed and clear ownership.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Web Development -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-        </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Web &amp; Systems Development</h3>
-                <div class="space-y-3">
-                  <div class="flex items-center gap-2">
-                    <div class="h-1 w-full bg-white/5 rounded">
-                      <div class="h-1 w-[95%] bg-gradient-to-r from-[#5300A6] to-[#BA24FF] rounded"></div>
-        </div>
-                    <span class="text-xs font-medium text-gray-400 w-12">95%</span>
-                  </div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="space-y-2">
-                      <p class="text-sm font-medium text-white">Frontend</p>
-                      <ul class="space-y-2.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>React.js</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Vue.js</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>TailwindCSS</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="text-sm font-medium text-white">No-Code</p>
-                      <ul class="space-y-2.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>WordPress</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Webflow</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Shopify</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!-- Process -->
+    <section id="process" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How engagements run</h2>
+        <p class="text-gray-400 text-lg">A clear path from messy reality to a working system—no mystery phases.</p>
+      </div>
+      <ol class="grid md:grid-cols-2 gap-6 list-none p-0 m-0">
+        <li v-for="(step, i) in processSteps" :key="step.title" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 flex gap-4">
+          <span class="text-2xl font-bold text-violet-500/90 tabular-nums shrink-0">{{ padStep(i) }}</span>
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2">{{ step.title }}</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">{{ step.body }}</p>
           </div>
+        </li>
+      </ol>
+    </section>
 
-          <!-- Digital Marketing & Creative -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Digital Marketing &amp; Creative</h3>
-                <div class="space-y-3">
-                  <div class="flex items-center gap-2">
-                    <div class="h-1 w-full bg-white/5 rounded">
-                      <div class="h-1 w-[90%] bg-gradient-to-r from-[#5300A6] to-[#BA24FF] rounded"></div>
-                    </div>
-                    <span class="text-xs font-medium text-gray-400 w-12">90%</span>
-                  </div>
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="space-y-2">
-                      <p class="text-sm font-medium text-white">Marketing</p>
-                      <ul class="space-y-2.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Social Media</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Content Strategy</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Email Marketing</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="text-sm font-medium text-white">Design</p>
-                      <ul class="space-y-2.5 text-sm text-gray-400">
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Adobe Creative</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>UI/UX Design</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                          <span>Video Editing</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Team -->
+    <section id="team" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
+      <div class="max-w-3xl mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Execution support</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          When clients need more than systems and product work, our extended team covers social, video, design, and admin—so delivery can scale without you hiring a separate agency for every channel.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <span v-for="t in executionTeamTags" :key="t" class="px-4 py-2 rounded-full text-sm border border-white/10 text-gray-300 bg-black/20">{{ t }}</span>
+      </div>
+    </section>
 
-          <!-- Support & Service -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Systems, IT &amp; Support</h3>
-                <div class="space-y-3">
-                  <div class="flex items-center gap-2">
-                    <div class="h-1 w-full bg-white/5 rounded">
-                      <div class="h-1 w-[92%] bg-gradient-to-r from-[#5300A6] to-[#BA24FF] rounded"></div>
-                    </div>
-                    <span class="text-xs font-medium text-gray-400 w-12">92%</span>
-                  </div>
-                  <ul class="space-y-2.5 text-sm text-gray-400">
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>L1/L2 Technical Support</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Remote System Administration</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Technical Documentation</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>User Training & Support</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Testimonials -->
+    <section class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-10">What clients say</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <blockquote v-for="q in testimonials" :key="q.quote" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
+          <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">"{{ q.quote }}"</p>
+          <footer class="text-xs text-gray-500">{{ q.attribution }}</footer>
+        </blockquote>
+      </div>
+    </section>
 
-          <!-- AV & Media -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">AV & Media Systems</h3>
-                <div class="space-y-3">
-                  <div class="flex items-center gap-2">
-                    <div class="h-1 w-full bg-white/5 rounded">
-                      <div class="h-1 w-[88%] bg-gradient-to-r from-[#5300A6] to-[#BA24FF] rounded"></div>
-                    </div>
-                    <span class="text-xs font-medium text-gray-400 w-12">88%</span>
-                  </div>
-                  <ul class="space-y-2.5 text-sm text-gray-400">
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Professional AV Setup</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Digital Signage Systems</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>IPTV Implementation</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Event Technical Direction</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Final CTA -->
+    <section class="py-16 md:py-20 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
+      <div class="rounded-3xl border border-violet-500/30 bg-gradient-to-br from-violet-950/50 to-[#0a1628] px-8 py-12 md:px-12 md:py-14 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to reduce manual work?</h2>
+        <p class="text-gray-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Tell me what is breaking in your operations or what you want to automate. We will map systems, chatbots, or product work—and add execution support only if you need it.</p>
+        <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity">Start a conversation</a>
+      </div>
+    </section>
 
-          <!-- Tools & Software -->
-          <div class="group bg-white/5 p-8 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-            <div class="flex items-start gap-6">
-              <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Professional Tools</h3>
-                <div class="space-y-3">
-                  <div class="flex items-center gap-2">
-                    <div class="h-1 w-full bg-white/5 rounded">
-                      <div class="h-1 w-[94%] bg-gradient-to-r from-[#5300A6] to-[#BA24FF] rounded"></div>
-                    </div>
-                    <span class="text-xs font-medium text-gray-400 w-12">94%</span>
-                  </div>
-                  <ul class="space-y-2.5 text-sm text-gray-400">
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Microsoft 365 Suite</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Adobe Creative Cloud</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Project Management Software</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
-                      <span>Network Monitoring Tools</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+    <!-- Background -->
+    <section id="background" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4">Background</h2>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            BS Information Technology (University of Mindanao, 2020). Prior roles across IT infrastructure, support, and digital delivery for international teams—experience that informs how I scope secure, maintainable systems today.
+          </p>
+          <a href="https://drive.google.com/file/d/1caOzNy7nxAuExabEMaDAtaSQzdzwG5W9" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-violet-300 hover:text-violet-200">Download CV →</a>
         </div>
-        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-4">Typical stack</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-4">
+            Vue and React, Node ecosystems, APIs and integrations, cloud hosting (Vercel and traditional), automation (Make and similar), AI-assisted delivery (LLM APIs, Cursor), plus creative and marketing tools when our execution team is involved.
+          </p>
+          <p class="text-xs text-gray-600">Tune this list as your positioning and case studies mature.</p>
         </div>
       </div>
     </section>
 
-    <!-- Education & Training -->
-    <section class="py-32 px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <!-- Background Gradient -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
-      
-      <div class="relative">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Education &amp; Experience</h2>
-          <p class="text-gray-400 max-w-2xl">BS Information Technology plus ongoing work in web, systems, and AI-assisted tooling—alongside certifications that support both technical delivery and creative collaboration with our team.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-12">
-          <!-- Education -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white">Education</h3>
-            <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-              <div class="flex items-start gap-6">
-                <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
-                    <path d="M3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-                  </svg>
-                </div>
-      <div>
-                  <h4 class="text-lg font-semibold text-white group-hover:text-pink-400 transition-colors">Bachelor of Science in Information Technology</h4>
-                  <p class="text-pink-400 mt-1">University of Mindanao</p>
-                  <p class="text-gray-400 mt-1">Graduated 2020</p>
-          </div>
-        </div>
-            </div>
-
-            <!-- Early Experience -->
-            <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-              <div class="flex items-start gap-6">
-                <div class="bg-gradient-to-br from-[#5300A6] to-[#BA24FF] px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
-                  </svg>
-      </div>
-      <div>
-                  <h4 class="text-lg font-semibold text-white group-hover:text-pink-400 transition-colors">Mobile Developer</h4>
-                  <p class="text-pink-400 mt-1">Paglaum Startup at UMASENSO HUB</p>
-                  <p class="text-gray-400 mt-1">December 2019 - June 2020</p>
-                  <p class="text-sm text-gray-400 mt-2">Led mobile development for PaglaUM App, gaining valuable hands-on experience in app development.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Trainings & Certifications -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white">Eligibility & Certifications</h3>
-        <div class="space-y-4">
-              <!-- Technical Certifications -->
-              <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-                <h4 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Technical Certifications</h4>
-                <ul class="space-y-3">
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">NCII: Computer Systems Servicing</p>
-                      <p class="text-sm text-gray-400">Technical Education and Skills Development Authority</p>
-          </div>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">Microsoft: Networking Fundamentals</p>
-                      <p class="text-sm text-gray-400">Microsoft Certification</p>
-          </div>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">Microsoft: Database Administration Fundamentals</p>
-                      <p class="text-sm text-gray-400">Microsoft Certification</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Design Certifications -->
-              <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-                <h4 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Design & Creative</h4>
-                <ul class="space-y-3">
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">Adobe Photoshop</p>
-                      <p class="text-sm text-gray-400">Eduonix Certification</p>
-                    </div>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">Adobe Illustrator</p>
-                      <p class="text-sm text-gray-400">Eduonix Certification</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Additional Training -->
-              <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-pink-400/20 transition-all duration-300">
-                <h4 class="text-lg font-semibold text-white mb-4 group-hover:text-pink-400 transition-colors">Additional Training</h4>
-                <ul class="space-y-3">
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">UMerge Startup Challenge Bootcamp</p>
-                      <p class="text-sm text-gray-400">Entrepreneurship and Innovation Training</p>
-                    </div>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">Google Business Group Bizfest 2019</p>
-                      <p class="text-sm text-gray-400">Digital Business Solutions and Strategy</p>
-                    </div>
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <span class="text-pink-400/40">
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a2 2 0 012 2v2h4a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 012-2h4V4a2 2 0 012-2zm0 2v2h4v8H6V6h4V4z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <p class="text-white font-medium">Introduction to React.js</p>
-                      <p class="text-sm text-gray-400">University of the Immaculate Conception, 2021</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- List of Tools -->
-    <section class="py-32 px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <!-- Background Gradient -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent"></div>
-      
-      <div class="relative">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-3xl font-bold mb-4">Tools &amp; Platforms</h2>
-          <p class="text-gray-400 max-w-2xl">Hosting, creative, development, and AI tooling I use for web and systems work—overlapping where needed with the stack our video, marketing, and social team runs for clients.</p>
-        </div>
-
-        <div class="grid gap-12">
-          <!-- Hosting & Infrastructure -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">Hosting & Infrastructure</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/OVH.png" alt="OVH" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">OVH</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/godaddy.png" alt="GoDaddy" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">GoDaddy</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/namecheap.png" alt="Namecheap" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Namecheap</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/bluehost.png" alt="BlueHost" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">BlueHost</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/cpanel.png" alt="cPanel" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">cPanel</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/hostgator.png" alt="HostGator" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">HostGator</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Web & Platforms -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">Web & Platforms</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/wordpress.png" alt="WordPress" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">WordPress</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/kajabi.png" alt="Kajabi" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Kajabi</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/gohighlevel.png" alt="GoHighLevel" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">GoHighLevel</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/clickfunnels.png" alt="ClickFunnels" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">ClickFunnels</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/firebase.png" alt="Firebase" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Firebase</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/mysql.png" alt="MySQL" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">MySQL</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/meta.png" alt="Meta" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Meta</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-orange-500 rounded text-white font-bold text-lg">Git</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Git</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-blue-500 rounded text-white font-bold text-xs">React</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">React.js</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-green-500 rounded text-white font-bold text-sm">Vue</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Vue</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-purple-500 rounded text-white font-bold text-xs">Vite</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Vite</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Marketing & Communication -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">Marketing & Communication</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/mailchimp.png" alt="Mailchimp" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Mailchimp</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/active campaign.png" alt="Active Campaign" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Active Campaign</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-purple-600 rounded text-white font-bold text-xs">Make</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Make.com</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Design & Creative -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">Design & Creative</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/canva.png" alt="Canva" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Canva</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/illustrator.png" alt="Illustrator" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Illustrator</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/photoshop.png" alt="Photoshop" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Photoshop</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/premiere pro.png" alt="Premiere Pro" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Premiere Pro</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <img src="@/assets/img/portfolio-logos/capcut.png" alt="CapCut" class="w-full h-full object-contain" />
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">CapCut</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Development -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">Web &amp; Systems</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-green-600 rounded text-white font-bold text-xs">Android</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Android Java</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-cyan-500 rounded text-white font-bold text-xs">TS</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">TypeScript</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-teal-500 rounded text-white font-bold text-xs">TW</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">TailwindCSS</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- AI & Automation -->
-          <div class="space-y-6">
-            <h3 class="text-2xl font-semibold text-white text-center">AI & Automation</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-green-500 rounded text-white font-bold text-xs">GPT</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">ChatGPT</span>
-              </a>
-              <a href="#" class="group flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-400/20 hover:bg-white/10 transition-all duration-300">
-                <div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg p-2">
-                  <div class="w-full h-full flex items-center justify-center bg-blue-600 rounded text-white font-bold text-xs">Cursor</div>
-                </div>
-                <span class="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">Cursor AI</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
     <!-- Contact -->
     <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
@@ -1502,8 +524,8 @@
       
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-10 sm:mb-16">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Let's Connect</h2>
-          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Share your site, system, or campaign goals. We will align technical scope with you and route video, marketing, and social through our team as needed.</p>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Start a project conversation</h2>
+          <p class="text-gray-400 max-w-2xl text-sm sm:text-base">Describe the workflow pain, the product idea, or the automation you want. I will reply with a sensible next step—systems and AI implementation first; execution support from our team only if it fits.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
@@ -1655,7 +677,7 @@
       <div class="max-w-7xl mx-auto px-8">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="text-center md:text-left">
-            <p class="text-[15px] text-gray-400"><span class="font-medium text-white">© 2026 Alvin Villamero.</span> AI-powered web &amp; systems; video, marketing &amp; social with our team.</p>
+            <p class="text-[15px] text-gray-400"><span class="font-medium text-white">© 2026 Alvin Villamero.</span> AI systems &amp; implementation partner—automation, internal tools, and chatbots; extended execution support when you need it.</p>
             <p class="text-xs text-gray-500 mt-1">All rights reserved.</p>
           </div>
           <div class="flex items-center gap-6">
@@ -1680,7 +702,7 @@
     </footer>
     <!-- Image Modal -->
     <div v-if="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95" @click="closeImageModal">
-      <div class="relative max-w-7xl w-full max-h-[90vh] bg-[#0B0B13] rounded-xl overflow-hidden">
+      <div class="relative max-w-7xl w-full max-h-[90vh] bg-[#0a1628] rounded-xl overflow-hidden">
         <button 
           @click="closeImageModal" 
           class="absolute top-4 right-4 text-white/80 hover:text-white bg-black/20 hover:bg-black/40 rounded-full p-2 transition-colors z-10"
@@ -1713,7 +735,51 @@ const activeSection = ref('home')
 const selectedImage = ref(null)
 const isModalOpen = ref(false)
 
-const sections = ['experience', 'services', 'portfolio', 'skills', 'contact']
+const sections = ['trust', 'services', 'portfolio', 'process', 'team', 'contact', 'background']
+
+const mobileNavItems = [
+  { id: 'services', label: 'What we build' },
+  { id: 'portfolio', label: 'Work' },
+  { id: 'process', label: 'Process' },
+  { id: 'team', label: 'Team' },
+  { id: 'contact', label: 'Contact' }
+]
+
+const problemsSolved = [
+  'Too much manual follow-up between tools, inboxes, and spreadsheets',
+  'Slow response to leads and customers because workflows are fragmented',
+  'Ideas stall after workshops—no clear path to an MVP or internal tool',
+  'Teams outgrow ad hoc automations and need maintainable systems',
+  'Chatbots that read like demos instead of handling real intents and handoffs',
+  'Operations leaders need execution help without hiring five different vendors'
+]
+
+const processSteps = [
+  { title: 'Discover & map', body: 'We clarify outcomes, constraints, and how work really flows today—then define what “working” means in your tools.' },
+  { title: 'Design the system', body: 'Architecture, integrations, bot flows, and data handoffs—so the solution fits how your team operates.' },
+  { title: 'Build & integrate', body: 'Implementation with AI-assisted speed where it is safe: APIs, automations, dashboards, and assistants with proper review.' },
+  { title: 'Launch & iterate', body: 'Rollout, monitoring, and improvements based on real usage—plus optional execution support from our team when you need scale.' }
+]
+
+const padStep = (i) => String(i + 1).padStart(2, '0')
+
+const executionTeamTags = [
+  'Social media management',
+  'Video editing',
+  'Graphic design',
+  'Admin & operations support'
+]
+
+const testimonials = [
+  {
+    quote: 'Placeholder—replace with a short client quote about systems, automation, or delivery once you have approval.',
+    attribution: 'Role, company (optional)'
+  },
+  {
+    quote: 'Second testimonial slot. Strong quotes here turn this from a portfolio into proof.',
+    attribution: 'Role, company (optional)'
+  }
+]
 const activeProjectCategory = ref('all')
 
 const projectCategories = [
@@ -1750,7 +816,10 @@ const projects = [
     description: 'Provides trading signals and automated bots for forex, crypto, and stocks markets.',
     category: 'web',
     images: ['tradingsignals.jpg'],
-    tags: ['Forex', 'Crypto', 'Stocks']
+    tags: ['Forex', 'Crypto', 'Stocks'],
+    problem: 'Traders needed one reliable place for signals and market coverage without constant manual follow-up.',
+    solution: 'Web platform with structured content, signal delivery flows, and account areas aligned to how users trade.',
+    outcome: 'Clearer path from signup to active use of trading content and tools.'
   },
   {
     id: 'trading-signals-funnel',
@@ -1790,7 +859,10 @@ const projects = [
     description: 'AI-driven trading platform born in Asia, blending hedge fund expertise with deep learning.',
     category: 'web',
     images: ['kopii ai.jpg'],
-    tags: ['AI Trading', 'Deep Learning']
+    tags: ['AI Trading', 'Deep Learning'],
+    problem: 'Position an AI-assisted trading product with credibility and a clear product story in a crowded market.',
+    solution: 'Product-facing site and flows that explain the AI value proposition and drive qualified interest.',
+    outcome: 'Tighter narrative from first visit to sign-up for a complex fintech offer.'
   },
   {
     id: 'global-grid',
