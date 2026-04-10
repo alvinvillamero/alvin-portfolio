@@ -75,7 +75,7 @@
             href="#contact"
             class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] px-7 py-2.5 rounded-full text-base font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
           >
-            Book a Call
+            Book a Discovery Call
           </a>
       </nav>
 
@@ -85,7 +85,7 @@
             href="#contact"
             class="bg-gradient-to-r from-[#5300A6] to-[#BA24FF] px-4 py-2 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 active:scale-[0.98]"
           >
-            Book a Call
+            Book a Discovery Call
           </a>
           <button 
             @click="toggleMenu"
@@ -166,51 +166,82 @@
     </header>
 
     <!-- Hero -->
-    <section class="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-12 md:pt-24 md:pb-16 gap-12 lg:gap-16" data-aos="fade-up">
-      <div class="max-w-2xl space-y-8">
-        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-violet-300/90">AI systems · automation · implementation</p>
-        <h1 class="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.12]">
-          AI-powered systems for businesses that want
-          <span class="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent"> less manual work</span>
-          and better execution
+    <section class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-12 md:pt-24 md:pb-20 gap-14 lg:gap-12" data-aos="fade-up">
+      <div class="max-w-xl lg:max-w-2xl space-y-7">
+        <p class="text-xs sm:text-sm font-medium tracking-[0.18em] uppercase text-violet-300/80">AI systems · automation · product implementation</p>
+        <h1 class="text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-white leading-[1.15]">
+          AI-powered systems that reduce manual work and keep your business running smoothly
         </h1>
-        <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl">
-          I help companies design and implement AI-powered systems, internal tools, chatbots, and automations that cut repetitive work, speed up response times, and simplify operations—then bring in execution support when you need more than engineering.
+        <p class="text-gray-400 text-base sm:text-lg leading-relaxed">
+          I help businesses turn messy workflows, repetitive tasks, and early-stage ideas into structured AI systems, automations, and tools that actually work in day-to-day operations.
         </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
           <a
             href="#contact"
-            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-violet-900/30"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-violet-900/25"
           >
-            Book a discovery call
+            Book a Discovery Call
           </a>
           <a
             href="#portfolio"
-            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/5 transition-colors"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-white/12 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors"
           >
-            See selected work
+            View Case Studies
           </a>
         </div>
-        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-          <span class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/80"></span>
-            Remote · Philippines
-          </span>
-          <a href="mailto:al.villamero@gmail.com" class="hover:text-violet-300 transition-colors">al.villamero@gmail.com</a>
-        </div>
+        <p class="text-sm text-gray-600">Remote · Philippines · <a href="mailto:al.villamero@gmail.com" class="text-gray-500 hover:text-violet-300 transition-colors">al.villamero@gmail.com</a></p>
       </div>
-      <div class="relative w-full max-w-[min(100%,380px)] aspect-square shrink-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-violet-600/30 to-fuchsia-600/20 rounded-3xl blur-3xl opacity-70"></div>
-        <div class="relative w-full h-full rounded-3xl border border-white/10 overflow-hidden bg-[#0f2744]/80">
-          <img
-            src="@/assets/img/pic.jpg"
-            alt="Alvin Villamero"
-            class="w-full h-full object-cover object-top scale-[1.02]"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent opacity-90"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5 border-t border-white/5">
-            <p class="text-xs font-medium text-violet-200/90 uppercase tracking-wider">Focus</p>
-            <p class="text-sm text-white font-medium mt-1">Operations-first AI systems &amp; product implementation</p>
+
+      <!-- System / dashboard mockup (no portrait) -->
+      <div class="relative w-full max-w-lg lg:max-w-[min(100%,440px)] mx-auto lg:mx-0 shrink-0 select-none" aria-hidden="true">
+        <div class="absolute -inset-4 bg-gradient-to-br from-violet-600/20 via-transparent to-cyan-500/10 rounded-[2rem] blur-2xl"></div>
+        <!-- Back stack -->
+        <div class="absolute top-6 right-2 w-[88%] h-48 rounded-xl border border-white/[0.07] bg-[#0c1f35] shadow-lg opacity-80"></div>
+        <div class="absolute top-3 right-6 w-[82%] h-44 rounded-xl border border-white/[0.08] bg-[#0e2438] shadow-md opacity-90"></div>
+        <!-- Main dashboard -->
+        <div class="relative rounded-xl border border-white/10 bg-[#0d2137] shadow-2xl overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] bg-black/30">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/90"></span>
+              <span class="text-[11px] font-medium text-gray-400 tracking-wide">Operations console</span>
+            </div>
+            <div class="flex gap-1">
+              <span class="w-8 h-2 rounded bg-white/10"></span>
+              <span class="w-8 h-2 rounded bg-white/10"></span>
+            </div>
+          </div>
+          <div class="p-4 grid grid-cols-3 gap-3">
+            <div class="col-span-2 space-y-2">
+              <div class="h-24 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10 border border-white/[0.06] p-3">
+                <div class="flex justify-between items-end h-full gap-1">
+                  <span v-for="h in [40,65,35,80,50,90,45]" :key="h" class="flex-1 rounded-sm bg-violet-400/50" :style="{ height: h + '%' }"></span>
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <div class="flex-1 h-10 rounded-md bg-white/[0.06] border border-white/[0.05]"></div>
+                <div class="flex-1 h-10 rounded-md bg-white/[0.06] border border-white/[0.05]"></div>
+              </div>
+            </div>
+            <div class="rounded-lg border border-white/[0.08] bg-[#0a1628] p-2.5 flex flex-col">
+              <span class="text-[10px] text-gray-500 uppercase tracking-wider mb-2">Flow</span>
+              <div class="space-y-1.5 flex-1">
+                <div class="h-2 w-full rounded bg-violet-500/40"></div>
+                <div class="h-2 w-[80%] rounded bg-white/10"></div>
+                <div class="h-2 w-full rounded bg-cyan-500/30"></div>
+                <div class="h-2 w-[60%] rounded bg-white/10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Chatbot panel -->
+        <div class="absolute -bottom-2 -right-1 sm:right-0 w-[min(100%,260px)] rounded-xl border border-violet-500/25 bg-[#0f2844] shadow-xl p-3 z-10">
+          <div class="flex items-center gap-2 mb-2 pb-2 border-b border-white/[0.06]">
+            <span class="text-[10px] font-semibold text-violet-300 uppercase tracking-wider">Assistant</span>
+            <span class="ml-auto w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          </div>
+          <div class="space-y-2 text-[11px]">
+            <div class="rounded-lg bg-white/[0.06] px-2.5 py-2 text-gray-400">How can we route this lead?</div>
+            <div class="rounded-lg bg-violet-500/15 border border-violet-500/20 px-2.5 py-2 text-gray-300">→ Intake form → CRM → Slack</div>
           </div>
         </div>
       </div>
@@ -218,21 +249,18 @@
 
     <!-- Trust -->
     <section id="trust" class="border-y border-white/[0.06] bg-black/20">
-      <div class="max-w-6xl mx-auto px-6 sm:px-8 py-10 sm:py-12">
-        <div class="grid grid-cols-3 gap-6 sm:gap-10 text-center">
-          <div>
-            <p class="text-2xl sm:text-3xl font-bold text-white tabular-nums">5+</p>
-            <p class="text-xs sm:text-sm text-gray-500 mt-1">Years shipping systems</p>
-          </div>
-          <div>
-            <p class="text-2xl sm:text-3xl font-bold text-white tabular-nums">40+</p>
-            <p class="text-xs sm:text-sm text-gray-500 mt-1">Builds &amp; integrations</p>
-          </div>
-          <div>
-            <p class="text-2xl sm:text-3xl font-bold text-white tabular-nums">18+</p>
-            <p class="text-xs sm:text-sm text-gray-500 mt-1">Teams &amp; clients served</p>
-          </div>
-        </div>
+      <div class="max-w-5xl mx-auto px-6 sm:px-8 py-8 sm:py-10">
+        <ul class="grid sm:grid-cols-3 gap-6 sm:gap-8 text-sm sm:text-[15px] text-gray-300 leading-snug">
+          <li class="text-center sm:text-left border-l-0 sm:border-l border-violet-500/30 sm:pl-6 first:sm:border-l-0 first:sm:pl-0">
+            Built systems across websites, operations, and automation workflows
+          </li>
+          <li class="text-center sm:text-left border-l-0 sm:border-l border-violet-500/30 sm:pl-6">
+            End-to-end execution from idea to implementation
+          </li>
+          <li class="text-center sm:text-left border-l-0 sm:border-l border-violet-500/30 sm:pl-6">
+            Supporting founders, teams, and growing businesses
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -240,49 +268,44 @@
     <!-- Services -->
     <section id="services" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
-        <div class="max-w-3xl mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">What I build</h2>
-          <p class="text-gray-400 text-lg leading-relaxed">
-            I help businesses turn messy workflows and ideas into <span class="text-gray-300">AI-powered systems, automations, and digital products</span>—with clear ownership from concept to working implementation.
+        <div class="max-w-3xl mb-12 md:mb-14">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">What I Help Businesses Build</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
+            <h3 class="text-lg font-semibold text-white mb-3">AI-Powered Systems</h3>
+            <p class="text-sm text-gray-400 leading-relaxed flex-grow">Custom workflows, internal tools, dashboards, and automation systems designed around how your business actually operates.</p>
+          </div>
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
+            <h3 class="text-lg font-semibold text-white mb-3">AI Chatbots</h3>
+            <p class="text-sm text-gray-400 leading-relaxed flex-grow">Smart conversational systems for lead capture, support, inquiries, and internal assistance — connected to your business logic.</p>
+          </div>
+          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
+            <h3 class="text-lg font-semibold text-white mb-3">AI Concepts → Product</h3>
+            <p class="text-sm text-gray-400 leading-relaxed flex-grow">From raw idea to structured product, interface, and working MVP — built with an AI-first approach.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems / conversion -->
+    <section id="problems" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <div class="max-w-3xl mb-10 md:mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">Where Most Businesses Get Stuck</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5 md:gap-6">
+        <article
+          v-for="item in businessStuck"
+          :key="item.title"
+          class="rounded-2xl border border-white/[0.08] bg-black/20 p-6 md:p-7 flex flex-col gap-4"
+        >
+          <h3 class="text-base font-semibold text-white leading-snug">{{ item.title }}</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">{{ item.pain }}</p>
+          <p class="text-sm text-gray-300 leading-relaxed pt-2 border-t border-white/[0.06]">
+            <span class="text-violet-400/90 mr-1.5">→</span>{{ item.fix }}
           </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-5 md:gap-6 mb-14 md:mb-16">
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg font-semibold text-white mb-3">AI-powered systems</h3>
-            <p class="text-sm text-gray-400 leading-relaxed flex-grow">Internal tools, automations, dashboards, workflow systems, and admin surfaces that reduce manual work and keep operations consistent.</p>
-          </div>
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg font-semibold text-white mb-3">AI chatbots</h3>
-            <p class="text-sm text-gray-400 leading-relaxed flex-grow">Lead capture, support, FAQ, and internal assistant bots—scoped for real conversations, escalation paths, and your brand voice.</p>
-          </div>
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg font-semibold text-white mb-3">Concept to product</h3>
-            <p class="text-sm text-gray-400 leading-relaxed flex-grow">From raw ideas to product plans, MVPs, interfaces, and working builds—so ideas become operational systems, not slide decks.</p>
-          </div>
-        </div>
-
-        <div class="mb-14">
-          <h3 class="text-xl font-semibold text-white mb-6">Problems this addresses</h3>
-          <ul class="grid sm:grid-cols-2 gap-3">
-            <li
-              v-for="p in problemsSolved"
-              :key="p"
-              class="flex gap-3 text-sm text-gray-300 border border-white/[0.06] rounded-xl px-4 py-3 bg-black/25"
-            >
-              <span class="text-violet-400 shrink-0 mt-0.5">→</span>
-              <span>{{ p }}</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-6 md:p-8">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500 mb-2">Secondary — execution support</p>
-          <h3 class="text-xl font-semibold text-white mb-3">When you need more than systems work</h3>
-          <p class="text-sm text-gray-400 max-w-2xl leading-relaxed">
-            Social media management, video editing, graphic design, and admin support—available through our team as <span class="text-gray-300">additional delivery capacity</span>, not the core offer. The main engagement stays systems, automation, and product implementation.
-          </p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -290,10 +313,30 @@
     <section id="portfolio" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
         <div class="max-w-3xl mb-12 md:mb-14">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Selected work</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Selected Work</h2>
           <p class="text-gray-400 text-lg leading-relaxed">
-            Case-style snapshots: problem, build, and tools—plus repos and live demos where available. Deeper case write-ups can be added as we document outcomes with clients.
+            Case-style snapshots with what was needed, what shipped, and the outcome—plus repos and live demos. Replace placeholders with your finalized client stories.
           </p>
+        </div>
+
+        <!-- Example case format (replace with a real project when ready) -->
+        <div class="mb-14 md:mb-16 rounded-2xl border border-dashed border-violet-500/25 bg-violet-950/10 p-6 md:p-8">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-violet-300/70 mb-4">Sample case structure</p>
+          <h3 class="text-lg md:text-xl font-semibold text-white mb-5">AI Lead Handling System for Service Business</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-gray-500 font-medium mb-0.5">What was needed</dt>
+              <dd class="text-gray-300">Faster response and structured inquiry handling</dd>
+            </div>
+            <div>
+              <dt class="text-gray-500 font-medium mb-0.5">What I built</dt>
+              <dd class="text-gray-300">Chatbot + intake flow + admin routing system</dd>
+            </div>
+            <div>
+              <dt class="text-gray-500 font-medium mb-0.5">Outcome</dt>
+              <dd class="text-gray-300">Clearer lead flow and reduced manual handling</dd>
+            </div>
+          </dl>
         </div>
 
         <!-- Recent on GitHub -->
@@ -416,8 +459,8 @@
               </div>
               <h3 class="text-base sm:text-lg font-semibold text-white mb-2 group-hover:text-violet-300 transition-colors">{{ project.title }}</h3>
               <div v-if="project.problem" class="space-y-2 mb-4 text-xs sm:text-sm">
-                <p class="text-gray-500"><span class="text-gray-400 font-medium">Problem:</span> {{ project.problem }}</p>
-                <p class="text-gray-500"><span class="text-gray-400 font-medium">Solution:</span> {{ project.solution }}</p>
+                <p class="text-gray-500"><span class="text-gray-400 font-medium">What was needed:</span> {{ project.problem }}</p>
+                <p class="text-gray-500"><span class="text-gray-400 font-medium">What I built:</span> {{ project.solution }}</p>
                 <p v-if="project.outcome" class="text-gray-500"><span class="text-gray-400 font-medium">Outcome:</span> {{ project.outcome }}</p>
               </div>
               <p v-else class="text-sm text-gray-400 mb-4 line-clamp-2 sm:line-clamp-none">{{ project.description }}</p>
@@ -449,14 +492,13 @@
     <!-- Process -->
     <section id="process" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="max-w-3xl mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How engagements run</h2>
-        <p class="text-gray-400 text-lg">A clear path from messy reality to a working system—no mystery phases.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How I Work</h2>
       </div>
-      <ol class="grid md:grid-cols-2 gap-6 list-none p-0 m-0">
-        <li v-for="(step, i) in processSteps" :key="step.title" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 flex gap-4">
-          <span class="text-2xl font-bold text-violet-500/90 tabular-nums shrink-0">{{ padStep(i) }}</span>
+      <ol class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 list-none p-0 m-0">
+        <li v-for="(step, i) in processSteps" :key="step.title" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6 flex flex-col gap-3">
+          <span class="text-xl font-bold text-violet-500/90 tabular-nums">{{ padStep(i) }}</span>
           <div>
-            <h3 class="text-lg font-semibold text-white mb-2">{{ step.title }}</h3>
+            <h3 class="text-base font-semibold text-white mb-1.5">{{ step.title }}</h3>
             <p class="text-sm text-gray-400 leading-relaxed">{{ step.body }}</p>
           </div>
         </li>
@@ -466,14 +508,28 @@
     <!-- Team -->
     <section id="team" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
       <div class="max-w-3xl mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Execution support</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">When You Need More Than Systems</h2>
         <p class="text-gray-400 text-lg leading-relaxed">
-          When clients need more than systems and product work, our extended team covers social, video, design, and admin—so delivery can scale without you hiring a separate agency for every channel.
+          For projects that require ongoing execution beyond AI systems, I also work with a team that supports content, design, editing, and admin operations.
         </p>
+        <p class="text-xs text-gray-600 mt-4 uppercase tracking-wider">Support layer — not the main offer</p>
       </div>
       <div class="flex flex-wrap gap-3">
         <span v-for="t in executionTeamTags" :key="t" class="px-4 py-2 rounded-full text-sm border border-white/10 text-gray-300 bg-black/20">{{ t }}</span>
       </div>
+    </section>
+
+    <!-- Why work with me -->
+    <section id="why" class="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <div class="max-w-3xl mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">Why Clients Work With Me</h2>
+      </div>
+      <ul class="space-y-3 max-w-2xl">
+        <li v-for="line in whyClients" :key="line" class="flex gap-3 text-sm md:text-base text-gray-300 leading-relaxed">
+          <span class="text-violet-400 shrink-0 mt-1">·</span>
+          <span>{{ line }}</span>
+        </li>
+      </ul>
     </section>
 
     <!-- Testimonials -->
@@ -490,9 +546,12 @@
     <!-- Final CTA -->
     <section class="py-16 md:py-20 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
       <div class="rounded-3xl border border-violet-500/30 bg-gradient-to-br from-violet-950/50 to-[#0a1628] px-8 py-12 md:px-12 md:py-14 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to reduce manual work?</h2>
-        <p class="text-gray-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Tell me what is breaking in your operations or what you want to automate. We will map systems, chatbots, or product work—and add execution support only if you need it.</p>
-        <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity">Start a conversation</a>
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need an AI system, chatbot, or product built for your business?</h2>
+        <p class="text-gray-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-[#5300A6] to-[#7c3aed] text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Send Your Idea</a>
+        </div>
       </div>
     </section>
 
@@ -673,31 +732,20 @@
     </section>
 
     <!-- Footer -->
-  <footer class="text-center py-8 border-t border-white/10 opacity-0 animate-fadeIn">
-      <div class="max-w-7xl mx-auto px-8">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="text-center md:text-left">
-            <p class="text-[15px] text-gray-400"><span class="font-medium text-white">© 2026 Alvin Villamero.</span> AI systems &amp; implementation partner—automation, internal tools, and chatbots; extended execution support when you need it.</p>
-            <p class="text-xs text-gray-500 mt-1">All rights reserved.</p>
-          </div>
-          <div class="flex items-center gap-6">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6 social-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V9H9V17ZM7.694 7.717C6.923 7.717 6.408 7.203 6.408 6.517C6.408 5.831 6.922 5.317 7.779 5.317C8.55 5.317 9.065 5.831 9.065 6.517C9.065 7.203 8.551 7.717 7.694 7.717ZM18 17H15.558V12.577C15.558 11.432 14.767 11.077 14.362 11.077C13.957 11.077 13.014 11.315 13.014 12.577C13.014 12.815 13.014 17 13.014 17H10.477V9H13.014V10.017C13.419 9.305 14.249 9 15.478 9C16.707 9 18 9.871 18 12.577V17Z"/>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6 social-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C19.1375 20.1625 22 16.4125 22 12C22 6.475 17.525 2 12 2Z"/>
-              </svg>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6 social-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM4 12C4 11.39 4.08 10.79 4.21 10.22L8 14V15C8 16.1 8.9 17 10 17V19.93C6.55 19.2 4 15.91 4 12ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z"/>
-              </svg>
-            </a>
-          </div>
+    <footer class="py-10 border-t border-white/10 opacity-0 animate-fadeIn">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-sm text-gray-500">
+        <p><span class="text-gray-400">© 2026 Alvin Villamero</span></p>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <a href="mailto:al.villamero@gmail.com" class="hover:text-violet-300 transition-colors">al.villamero@gmail.com</a>
+          <a href="#contact" class="hover:text-violet-300 transition-colors">Contact</a>
+          <a href="#contact" class="hover:text-violet-300 transition-colors">Book a call</a>
         </div>
+        <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
+          <a href="#services" class="hover:text-gray-300 transition-colors">What we build</a>
+          <a href="#portfolio" class="hover:text-gray-300 transition-colors">Work</a>
+          <a href="#process" class="hover:text-gray-300 transition-colors">Process</a>
+          <a href="#team" class="hover:text-gray-300 transition-colors">Team</a>
+        </nav>
       </div>
     </footer>
     <!-- Image Modal -->
@@ -735,7 +783,7 @@ const activeSection = ref('home')
 const selectedImage = ref(null)
 const isModalOpen = ref(false)
 
-const sections = ['trust', 'services', 'portfolio', 'process', 'team', 'contact', 'background']
+const sections = ['trust', 'services', 'problems', 'portfolio', 'process', 'team', 'why', 'contact', 'background']
 
 const mobileNavItems = [
   { id: 'services', label: 'What we build' },
@@ -745,20 +793,43 @@ const mobileNavItems = [
   { id: 'contact', label: 'Contact' }
 ]
 
-const problemsSolved = [
-  'Too much manual follow-up between tools, inboxes, and spreadsheets',
-  'Slow response to leads and customers because workflows are fragmented',
-  'Ideas stall after workshops—no clear path to an MVP or internal tool',
-  'Teams outgrow ad hoc automations and need maintainable systems',
-  'Chatbots that read like demos instead of handling real intents and handoffs',
-  'Operations leaders need execution help without hiring five different vendors'
+const businessStuck = [
+  {
+    title: 'Too many repetitive tasks',
+    pain: 'Manual processes slow everything down and waste time.',
+    fix: 'I build automation systems that remove repetitive work.'
+  },
+  {
+    title: 'Leads and inquiries are messy',
+    pain: 'No structure, slow response, missed opportunities.',
+    fix: 'I design chatbot + workflow systems to handle and route leads properly.'
+  },
+  {
+    title: 'You have an AI idea but no execution',
+    pain: 'Concepts stay ideas without a system behind them.',
+    fix: 'I turn ideas into working tools, products, and systems.'
+  },
+  {
+    title: 'Your tools don\'t connect',
+    pain: 'Everything is scattered across platforms.',
+    fix: 'I create structured systems that connect workflows and simplify operations.'
+  }
 ]
 
 const processSteps = [
-  { title: 'Discover & map', body: 'We clarify outcomes, constraints, and how work really flows today—then define what “working” means in your tools.' },
-  { title: 'Design the system', body: 'Architecture, integrations, bot flows, and data handoffs—so the solution fits how your team operates.' },
-  { title: 'Build & integrate', body: 'Implementation with AI-assisted speed where it is safe: APIs, automations, dashboards, and assistants with proper review.' },
-  { title: 'Launch & iterate', body: 'Rollout, monitoring, and improvements based on real usage—plus optional execution support from our team when you need scale.' }
+  { title: 'Audit', body: 'Understand your workflows, problems, and opportunities' },
+  { title: 'Map', body: 'Design system logic, flows, and structure' },
+  { title: 'Build', body: 'Develop chatbot, system, or product' },
+  { title: 'Refine', body: 'Improve usability and automation logic' },
+  { title: 'Support', body: 'Optional ongoing execution and team support' }
+]
+
+const whyClients = [
+  'Combines AI, systems, and real business operations',
+  'Focus on execution — not just ideas',
+  'From concept to working solution',
+  'Builds systems that actually reduce workload',
+  'Supported by a team when needed'
 ]
 
 const padStep = (i) => String(i + 1).padStart(2, '0')
