@@ -3,12 +3,32 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Outfit"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
+      fontSize: {
+        'display-sm': ['2.25rem', { lineHeight: '1.12', letterSpacing: '-0.03em' }],
+        display: ['2.65rem', { lineHeight: '1.1', letterSpacing: '-0.035em' }],
+        'section': ['1.875rem', { lineHeight: '1.2', letterSpacing: '-0.025em' }],
+      },
       colors: {
+        surface: {
+          950: '#0a0f1c',
+          900: '#0e1524',
+          850: '#121a2c',
+        },
+        brand: {
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          950: '#1e1b4b',
+        },
         primary: {
-          DEFAULT: '#5300A6',
-          light: '#BA24FF',
+          DEFAULT: '#4f46e5',
+          light: '#a855f7',
         },
         dark: {
           DEFAULT: '#0B0B13',
