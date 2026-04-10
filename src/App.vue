@@ -643,7 +643,7 @@
 
 
     <!-- Contact -->
-    <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28" data-aos="fade-up">
+    <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28">
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent pointer-events-none"></div>
       
       <div class="relative">
@@ -655,8 +655,8 @@
           </div>
           <div
             ref="calendlyEl"
-            class="w-full min-w-[320px] min-h-[700px] rounded-2xl overflow-hidden border border-white/10 bg-[#0d2137]/80 shadow-xl shadow-black/20"
-            style="min-height: 700px;"
+            class="calendly-widget-host w-full min-w-[320px] rounded-2xl overflow-hidden border border-white/10 bg-white shadow-xl shadow-black/20"
+            style="height: 700px; min-height: 700px;"
           ></div>
         </div>
 
@@ -1127,6 +1127,30 @@ const checkActiveSection = () => {
   })
 }
 
+const fixCalendlyIframeSize = () => {
+  const el = calendlyEl.value
+  if (!el) return
+  const apply = () => {
+    el.style.height = '700px'
+    el.style.minHeight = '700px'
+    el.querySelectorAll('div').forEach((node) => {
+      if (node.querySelector?.('iframe')) {
+        node.style.height = '700px'
+        node.style.minHeight = '700px'
+      }
+    })
+    el.querySelectorAll('iframe').forEach((iframe) => {
+      iframe.setAttribute('height', '700')
+      iframe.style.height = '700px'
+      iframe.style.minHeight = '700px'
+      iframe.style.width = '100%'
+    })
+  }
+  apply()
+  requestAnimationFrame(apply)
+  ;[100, 400, 1000].forEach((ms) => setTimeout(apply, ms))
+}
+
 const initCalendlyWidget = () => {
   const el = calendlyEl.value
   if (!el || calendlyReady.value) return
@@ -1138,6 +1162,7 @@ const initCalendlyWidget = () => {
     parentElement: el,
   })
   calendlyReady.value = true
+  fixCalendlyIframeSize()
 }
 
 const loadCalendlyScript = () => {
@@ -1307,5 +1332,23 @@ p, h1, h2, h3, h4, h5, h6, span {
   animation: pulse-slow 4s ease-in-out infinite;
 }
 
+/* Calendly: explicit height — min-height alone lets the iframe collapse */
+.calendly-widget-host {
+  height: 700px;
+  min-height: 700px;
+  min-width: 320px;
+}
+
+.calendly-widget-host iframe {
+  width: 100% !important;
+  height: 700px !important;
+  min-height: 700px !important;
+  border: 0 !important;
+}
+
+.calendly-widget-host .calendly-inline-widget,
+.calendly-widget-host .calendly-inline-widget iframe {
+  min-height: 700px !important;
+}
 
 </style>
