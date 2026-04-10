@@ -82,7 +82,7 @@
           
           <a 
             href="#booking"
-            class="bg-gradient-to-r from-brand-600 to-fuchsia-500 px-7 py-2.5 rounded-full text-base font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+            class="bg-gradient-to-r from-brand-600 to-fuchsia-500 px-7 py-2.5 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
           >
             Book a Discovery Call
           </a>
@@ -142,7 +142,7 @@
             :key="item.id"
             :href="'#' + item.id"
             @click="closeMenu"
-            class="relative text-2xl font-medium hover:text-fuchsia-400 transition-all duration-300 hover:scale-[1.02] py-2"
+            class="relative text-xl font-medium hover:text-fuchsia-400 transition-all duration-300 hover:scale-[1.02] py-2"
             :class="{ 'text-fuchsia-400': activeSection === item.id }"
           >
             {{ item.label }}
@@ -184,13 +184,13 @@
       <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16" data-aos="fade-up">
       <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
         <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">AI systems · automation · product implementation</p>
-        <h1 class="font-display text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-white leading-[1.12]">
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
           <span class="text-slate-100">AI-powered systems that reduce </span>
           <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent">manual work</span>
           <span class="text-slate-100"> and keep your business </span>
           <span class="bg-gradient-to-r from-cyan-400 to-brand-400 bg-clip-text text-transparent">running smoothly</span>
         </h1>
-        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl">
+        <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
           I help businesses turn messy workflows, repetitive tasks, and early-stage ideas into structured AI systems, automations, and tools that actually work in day-to-day operations.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
@@ -259,7 +259,7 @@
           </div>
           <div class="space-y-2 text-[11px]">
             <div class="rounded-lg bg-white/[0.06] px-2.5 py-2 text-slate-400">How can we route this lead?</div>
-            <div class="rounded-lg bg-violet-500/15 border border-violet-500/20 px-2.5 py-2 text-slate-300">→ Intake form → CRM → Slack</div>
+            <div class="rounded-lg bg-violet-500/15 border border-violet-500/20 px-2.5 py-2 text-slate-300">→ Intake → routing → team handoff</div>
           </div>
         </div>
       </div>
@@ -269,7 +269,7 @@
     <!-- Trust -->
     <section id="trust" class="border-y border-white/[0.06] bg-black/20">
       <div class="max-w-5xl mx-auto px-6 sm:px-8 py-8 sm:py-10">
-        <ul class="grid sm:grid-cols-3 gap-6 sm:gap-8 text-sm sm:text-[15px] text-slate-300 leading-snug">
+        <ul class="grid sm:grid-cols-3 gap-6 sm:gap-8 text-base text-slate-300 leading-snug">
           <li class="text-center sm:text-left border-l-0 sm:border-l border-brand-500/25 sm:pl-6 first:sm:border-l-0 first:sm:pl-0">
             Built systems across websites, operations, and automation workflows
           </li>
@@ -302,7 +302,7 @@
         </div>
         <div class="space-y-5">
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80">About me</p>
-          <h2 class="font-display text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
             Systems-first builder for teams that need <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">real execution</span>
           </h2>
           <p class="text-slate-400 text-base leading-relaxed">
@@ -333,20 +333,20 @@
     <section id="services" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
         <div class="max-w-3xl mb-12 md:mb-14">
-          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">What I Help Businesses Build</h2>
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">What I Help Businesses Build</h2>
         </div>
 
         <div class="grid md:grid-cols-3 gap-5 md:gap-6">
           <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg font-semibold text-white mb-3">AI-Powered Systems</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-white mb-3">AI-Powered Systems</h3>
             <p class="text-sm text-slate-400 leading-relaxed flex-grow">Custom workflows, internal tools, dashboards, and automation systems designed around how your business actually operates.</p>
           </div>
           <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg font-semibold text-white mb-3">AI Chatbots</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-white mb-3">AI Chatbots</h3>
             <p class="text-sm text-slate-400 leading-relaxed flex-grow">Smart conversational systems for lead capture, support, inquiries, and internal assistance — connected to your business logic.</p>
           </div>
           <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg font-semibold text-white mb-3">AI Concepts → Product</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-white mb-3">AI Concepts → Product</h3>
             <p class="text-sm text-slate-400 leading-relaxed flex-grow">From raw idea to structured product, interface, and working MVP — built with an AI-first approach.</p>
           </div>
         </div>
@@ -356,7 +356,7 @@
     <!-- Problems / conversion -->
     <section id="problems" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="max-w-3xl mb-10 md:mb-12">
-        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">Where Most Businesses Get Stuck</h2>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">Where Most Businesses Get Stuck</h2>
       </div>
       <div class="grid sm:grid-cols-2 gap-5 md:gap-6">
         <article
@@ -377,8 +377,8 @@
     <section id="portfolio" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
         <div class="max-w-3xl mb-12 md:mb-14">
-          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Selected Work</h2>
-          <p class="text-slate-400 text-lg leading-relaxed">
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Selected Work</h2>
+          <p class="text-slate-400 text-base md:text-lg leading-relaxed">
             Case-style snapshots with what was needed, what shipped, and the outcome—plus repos and live demos. Replace placeholders with your finalized client stories.
           </p>
         </div>
@@ -403,12 +403,12 @@
           </dl>
         </div>
 
-        <!-- Recent on GitHub -->
+        <!-- Recent code -->
         <div class="mb-16 md:mb-20">
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <div>
-              <h3 class="text-xl font-semibold text-white mb-1">Recent on GitHub</h3>
-              <p class="text-sm text-slate-400 max-w-xl">Public repositories—source on GitHub, live demo when a deployment URL is set.</p>
+              <h3 class="text-lg md:text-xl font-semibold text-white mb-1">Recent code</h3>
+              <p class="text-sm text-slate-400 max-w-xl">Public source and live demos—updated as new work ships.</p>
             </div>
             <a
               href="https://github.com/alvinvillamero"
@@ -419,7 +419,7 @@
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
               </svg>
-              github.com/alvinvillamero
+              View profile
             </a>
           </div>
           <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
@@ -429,8 +429,7 @@
               class="group relative bg-white/5 rounded-xl border border-white/10 p-5 sm:p-6 hover:border-fuchsia-500/25 transition-all duration-300 flex flex-col"
             >
               <div class="flex items-start justify-between gap-3 mb-3">
-                <h4 class="text-base sm:text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors pr-2">{{ repo.title }}</h4>
-                <span v-if="repo.language" class="shrink-0 px-2 py-0.5 rounded text-xs font-medium bg-white/10 text-slate-300">{{ repo.language }}</span>
+                <h4 class="text-base md:text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors pr-2">{{ repo.title }}</h4>
               </div>
               <p class="text-sm text-slate-400 mb-5 flex-grow">{{ repo.description }}</p>
               <div class="flex flex-wrap gap-3">
@@ -440,7 +439,7 @@
                   rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 text-sm font-medium text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                 >
-                  View repo
+                  View source
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
                 </a>
                 <a
@@ -458,7 +457,7 @@
           </div>
         </div>
 
-        <h3 class="text-lg font-semibold text-slate-200 text-left mb-6">Client &amp; product builds</h3>
+        <h3 class="text-lg md:text-xl font-semibold text-slate-200 text-left mb-6">Client &amp; product builds</h3>
 
         <!-- Project Categories -->
         <div class="flex flex-col items-center gap-6 mb-12">
@@ -556,7 +555,7 @@
     <!-- Process -->
     <section id="process" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="max-w-3xl mb-12">
-        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How I Work</h2>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How I Work</h2>
       </div>
       <ol class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 list-none p-0 m-0">
         <li v-for="(step, i) in processSteps" :key="step.title" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6 flex flex-col gap-3">
@@ -572,8 +571,8 @@
     <!-- Team -->
     <section id="team" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
       <div class="max-w-3xl mb-10">
-        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">When You Need More Than Systems</h2>
-        <p class="text-slate-400 text-lg leading-relaxed">
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">When You Need More Than Systems</h2>
+        <p class="text-slate-400 text-base md:text-lg leading-relaxed">
           For projects that require ongoing execution beyond AI systems, I also work with a team that supports content, design, editing, and admin operations.
         </p>
         <p class="text-xs text-slate-600 mt-4 uppercase tracking-wider">Support layer — not the main offer</p>
@@ -586,7 +585,7 @@
     <!-- Why work with me -->
     <section id="why" class="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="max-w-3xl mb-8">
-        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">Why Clients Work With Me</h2>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">Why Clients Work With Me</h2>
       </div>
       <ul class="space-y-3 max-w-2xl">
         <li v-for="line in whyClients" :key="line" class="flex gap-3 text-sm md:text-base text-slate-300 leading-relaxed">
@@ -598,7 +597,7 @@
 
     <!-- Testimonials -->
     <section class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-10">What clients say</h2>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-10">What clients say</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <blockquote v-for="q in testimonials" :key="q.quote" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
           <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">"{{ q.quote }}"</p>
@@ -610,7 +609,7 @@
     <!-- Final CTA -->
     <section class="py-16 md:py-20 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
       <div class="rounded-3xl border border-brand-500/25 bg-gradient-to-br from-brand-950/40 to-surface-950 px-8 py-12 md:px-12 md:py-14 text-center">
-        <h2 class="font-display text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need an AI system, chatbot, or product built for your business?</h2>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need an AI system, chatbot, or product built for your business?</h2>
         <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a href="#booking" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
@@ -623,7 +622,7 @@
     <section id="background" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="grid md:grid-cols-2 gap-12 md:gap-16">
         <div>
-          <h2 class="font-display text-2xl font-bold text-white mb-4">Background</h2>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-4">Background</h2>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
             BS Information Technology (University of Mindanao, 2020). Prior roles across IT infrastructure, support, and digital delivery for international teams—experience that informs how I scope secure, maintainable systems today.
           </p>
@@ -632,7 +631,7 @@
         <div>
           <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">Typical stack</h3>
           <p class="text-sm text-slate-400 leading-relaxed mb-4">
-            Vue and React, Node ecosystems, APIs and integrations, cloud hosting (Vercel and traditional), automation (Make and similar), AI-assisted delivery (LLM APIs, Cursor), plus creative and marketing tools when our execution team is involved.
+            Modern front-end and back-end stacks, APIs and integrations, cloud hosting, workflow automation, and AI-assisted delivery—plus creative and marketing support when the extended team is involved.
           </p>
           <p class="text-xs text-slate-600">Tune this list as your positioning and case studies mature.</p>
         </div>
@@ -645,11 +644,11 @@
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent pointer-events-none"></div>
       
       <div class="relative">
-        <!-- Calendly booking -->
+        <!-- Booking -->
         <div id="booking" class="scroll-mt-28 mb-16 md:mb-24">
           <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-3">Book a discovery call</h2>
-            <p class="text-slate-400 text-sm sm:text-base">Choose a 30-minute slot. You&apos;ll get a calendar invite from Calendly—same link works from the header &quot;Book a Discovery Call&quot; button.</p>
+            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">Book a discovery call</h2>
+            <p class="text-slate-400 text-base leading-relaxed">Choose a 30-minute slot. You&apos;ll receive a calendar invite after you book—the same link as the header &quot;Book a Discovery Call&quot; button.</p>
           </div>
           <div
             ref="calendlyEl"
@@ -659,8 +658,8 @@
         </div>
 
         <div class="flex flex-col items-center text-center mb-10 sm:mb-14 pt-4 border-t border-white/[0.06]">
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-100 mb-3 sm:mb-4">Start a project conversation</h2>
-          <p class="text-slate-400 max-w-2xl text-sm sm:text-base">Prefer email? Describe the workflow pain, the product idea, or the automation you want. I will reply with a sensible next step—systems and AI implementation first; execution support from our team only if it fits.</p>
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100 mb-3 sm:mb-4">Start a project conversation</h2>
+          <p class="text-slate-400 max-w-2xl text-base leading-relaxed">Prefer email? Describe the workflow pain, the product idea, or the automation you want. I will reply with a sensible next step—systems and AI implementation first; execution support from our team only if it fits.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
@@ -752,7 +751,7 @@
 
           <!-- Contact Form -->
           <div id="message" class="scroll-mt-28 bg-white/5 p-8 rounded-xl border border-white/10">
-            <h3 class="text-lg font-semibold text-white mb-6">Send a Message</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-white mb-6">Send a Message</h3>
             <form class="space-y-6" @submit.prevent="sendEmail">
               <div>
                 <label class="block text-sm font-medium text-slate-400 mb-2">Name</label>
@@ -943,23 +942,20 @@ const projectCategories = [
   { id: 'video', label: 'Video Editing' }
 ]
 
-/** Public repos from https://api.github.com/users/alvinvillamero/repos — update when you add repositories. */
 const githubProjects = [
   {
     id: 'church-management-portfolio',
     title: 'Church Management System (showcase)',
-    description: 'Portfolio site for the UPC VOT MINTAL church management system—TypeScript stack, deployed on Vercel.',
+    description: 'Showcase site for a church management system—source and live deployment in the repository.',
     githubUrl: 'https://github.com/alvinvillamero/church-management-portfolio',
-    homepage: 'https://church-management-portfolio.vercel.app',
-    language: 'TypeScript'
+    homepage: 'https://church-management-portfolio.vercel.app'
   },
   {
     id: 'alvin-portfolio',
     title: 'This portfolio',
-    description: 'This site: Vue 3, Vite, Tailwind, EmailJS—source and deployment config in the repo.',
+    description: 'This marketing site—full source and deployment configuration in the repository.',
     githubUrl: 'https://github.com/alvinvillamero/alvin-portfolio',
-    homepage: 'https://my-portfolio-liart-iota-44.vercel.app',
-    language: 'Vue'
+    homepage: 'https://my-portfolio-liart-iota-44.vercel.app'
   }
 ]
 
@@ -1231,15 +1227,15 @@ const sendEmail = async () => {
 
   try {
     await emailjs.send(
-      'service_YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-      'template_YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      'service_YOUR_SERVICE_ID',
+      'template_YOUR_TEMPLATE_ID',
       {
         from_name: formData.value.name,
         from_email: formData.value.email,
         message: formData.value.message,
         to_email: 'al.villamero@gmail.com'
       },
-      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      'YOUR_PUBLIC_KEY'
     )
 
     formStatus.value = { type: 'success', message: 'Message sent successfully!' }
@@ -1259,6 +1255,7 @@ const sendEmail = async () => {
 /* Global styles — fonts loaded in index.html (Outfit + Plus Jakarta Sans) */
 :root {
   scroll-behavior: smooth;
+  /* Type scale reference: body 16px · sm 14px · lg 18px · h2 clamp 2xl→4xl · h1 3xl→5xl */
 }
 
 html {

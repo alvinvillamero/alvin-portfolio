@@ -10,7 +10,7 @@ module.exports = {
       fontSize: {
         'display-sm': ['2.25rem', { lineHeight: '1.12', letterSpacing: '-0.03em' }],
         display: ['2.65rem', { lineHeight: '1.1', letterSpacing: '-0.035em' }],
-        'section': ['1.875rem', { lineHeight: '1.2', letterSpacing: '-0.025em' }],
+        section: ['1.875rem', { lineHeight: '1.2', letterSpacing: '-0.025em' }],
       },
       colors: {
         surface: {
