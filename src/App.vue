@@ -1088,7 +1088,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Android TV'],
     url: 'https://teeveefy-app.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://teeveefy-app.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fteeveefy-app.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
   },
   {
@@ -1099,7 +1099,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Android'],
     url: 'https://screencast-tau.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://screencast-tau.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fscreencast-tau.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, responsive layouts, and Vercel deployment.'
   },
   {
@@ -1110,7 +1110,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Freelance'],
     url: 'https://tracker-invoice-generator.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://tracker-invoice-generator.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
     techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
   },
   {
@@ -1121,7 +1121,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Healthcare'],
     url: 'https://clari-med-kohl.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://clari-med-kohl.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclari-med-kohl.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, reusable section components, and Vercel deployment.'
   },
   {
@@ -1132,7 +1132,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Pet Care'],
     url: 'https://pawly-gold.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://pawly-gold.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpawly-gold.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
   },
   {
@@ -1143,7 +1143,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Real Estate'],
     url: 'https://realty-property-listing.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://realty-property-listing.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Frealty-property-listing.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, listing-focused page architecture, and Vercel deployment.'
   },
   {
@@ -1154,7 +1154,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'Church'],
     url: 'https://www.upcvotmintal.com/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://www.upcvotmintal.com/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.upcvotmintal.com%2F?w=1200',
     techStack: 'Frontend web UI, membership-system landing architecture, and production hosting.'
   },
   {
@@ -1165,7 +1165,7 @@ const projects = [
     images: [],
     tags: ['Featured Project', 'Web Development', 'AI'],
     url: 'https://deezine.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://deezine.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fdeezine.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
   }
 ]
