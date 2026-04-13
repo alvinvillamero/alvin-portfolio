@@ -527,6 +527,9 @@
                 <p v-if="project.outcome" class="text-slate-500"><span class="text-slate-400 font-medium">Outcome:</span> {{ project.outcome }}</p>
               </div>
               <p v-else class="text-sm text-slate-400 mb-4 line-clamp-2 sm:line-clamp-none">{{ project.description }}</p>
+              <p class="text-xs sm:text-sm text-slate-500 mb-4">
+                <span class="text-slate-400 font-medium">Tech stack:</span> {{ getProjectTechStack(project) }}
+              </p>
               <div class="flex items-center gap-3 sm:gap-4">
                 <a
                   v-if="project.url"
@@ -937,9 +940,9 @@ const activeProjectCategory = ref('all')
 
 const projectCategories = [
   { id: 'all', label: 'All Projects' },
-  { id: 'web', label: 'Web Development' },
-  { id: 'social', label: 'Social Media' },
-  { id: 'video', label: 'Video Editing' }
+  { id: 'featured-projects', label: 'Featured Projects' },
+  { id: 'web-development', label: 'Web Development' },
+  { id: 'wordpress-development', label: 'WordPress Development' }
 ]
 
 const githubProjects = [
@@ -964,7 +967,7 @@ const projects = [
     id: 'trading-signals-main',
     title: 'Trading Signals',
     description: 'Provides trading signals and automated bots for forex, crypto, and stocks markets.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['tradingsignals.jpg'],
     tags: ['Forex', 'Crypto', 'Stocks'],
     problem: 'Traders needed one reliable place for signals and market coverage without constant manual follow-up.',
@@ -975,7 +978,7 @@ const projects = [
     id: 'trading-signals-funnel',
     title: 'Trading Signals - Sales Funnel',
     description: 'High-converting sales funnel for the Trading Signals platform.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['tradingsignals-funnel.jpg'],
     tags: ['Sales Funnel', 'Marketing']
   },
@@ -983,7 +986,7 @@ const projects = [
     id: 'trading-signals-old',
     title: 'Trading Signals - Previous Version',
     description: 'Previous version of the Trading Signals platform.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['tradingsignals-old.jpg'],
     tags: ['Legacy', 'Trading']
   },
@@ -991,7 +994,7 @@ const projects = [
     id: 'volume-day-trader-main',
     title: 'Volume Day Trader',
     description: 'Offers Wyckoff method–based indicators and a community of active day traders.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['volumedaytrader.jpg'],
     tags: ['Wyckoff Method', 'Day Trading']
   },
@@ -999,7 +1002,7 @@ const projects = [
     id: 'volume-day-trader-funnel',
     title: 'Volume Day Trader - Sales Funnel',
     description: 'Sales funnel for the Volume Day Trader platform.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['volumedaytrader-funnel.jpg'],
     tags: ['Sales Funnel', 'Marketing']
   },
@@ -1007,7 +1010,7 @@ const projects = [
     id: 'kopii-ai',
     title: 'Kopii AI',
     description: 'AI-driven trading platform born in Asia, blending hedge fund expertise with deep learning.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['kopii ai.jpg'],
     tags: ['AI Trading', 'Deep Learning'],
     problem: 'Position an AI-assisted trading product with credibility and a clear product story in a crowded market.',
@@ -1018,7 +1021,7 @@ const projects = [
     id: 'global-grid',
     title: 'Global Grid Solutions',
     description: 'Delivers digital outsourcing services specializing in BPO and virtual assistance.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['globalgridsolutions.jpg'],
     tags: ['BPO', 'Virtual Assistance']
   },
@@ -1026,7 +1029,7 @@ const projects = [
     id: 'asia-offshore',
     title: 'Asia Offshore Banking',
     description: 'Assists with setting up offshore and private bank accounts across Asia.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['asiaoffshorebanking.jpg'],
     tags: ['Offshore Banking', 'Financial Services']
   },
@@ -1034,7 +1037,7 @@ const projects = [
     id: 'adv-rangers',
     title: 'ADV Rangers',
       description: 'Organizes guided dirt bike tour packages across Cambodia\'s trails and countryside.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['advrangers.jpg'],
     tags: ['Adventure Tours', 'Dirt Bikes']
   },
@@ -1042,7 +1045,7 @@ const projects = [
     id: 'jv-holdings',
     title: 'JV Holdings Corp',
     description: 'A visionary holding company driving growth through strategic acquisitions.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['jvholdingscorp.jpg'],
     tags: ['Holdings', 'Investment']
   },
@@ -1050,7 +1053,7 @@ const projects = [
     id: 'nieruchomosci',
     title: 'Nieruchomości w Kambodży',
     description: 'Polish-language platform dedicated to real estate investment opportunities in Cambodia.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['nieruchomosciwkambodzy.jpg'],
     tags: ['Real Estate', 'Investment']
   },
@@ -1058,7 +1061,7 @@ const projects = [
     id: 'tomasz-rozmus',
     title: 'Tomasz Rozmus',
     description: 'Expert in stock and crypto markets; advisor on Asian opportunities.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['tomaszrozmus.jpg'],
     tags: ['Trading', 'Advisory']
   },
@@ -1066,7 +1069,7 @@ const projects = [
     id: 'trading-financial',
     title: 'Trading Financial Markets',
     description: 'Education hub focused on trading strategies for forex, crypto, and global equities.',
-    category: 'web',
+    categories: ['wordpress-development'],
     images: ['tradingfinancialmarkets.jpg'],
     tags: ['Education', 'Trading']
   },
@@ -1074,81 +1077,89 @@ const projects = [
     id: 'deezine',
     title: 'Deezine',
     description: 'AI web concept helper that generates layout and style directions from a prompt.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['AI', 'Concept Generator'],
+    tags: ['Featured Project', 'Web Development', 'AI'],
     url: 'https://deezine.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://deezine.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://deezine.vercel.app/',
+    techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
   },
   {
     id: 'castbridge',
     title: 'CastBridge',
     description: 'Android phone to Android TV casting app site with direct playback and mirroring fallback.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Android', 'Streaming'],
+    tags: ['Featured Project', 'Web Development', 'Android'],
     url: 'https://screencast-tau.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://screencast-tau.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://screencast-tau.vercel.app/',
+    techStack: 'Frontend web UI, responsive layouts, and Vercel deployment.'
   },
   {
     id: 'clarimed',
     title: 'ClariMed',
     description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Healthcare', 'Clinic'],
+    tags: ['Featured Project', 'Web Development', 'Healthcare'],
     url: 'https://clari-med-kohl.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://clari-med-kohl.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://clari-med-kohl.vercel.app/',
+    techStack: 'Frontend web UI, reusable section components, and Vercel deployment.'
   },
   {
     id: 'asia-realty',
     title: 'Asia Realty',
     description: 'Property listing concept for discovering high-return real estate opportunities in Asia.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Real Estate', 'Listings'],
+    tags: ['Featured Project', 'Web Development', 'Real Estate'],
     url: 'https://realty-property-listing.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://realty-property-listing.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://realty-property-listing.vercel.app/',
+    techStack: 'Frontend web UI, listing-focused page architecture, and Vercel deployment.'
   },
   {
     id: 'upc-vot-mintal',
     title: 'UPC VOT MINTAL',
     description: 'Church membership QR code system landing page and login entrypoint.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Church', 'Membership'],
+    tags: ['Featured Project', 'Web Development', 'Church'],
     url: 'https://www.upcvotmintal.com/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://www.upcvotmintal.com/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://www.upcvotmintal.com/',
+    techStack: 'Frontend web UI, membership-system landing architecture, and production hosting.'
   },
   {
     id: 'teeveefy',
     title: 'Teeveefy',
     description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Android TV', 'Live TV'],
+    tags: ['Featured Project', 'Web Development', 'Android TV'],
     url: 'https://teeveefy-app.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://teeveefy-app.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://teeveefy-app.vercel.app/',
+    techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
   },
   {
     id: 'pawly',
     title: 'Pawly',
     description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Pet Care', 'Healthcare'],
+    tags: ['Featured Project', 'Web Development', 'Pet Care'],
     url: 'https://pawly-gold.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://pawly-gold.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://pawly-gold.vercel.app/',
+    techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
   },
   {
     id: 'invoice-tracker',
     title: 'Freelancer Invoice & Tracker',
     description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
-    category: 'web',
+    categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Freelance', 'Invoices'],
+    tags: ['Featured Project', 'Web Development', 'Freelance'],
     url: 'https://tracker-invoice-generator.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://tracker-invoice-generator.vercel.app/'
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://tracker-invoice-generator.vercel.app/',
+    techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
   }
 ]
 
@@ -1156,7 +1167,7 @@ const filteredProjects = computed(() => {
   if (activeProjectCategory.value === 'all') {
     return projects
   }
-  return projects.filter(project => project.category === activeProjectCategory.value)
+  return projects.filter((project) => project.categories?.includes(activeProjectCategory.value))
 })
 
 const setActiveCategory = (category) => {
@@ -1166,6 +1177,11 @@ const setActiveCategory = (category) => {
 const getProjectPreviewSrc = (project) => {
   if (project.preview) return project.preview
   return `/img/projects/websites/${project.images[0]}`
+}
+
+const getProjectTechStack = (project) => {
+  if (project.techStack) return project.techStack
+  return 'WordPress CMS, custom theme/page structure, and Elementor-designed sections.'
 }
 
 const openImageModal = (imagePath) => {
