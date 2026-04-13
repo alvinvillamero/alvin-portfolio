@@ -936,10 +936,9 @@ const testimonials = [
     attribution: 'Role, company (optional)'
   }
 ]
-const activeProjectCategory = ref('all')
+const activeProjectCategory = ref('featured-projects')
 
 const projectCategories = [
-  { id: 'all', label: 'All Projects' },
   { id: 'featured-projects', label: 'Featured Projects' },
   { id: 'web-development', label: 'Web Development' },
   { id: 'wordpress-development', label: 'WordPress Development' }
@@ -1074,15 +1073,15 @@ const projects = [
     tags: ['Education', 'Trading']
   },
   {
-    id: 'deezine',
-    title: 'Deezine',
-    description: 'AI web concept helper that generates layout and style directions from a prompt.',
+    id: 'teeveefy',
+    title: 'Teeveefy',
+    description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
     categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'AI'],
-    url: 'https://deezine.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://deezine.vercel.app/',
-    techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
+    tags: ['Featured Project', 'Web Development', 'Android TV'],
+    url: 'https://teeveefy-app.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://teeveefy-app.vercel.app/',
+    techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
   },
   {
     id: 'castbridge',
@@ -1096,6 +1095,17 @@ const projects = [
     techStack: 'Frontend web UI, responsive layouts, and Vercel deployment.'
   },
   {
+    id: 'invoice-tracker',
+    title: 'Invoice Tracker',
+    description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Freelance'],
+    url: 'https://tracker-invoice-generator.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://tracker-invoice-generator.vercel.app/',
+    techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
+  },
+  {
     id: 'clarimed',
     title: 'ClariMed',
     description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
@@ -1105,6 +1115,17 @@ const projects = [
     url: 'https://clari-med-kohl.vercel.app/',
     preview: 'https://image.thum.io/get/width/1200/noanimate/https://clari-med-kohl.vercel.app/',
     techStack: 'Frontend web UI, reusable section components, and Vercel deployment.'
+  },
+  {
+    id: 'pawly',
+    title: 'Pawly',
+    description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Pet Care'],
+    url: 'https://pawly-gold.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://pawly-gold.vercel.app/',
+    techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
   },
   {
     id: 'asia-realty',
@@ -1119,7 +1140,7 @@ const projects = [
   },
   {
     id: 'upc-vot-mintal',
-    title: 'UPC VOT MINTAL',
+    title: 'UPC VOT Mintal',
     description: 'Church membership QR code system landing page and login entrypoint.',
     categories: ['featured-projects', 'web-development'],
     images: [],
@@ -1129,44 +1150,19 @@ const projects = [
     techStack: 'Frontend web UI, membership-system landing architecture, and production hosting.'
   },
   {
-    id: 'teeveefy',
-    title: 'Teeveefy',
-    description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
+    id: 'deezine',
+    title: 'Deezine',
+    description: 'AI web concept helper that generates layout and style directions from a prompt.',
     categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Android TV'],
-    url: 'https://teeveefy-app.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://teeveefy-app.vercel.app/',
-    techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
-  },
-  {
-    id: 'pawly',
-    title: 'Pawly',
-    description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Pet Care'],
-    url: 'https://pawly-gold.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://pawly-gold.vercel.app/',
-    techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
-  },
-  {
-    id: 'invoice-tracker',
-    title: 'Freelancer Invoice & Tracker',
-    description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Freelance'],
-    url: 'https://tracker-invoice-generator.vercel.app/',
-    preview: 'https://image.thum.io/get/width/1200/noanimate/https://tracker-invoice-generator.vercel.app/',
-    techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
+    tags: ['Featured Project', 'Web Development', 'AI'],
+    url: 'https://deezine.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://deezine.vercel.app/',
+    techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
   }
 ]
 
 const filteredProjects = computed(() => {
-  if (activeProjectCategory.value === 'all') {
-    return projects
-  }
   return projects.filter((project) => project.categories?.includes(activeProjectCategory.value))
 })
 
