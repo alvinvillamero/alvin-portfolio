@@ -500,10 +500,10 @@
             <div class="p-2">
               <div 
                 class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg"
-                @click="openImageModal(`/img/projects/websites/${project.images[0]}`)"
+                @click="openImageModal(getProjectPreviewSrc(project))"
               >
                 <img 
-                  :src="`/img/projects/websites/${project.images[0]}`" 
+                  :src="getProjectPreviewSrc(project)"
                   :alt="project.title" 
                   loading="lazy"
                   class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500"
@@ -1069,6 +1069,86 @@ const projects = [
     category: 'web',
     images: ['tradingfinancialmarkets.jpg'],
     tags: ['Education', 'Trading']
+  },
+  {
+    id: 'deezine',
+    title: 'Deezine',
+    description: 'AI web concept helper that generates layout and style directions from a prompt.',
+    category: 'web',
+    images: [],
+    tags: ['AI', 'Concept Generator'],
+    url: 'https://deezine.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://deezine.vercel.app/'
+  },
+  {
+    id: 'castbridge',
+    title: 'CastBridge',
+    description: 'Android phone to Android TV casting app site with direct playback and mirroring fallback.',
+    category: 'web',
+    images: [],
+    tags: ['Android', 'Streaming'],
+    url: 'https://screencast-tau.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://screencast-tau.vercel.app/'
+  },
+  {
+    id: 'clarimed',
+    title: 'ClariMed',
+    description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
+    category: 'web',
+    images: [],
+    tags: ['Healthcare', 'Clinic'],
+    url: 'https://clari-med-kohl.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://clari-med-kohl.vercel.app/'
+  },
+  {
+    id: 'asia-realty',
+    title: 'Asia Realty',
+    description: 'Property listing concept for discovering high-return real estate opportunities in Asia.',
+    category: 'web',
+    images: [],
+    tags: ['Real Estate', 'Listings'],
+    url: 'https://realty-property-listing.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://realty-property-listing.vercel.app/'
+  },
+  {
+    id: 'upc-vot-mintal',
+    title: 'UPC VOT MINTAL',
+    description: 'Church membership QR code system landing page and login entrypoint.',
+    category: 'web',
+    images: [],
+    tags: ['Church', 'Membership'],
+    url: 'https://www.upcvotmintal.com/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://www.upcvotmintal.com/'
+  },
+  {
+    id: 'teeveefy',
+    title: 'Teeveefy',
+    description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
+    category: 'web',
+    images: [],
+    tags: ['Android TV', 'Live TV'],
+    url: 'https://teeveefy-app.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://teeveefy-app.vercel.app/'
+  },
+  {
+    id: 'pawly',
+    title: 'Pawly',
+    description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
+    category: 'web',
+    images: [],
+    tags: ['Pet Care', 'Healthcare'],
+    url: 'https://pawly-gold.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://pawly-gold.vercel.app/'
+  },
+  {
+    id: 'invoice-tracker',
+    title: 'Freelancer Invoice & Tracker',
+    description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
+    category: 'web',
+    images: [],
+    tags: ['Freelance', 'Invoices'],
+    url: 'https://tracker-invoice-generator.vercel.app/',
+    preview: 'https://image.thum.io/get/width/1200/noanimate/https://tracker-invoice-generator.vercel.app/'
   }
 ]
 
@@ -1081,6 +1161,11 @@ const filteredProjects = computed(() => {
 
 const setActiveCategory = (category) => {
   activeProjectCategory.value = category
+}
+
+const getProjectPreviewSrc = (project) => {
+  if (project.preview) return project.preview
+  return `/img/projects/websites/${project.images[0]}`
 }
 
 const openImageModal = (imagePath) => {
