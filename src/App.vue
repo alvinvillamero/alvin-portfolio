@@ -496,8 +496,16 @@
 
         <!-- Projects Grid -->
         <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-full">
-          <div v-for="project in filteredProjects" :key="project.id" class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-fuchsia-500/25 transition-all duration-300">
-            <div class="p-2">
+          <div
+            v-for="(project, index) in filteredProjects"
+            :key="project.id"
+            data-aos="fade-up"
+            :data-aos-delay="80 + ((index % 4) * 80)"
+            data-aos-duration="700"
+            class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-fuchsia-500/25 transition-all duration-500 transform-gpu hover:-translate-y-1.5 hover:shadow-[0_16px_40px_-20px_rgba(217,70,239,0.45)]"
+          >
+            <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(130%_90%_at_50%_0%,rgba(192,132,252,0.16),transparent_62%)]"></div>
+            <div class="relative p-2">
               <div 
                 class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg"
                 @click="openImageModal(getProjectPreviewSrc(project))"
@@ -506,11 +514,11 @@
                   :src="getProjectPreviewSrc(project)"
                   :alt="project.title" 
                   loading="lazy"
-                  class="w-full h-full object-contain bg-black/20 group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-contain bg-black/20 group-hover:scale-[1.08] group-hover:brightness-105 transition-all duration-700 ease-out"
                 />
               </div>
             </div>
-            <div class="p-4 sm:p-6">
+            <div class="relative p-4 sm:p-6">
               <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
                 <span 
                   v-for="tag in project.tags" 
