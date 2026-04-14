@@ -624,7 +624,7 @@
         <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a href="#booking" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
-          <a href="#message" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Send Your Idea</a>
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Contact Details</a>
         </div>
       </div>
     </section>
@@ -670,10 +670,10 @@
 
         <div class="flex flex-col items-center text-center mb-10 sm:mb-14 pt-4 border-t border-white/[0.06]">
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100 mb-3 sm:mb-4">Start a project conversation</h2>
-          <p class="text-slate-400 max-w-2xl text-base leading-relaxed">Prefer email? Describe the workflow pain, the product idea, or the automation you want. I will reply with a sensible next step—systems and AI implementation first; execution support from our team only if it fits.</p>
+          <p class="text-slate-400 max-w-2xl text-base leading-relaxed">Book directly through Calendly or reach me via the contact options below for a fast next step.</p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+        <div class="max-w-3xl mx-auto">
           <!-- Contact Info -->
           <div class="space-y-6">
             <!-- Email Card -->
@@ -759,60 +759,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Contact Form -->
-          <div id="message" class="scroll-mt-28 bg-white/5 p-8 rounded-xl border border-white/10">
-            <h3 class="text-lg md:text-xl font-semibold text-white mb-6">Send a Message</h3>
-            <form class="space-y-6" @submit.prevent="sendEmail">
-              <div>
-                <label class="block text-sm font-medium text-slate-400 mb-2">Name</label>
-                <input 
-                  v-model="formData.name"
-                  type="text" 
-                  class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-400/45 transition-colors" 
-                  placeholder="Your name"
-                  required
-                >
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-400 mb-2">Email</label>
-                <input 
-                  v-model="formData.email"
-                  type="email" 
-                  class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-400/45 transition-colors" 
-                  placeholder="your@email.com"
-                  required
-                >
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-400 mb-2">Message</label>
-                <textarea 
-                  v-model="formData.message"
-                  rows="4" 
-                  class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-400/45 transition-colors" 
-                  placeholder="Your message"
-                  required
-                ></textarea>
-              </div>
-              
-              <!-- Form Status Message -->
-              <div v-if="formStatus.message" :class="[
-                'text-sm p-3 rounded-lg',
-                formStatus.type === 'success' ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'
-              ]">
-                {{ formStatus.message }}
-              </div>
-
-              <button 
-                type="submit" 
-                class="w-full bg-gradient-to-r from-brand-600 to-fuchsia-500 text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all disabled:opacity-50"
-                :disabled="isSubmitting"
-              >
-                <span v-if="!isSubmitting">Send Message</span>
-                <span v-else>Sending...</span>
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </section>
@@ -864,7 +810,6 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { onMounted, onUnmounted, ref, computed, nextTick } from 'vue'
-import emailjs from '@emailjs/browser'
 
 const CALENDLY_URL = 'https://calendly.com/al-villamero/30min'
 
@@ -959,6 +904,12 @@ const githubProjects = [
     description: 'Showcase site for a church management system—source and live deployment in the repository.',
     githubUrl: 'https://github.com/alvinvillamero/church-management-portfolio',
     homepage: 'https://church-management-portfolio.vercel.app'
+  },
+  {
+    id: 'cvgenie-ai',
+    title: 'CVGenie AI',
+    description: 'AI-assisted CV and resume builder focused on faster drafting, edits, and export-ready outputs.',
+    githubUrl: 'https://github.com/alvinvillamero/CVGenie-AI'
   },
   {
     id: 'alvin-portfolio',
@@ -1314,45 +1265,6 @@ onUnmounted(() => {
   calendlyReady.value = false
 })
 
-// Contact form
-const formData = ref({
-  name: '',
-  email: '',
-  message: ''
-})
-const isSubmitting = ref(false)
-const formStatus = ref({ type: '', message: '' })
-
-const sendEmail = async () => {
-  if (!formData.value.name || !formData.value.email || !formData.value.message) {
-    formStatus.value = { type: 'error', message: 'Please fill in all fields.' }
-    return
-  }
-
-  isSubmitting.value = true
-  formStatus.value = { type: '', message: '' }
-
-  try {
-    await emailjs.send(
-      'service_YOUR_SERVICE_ID',
-      'template_YOUR_TEMPLATE_ID',
-      {
-        from_name: formData.value.name,
-        from_email: formData.value.email,
-        message: formData.value.message,
-        to_email: 'al.villamero@gmail.com'
-      },
-      'YOUR_PUBLIC_KEY'
-    )
-
-    formStatus.value = { type: 'success', message: 'Message sent successfully!' }
-    formData.value = { name: '', email: '', message: '' }
-  } catch (error) {
-    formStatus.value = { type: 'error', message: 'Failed to send message. Please try again.' }
-  } finally {
-    isSubmitting.value = false
-  }
-}
 </script>
 
 
