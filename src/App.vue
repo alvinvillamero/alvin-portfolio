@@ -698,46 +698,26 @@
 
     <!-- Testimonials -->
     <section id="testimonials" class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-10">
-        <div>
-          <div class="mb-8 max-w-2xl">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Client stories</p>
-              <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Video testimonial and social proof</h2>
-              <p class="text-slate-400 text-base leading-relaxed">An embedded YouTube testimonial from Ben Traub, plus client quote cards and supporting visuals.</p>
-          <div class="grid gap-4">
-            <blockquote v-for="q in testimonials" :key="q.quote" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">"{{ q.quote }}"</p>
-              <footer class="text-xs text-slate-500">{{ q.attribution }}</footer>
-            </blockquote>
-          </div>
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Client stories</p>
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">Video testimonial</h2>
         </div>
 
-        <div class="space-y-5">
-          <div class="rounded-3xl overflow-hidden border border-white/[0.08] bg-black/70">
-            <div class="relative aspect-video bg-slate-950">
-              <iframe
-                :src="testimonialVideoEmbedUrl"
-                title="Testimonial video — Ben Traub"
-                class="absolute inset-0 h-full w-full"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <div class="absolute inset-0" @contextmenu.prevent></div>
-            </div>
-            <div class="px-6 py-4 border-t border-white/[0.08] bg-black/80">
-              <p class="text-xs uppercase tracking-[0.22em] text-slate-500 mb-2">Protected embed</p>
-              <p class="text-sm text-slate-400 leading-relaxed">A YouTube embed is used for delivery, and the wrapper disables casual right-click access. Full digital protection is limited by the platform.</p>
-            </div>
+        <div class="rounded-3xl overflow-hidden border border-white/[0.08] bg-black/70">
+          <div class="relative aspect-video bg-slate-950">
+            <iframe
+              :src="testimonialVideoEmbedUrl"
+              title="Testimonial video — Ben Traub"
+              class="absolute inset-0 h-full w-full"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
-
-          <div class="grid grid-cols-2 gap-3">
-            <div v-for="item in testimonialPhotos" :key="item.id" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] h-44 flex items-center justify-center text-center text-sm text-slate-400 p-4">
-              <div>
-                <p class="font-semibold text-white">{{ item.label }}</p>
-                <p class="text-slate-500 text-xs mt-2">Client photo or testimonial image</p>
-              </div>
-            </div>
+          <div class="px-6 py-5 border-t border-white/[0.08] bg-black/80">
+            <p class="text-sm text-slate-200 font-semibold">Ben Traub — CEO, Student Marketing Academy</p>
+            <p class="text-xs text-slate-500 mt-2">Social media manager for content calendar, captions, and graphics — Feb 2024 to Nov 2025.</p>
           </div>
         </div>
       </div>
@@ -1006,29 +986,11 @@ const executionTeamTags = [
   'Admin & operations support'
 ]
 
-const testimonials = [
-  {
-    quote: 'Alvin managed our social media content calendar, captions, and graphics for Student Marketing Academy clients from February 2024 through November 2025. His consistency and attention to brand detail made our campaigns much easier to run.',
-    attribution: 'Ben Traub — CEO, Student Marketing Academy'
-  },
-  {
-    quote: 'Second testimonial slot. Strong quotes here turn this from a portfolio into proof.',
-    attribution: 'Role, company (optional)'
-  }
-]
-
 const testimonialVideoId = ref('9avGINGorzU')
 const testimonialVideoEmbedUrl = computed(() => {
   if (!testimonialVideoId.value) return ''
   return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1&fs=0`
 })
-
-const testimonialPhotos = [
-  { id: 'photo-1', label: 'SMA campaign preview' },
-  { id: 'photo-2', label: 'Social content calendar' },
-  { id: 'photo-3', label: 'Branded caption design' },
-  { id: 'photo-4', label: 'Client engagement visuals' }
-]
 
 const activeProjectCategory = ref('featured-projects')
 
