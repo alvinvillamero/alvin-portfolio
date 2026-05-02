@@ -406,14 +406,17 @@
           </div>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">Core tools I use for product, web, and system builds.</p>
           <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Vue 3</span>
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Tailwind CSS</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Vue</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">React</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Java</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">PHP</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">MySQL</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Firebase</span>
             <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">JavaScript</span>
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">WordPress</span>
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">API integrations</span>
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">OpenAI</span>
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Zapier / Make</span>
-            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Vercel</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Supabase</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">C#</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">Tailwind CSS</span>
+            <span class="px-4 py-3 rounded-2xl bg-slate-950 text-slate-200">HTML CSS</span>
           </div>
         </div>
       </div>
