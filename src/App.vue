@@ -1031,8 +1031,8 @@ const executionTeamTags = [
 
 const testimonials = [
   {
-    quote: 'Placeholder—replace with a short client quote about systems, automation, or delivery once you have approval.',
-    attribution: 'Role, company (optional)'
+    quote: 'Alvin managed our social media content calendar, captions, and graphics for Student Marketing Academy clients from February 2024 through November 2025. His consistency and attention to brand detail made our campaigns much easier to run.',
+    attribution: 'Ben Traub — CEO, Student Marketing Academy'
   },
   {
     quote: 'Second testimonial slot. Strong quotes here turn this from a portfolio into proof.',
@@ -1040,18 +1040,18 @@ const testimonials = [
   }
 ]
 
-const testimonialVideoId = ref('')
+const testimonialVideoId = ref('9avGINGorzU')
 const testimonialVideoLoaded = ref(false)
 const testimonialVideoEmbedUrl = computed(() => {
   if (!testimonialVideoId.value) return ''
-  return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1`
+  return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1&fs=0`
 })
 
 const testimonialPhotos = [
-  { id: 'photo-1', label: 'Testimonial photo 1' },
-  { id: 'photo-2', label: 'Testimonial photo 2' },
-  { id: 'photo-3', label: 'Testimonial photo 3' },
-  { id: 'photo-4', label: 'Testimonial photo 4' }
+  { id: 'photo-1', label: 'SMA campaign preview' },
+  { id: 'photo-2', label: 'Social content calendar' },
+  { id: 'photo-3', label: 'Branded caption design' },
+  { id: 'photo-4', label: 'Client engagement visuals' }
 ]
 
 const activeProjectCategory = ref('featured-projects')
