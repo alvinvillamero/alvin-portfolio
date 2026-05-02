@@ -24,6 +24,17 @@
               ></span>
             </a>
             <a 
+              href="#skills" 
+              class="relative py-2 text-slate-300 hover:text-white transition-all duration-300"
+              :class="{ 'text-white': activeSection === 'skills' }"
+            >
+              Skills
+              <span 
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+                :class="{ '!scale-x-100': activeSection === 'skills' }"
+              ></span>
+            </a>
+            <a 
               href="#services" 
               class="relative py-2 text-slate-300 hover:text-white transition-all duration-300"
               :class="{ 'text-white': activeSection === 'services' }"
@@ -325,6 +336,56 @@
               See selected work
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] gap-10 lg:gap-16 items-start">
+        <div class="max-w-xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">The systems I build and the tools I use to ship them</h2>
+          <p class="text-slate-400 text-base leading-relaxed mb-8">From AI automation and chatbots to web products and integrations, I bring practical experience in the tools and workflows that make systems work.</p>
+          <div class="grid gap-4">
+            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-sm font-semibold text-white">AI systems</p>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Expert</span>
+              </div>
+              <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full bg-brand-500" style="width: 92%"></div>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-sm font-semibold text-white">Workflow automation</p>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Advanced</span>
+              </div>
+              <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full bg-brand-500" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-sm font-semibold text-white">Product & web builds</p>
+                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Advanced</span>
+              </div>
+              <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full bg-brand-500" style="width: 86%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 grid grid-cols-2 gap-3">
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">Vue 3</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">Tailwind CSS</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">JavaScript</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">WordPress</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">API integrations</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">OpenAI</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">Zapier / Make</span>
+          <span class="px-4 py-3 rounded-2xl bg-slate-950 text-xs font-semibold text-slate-200">Vercel</span>
         </div>
       </div>
     </section>
@@ -820,10 +881,11 @@ const isModalOpen = ref(false)
 const calendlyEl = ref(null)
 const calendlyReady = ref(false)
 
-const sections = ['trust', 'about', 'services', 'problems', 'portfolio', 'process', 'team', 'why', 'contact', 'background']
+const sections = ['trust', 'about', 'skills', 'services', 'problems', 'portfolio', 'process', 'team', 'why', 'contact', 'background']
 
 const mobileNavItems = [
   { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
   { id: 'services', label: 'What we build' },
   { id: 'portfolio', label: 'Work' },
   { id: 'process', label: 'Process' },
@@ -904,12 +966,6 @@ const githubProjects = [
     description: 'Showcase site for a church management system—source and live deployment in the repository.',
     githubUrl: 'https://github.com/alvinvillamero/church-management-portfolio',
     homepage: 'https://church-management-portfolio.vercel.app'
-  },
-  {
-    id: 'cvgenie-ai',
-    title: 'CVGenie AI',
-    description: 'AI-assisted CV and resume builder focused on faster drafting, edits, and export-ready outputs.',
-    githubUrl: 'https://github.com/alvinvillamero/CVGenie-AI'
   },
   {
     id: 'alvin-portfolio',
@@ -1118,6 +1174,17 @@ const projects = [
     url: 'https://deezine.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fdeezine.vercel.app%2F?w=1200',
     techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
+  },
+  {
+    id: 'cvgenie-ai',
+    title: 'CVGenie AI',
+    description: 'AI-assisted CV and resume builder focused on faster drafting, edits, and export-ready outputs.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'AI'],
+    url: 'https://github.com/alvinvillamero/CVGenie-AI',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2Falvinvillamero%2FCVGenie-AI?w=1200',
+    techStack: 'AI-assisted resume generation workflows, modern web app frontend, and GitHub-based delivery.'
   }
 ]
 
