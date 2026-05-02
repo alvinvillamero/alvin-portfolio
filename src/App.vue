@@ -718,34 +718,13 @@
           <div class="rounded-3xl overflow-hidden border border-white/[0.08] bg-black/70">
             <div class="relative aspect-video bg-slate-950">
               <iframe
-                v-if="testimonialVideoLoaded && testimonialVideoEmbedUrl"
                 :src="testimonialVideoEmbedUrl"
-                title="Client video testimonial"
+                title="Testimonial video — Ben Traub"
                 class="absolute inset-0 h-full w-full"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-
-              <div
-                v-else
-                class="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center"
-              >
-                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-brand-500/10 border border-brand-500 text-brand-300 text-2xl">▶</div>
-                <div>
-                  <p class="text-white font-semibold">Video testimonial</p>
-                  <p class="text-slate-400 text-sm max-w-sm">Click to load the embedded YouTube testimonial once the link is available.</p>
-                </div>
-                <button
-                  type="button"
-                  class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white transition hover:bg-white/10"
-                  :disabled="!testimonialVideoEmbedUrl"
-                  @click="testimonialVideoLoaded = true"
-                >
-                  Load video
-                </button>
-              </div>
-
               <div class="absolute inset-0" @contextmenu.prevent></div>
             </div>
             <div class="px-6 py-4 border-t border-white/[0.08] bg-black/80">
