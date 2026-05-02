@@ -697,13 +697,72 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-10">What clients say</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <blockquote v-for="q in testimonials" :key="q.quote" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-          <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">"{{ q.quote }}"</p>
-          <footer class="text-xs text-slate-500">{{ q.attribution }}</footer>
-        </blockquote>
+    <section id="testimonials" class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+      <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-10">
+        <div>
+          <div class="mb-8 max-w-2xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Client stories</p>
+            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Video testimonials, client photos, and quotes</h2>
+            <p class="text-slate-400 text-base leading-relaxed">Share real feedback through a protected YouTube testimonial embed and a gallery of client visuals. This section is built to support both video and photo proof.</p>
+          </div>
+
+          <div class="grid gap-4">
+            <blockquote v-for="q in testimonials" :key="q.quote" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
+              <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">"{{ q.quote }}"</p>
+              <footer class="text-xs text-slate-500">{{ q.attribution }}</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <div class="rounded-3xl overflow-hidden border border-white/[0.08] bg-black/70">
+            <div class="relative aspect-video bg-slate-950">
+              <iframe
+                v-if="testimonialVideoLoaded && testimonialVideoEmbedUrl"
+                :src="testimonialVideoEmbedUrl"
+                title="Client video testimonial"
+                class="absolute inset-0 h-full w-full"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+
+              <div
+                v-else
+                class="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center"
+              >
+                <div class="flex items-center justify-center w-16 h-16 rounded-full bg-brand-500/10 border border-brand-500 text-brand-300 text-2xl">▶</div>
+                <div>
+                  <p class="text-white font-semibold">Video testimonial</p>
+                  <p class="text-slate-400 text-sm max-w-sm">Click to load the embedded YouTube testimonial once the link is available.</p>
+                </div>
+                <button
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white transition hover:bg-white/10"
+                  :disabled="!testimonialVideoEmbedUrl"
+                  @click="testimonialVideoLoaded = true"
+                >
+                  Load video
+                </button>
+              </div>
+
+              <div class="absolute inset-0" @contextmenu.prevent></div>
+            </div>
+            <div class="px-6 py-4 border-t border-white/[0.08] bg-black/80">
+              <p class="text-xs uppercase tracking-[0.22em] text-slate-500 mb-2">Protected embed</p>
+              <p class="text-sm text-slate-400 leading-relaxed">A YouTube embed is used for delivery, and the wrapper disables casual right-click access. Full digital protection is limited by the platform.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div v-for="item in testimonialPhotos" :key="item.id" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] h-44 flex items-center justify-center text-center text-sm text-slate-400 p-4">
+              <div>
+                <p class="font-semibold text-white">{{ item.label }}</p>
+                <p class="text-slate-500 text-xs mt-2">Client photo or testimonial image</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -980,6 +1039,21 @@ const testimonials = [
     attribution: 'Role, company (optional)'
   }
 ]
+
+const testimonialVideoId = ref('')
+const testimonialVideoLoaded = ref(false)
+const testimonialVideoEmbedUrl = computed(() => {
+  if (!testimonialVideoId.value) return ''
+  return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1`
+})
+
+const testimonialPhotos = [
+  { id: 'photo-1', label: 'Testimonial photo 1' },
+  { id: 'photo-2', label: 'Testimonial photo 2' },
+  { id: 'photo-3', label: 'Testimonial photo 3' },
+  { id: 'photo-4', label: 'Testimonial photo 4' }
+]
+
 const activeProjectCategory = ref('featured-projects')
 
 const projectCategories = [
