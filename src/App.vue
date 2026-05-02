@@ -1018,7 +1018,6 @@ const testimonials = [
 ]
 
 const testimonialVideoId = ref('9avGINGorzU')
-const testimonialVideoLoaded = ref(true)
 const testimonialVideoEmbedUrl = computed(() => {
   if (!testimonialVideoId.value) return ''
   return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1&fs=0`
