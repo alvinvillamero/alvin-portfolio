@@ -342,18 +342,15 @@
 
     <!-- Skills -->
     <section id="skills" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] gap-10 lg:gap-16 items-start">
-        <div class="max-w-xl">
+      <div class="grid lg:grid-cols-[1.3fr_0.9fr] gap-10 lg:gap-16 items-start">
+        <div>
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">The systems I build and the tools I use to ship them</h2>
-          <p class="text-slate-400 text-base leading-relaxed mb-8">From no-code platforms to automation, creative tools, hosting, and AI—these are the tools I use every day, with proficiency aligned to real delivery.</p>
-          <div class="space-y-6">
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Tools I use every day, grouped by category</h2>
+          <p class="text-slate-400 text-base leading-relaxed mb-8">Organized by platform type so clients see exactly where my delivery strength lies—no visual clutter, just clear capability.</p>
+          <div class="grid gap-4">
             <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-base font-semibold text-white">Web & Platforms (No-Code)</h3>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">WordPress • GoHighLevel • ClickFunnels • Kajabi • Skool • Mailchimp</span>
-              </div>
-              <div class="grid gap-2 text-sm text-slate-300">
+              <h3 class="text-lg font-semibold text-white mb-4">Web & Platforms (No-Code)</h3>
+              <div class="space-y-2 text-sm text-slate-300">
                 <div class="flex items-center justify-between"><span>WordPress</span><span class="text-brand-300">⭐⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>GoHighLevel</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>ClickFunnels</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
@@ -363,11 +360,8 @@
               </div>
             </div>
             <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-base font-semibold text-white">Automation & CRM</h3>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Make.com • Airtable • Metricool • Meta Business Suite</span>
-              </div>
-              <div class="grid gap-2 text-sm text-slate-300">
+              <h3 class="text-lg font-semibold text-white mb-4">Automation & CRM</h3>
+              <div class="space-y-2 text-sm text-slate-300">
                 <div class="flex items-center justify-between"><span>Make.com</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Airtable</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Metricool</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
@@ -375,11 +369,8 @@
               </div>
             </div>
             <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-base font-semibold text-white">Design & Creative Tools</h3>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">Canva • Photoshop • Illustrator • CapCut • Premiere Pro</span>
-              </div>
-              <div class="grid gap-2 text-sm text-slate-300">
+              <h3 class="text-lg font-semibold text-white mb-4">Design & Creative Tools</h3>
+              <div class="space-y-2 text-sm text-slate-300">
                 <div class="flex items-center justify-between"><span>Canva</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Photoshop</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Illustrator</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
@@ -388,11 +379,8 @@
               </div>
             </div>
             <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-base font-semibold text-white">Hosting & Management</h3>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">GoDaddy • Namecheap • OVH • cPanel • BlueHost</span>
-              </div>
-              <div class="grid gap-2 text-sm text-slate-300">
+              <h3 class="text-lg font-semibold text-white mb-4">Hosting & Management</h3>
+              <div class="space-y-2 text-sm text-slate-300">
                 <div class="flex items-center justify-between"><span>GoDaddy</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Namecheap</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>OVH</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
@@ -401,11 +389,8 @@
               </div>
             </div>
             <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-base font-semibold text-white">AI & Productivity</h3>
-                <span class="text-xs uppercase tracking-[0.2em] text-slate-400">ChatGPT • Cursor AI • Google Workspace • Microsoft 365</span>
-              </div>
-              <div class="grid gap-2 text-sm text-slate-300">
+              <h3 class="text-lg font-semibold text-white mb-4">AI & Productivity</h3>
+              <div class="space-y-2 text-sm text-slate-300">
                 <div class="flex items-center justify-between"><span>ChatGPT</span><span class="text-brand-300">⭐⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Cursor AI</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
                 <div class="flex items-center justify-between"><span>Google Workspace</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
@@ -415,11 +400,9 @@
           </div>
         </div>
         <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
-          <div class="flex items-center justify-between mb-5">
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
-              <h3 class="text-2xl font-semibold text-white">Development stack</h3>
-            </div>
+          <div class="mb-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
+            <h3 class="text-2xl font-semibold text-white">Development stack</h3>
           </div>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">Core tools I use for product, web, and system builds.</p>
           <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
