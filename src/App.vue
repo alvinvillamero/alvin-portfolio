@@ -702,10 +702,8 @@
         <div>
           <div class="mb-8 max-w-2xl">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Client stories</p>
-            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Video testimonials, client photos, and quotes</h2>
-            <p class="text-slate-400 text-base leading-relaxed">Share real feedback through a protected YouTube testimonial embed and a gallery of client visuals. This section is built to support both video and photo proof.</p>
-          </div>
-
+              <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Video testimonial and social proof</h2>
+              <p class="text-slate-400 text-base leading-relaxed">An embedded YouTube testimonial from Ben Traub, plus client quote cards and supporting visuals.</p>
           <div class="grid gap-4">
             <blockquote v-for="q in testimonials" :key="q.quote" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
               <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">"{{ q.quote }}"</p>
@@ -1020,7 +1018,7 @@ const testimonials = [
 ]
 
 const testimonialVideoId = ref('9avGINGorzU')
-const testimonialVideoLoaded = ref(false)
+const testimonialVideoLoaded = ref(true)
 const testimonialVideoEmbedUrl = computed(() => {
   if (!testimonialVideoId.value) return ''
   return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1&fs=0`
