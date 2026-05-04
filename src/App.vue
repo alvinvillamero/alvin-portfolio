@@ -346,59 +346,49 @@
         <div>
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Tools I use every day, grouped by category</h2>
-          <p class="text-slate-400 text-base leading-relaxed mb-8">Organized by platform type so clients see exactly where my delivery strength lies—no visual clutter, just clear capability.</p>
-          <div class="grid gap-4">
-            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <h3 class="text-lg font-semibold text-white mb-4">Web & Platforms (No-Code)</h3>
-              <div class="space-y-2 text-sm text-slate-300">
-                <div class="flex items-center justify-between"><span>WordPress</span><span class="text-brand-300">⭐⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>GoHighLevel</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>ClickFunnels</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Kajabi</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Skool</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Mailchimp</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-              </div>
-            </div>
-            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <h3 class="text-lg font-semibold text-white mb-4">Automation & CRM</h3>
-              <div class="space-y-2 text-sm text-slate-300">
-                <div class="flex items-center justify-between"><span>Make.com</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Airtable</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Metricool</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Meta Business Suite</span><span class="text-brand-300">⭐⭐⭐</span></div>
-              </div>
-            </div>
-            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <h3 class="text-lg font-semibold text-white mb-4">Design & Creative Tools</h3>
-              <div class="space-y-2 text-sm text-slate-300">
-                <div class="flex items-center justify-between"><span>Canva</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Photoshop</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Illustrator</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>CapCut</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Premiere Pro</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-              </div>
-            </div>
-            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <h3 class="text-lg font-semibold text-white mb-4">Hosting & Management</h3>
-              <div class="space-y-2 text-sm text-slate-300">
-                <div class="flex items-center justify-between"><span>GoDaddy</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Namecheap</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>OVH</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>cPanel</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>BlueHost</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-              </div>
-            </div>
-            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6">
-              <h3 class="text-lg font-semibold text-white mb-4">AI & Productivity</h3>
-              <div class="space-y-2 text-sm text-slate-300">
-                <div class="flex items-center justify-between"><span>ChatGPT</span><span class="text-brand-300">⭐⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Cursor AI</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Google Workspace</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
-                <div class="flex items-center justify-between"><span>Microsoft 365</span><span class="text-brand-300">⭐⭐⭐⭐</span></div>
+          <p class="text-slate-400 text-base leading-relaxed mb-8">Organized by platform type so clients see exactly where my delivery strength lies—click categories to explore.</p>
+          
+          <div class="space-y-3">
+            <div v-for="category in skillCategories" :key="category.id" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] overflow-hidden">
+              <button 
+                @click="toggleSkillSection(category.id)"
+                class="w-full p-6 text-left hover:bg-white/[0.02] transition-colors duration-200 flex items-center justify-between group"
+              >
+                <h3 class="text-lg font-semibold text-white group-hover:text-brand-300 transition-colors">{{ category.title }}</h3>
+                <svg 
+                  class="w-5 h-5 text-slate-400 group-hover:text-brand-300 transition-all duration-200 transform" 
+                  :class="{ 'rotate-180': expandedSkills.includes(category.id) }"
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              
+              <div 
+                class="overflow-hidden transition-all duration-300 ease-in-out"
+                :class="{ 'max-h-0': !expandedSkills.includes(category.id), 'max-h-96': expandedSkills.includes(category.id) }"
+              >
+                <div class="px-6 pb-6 space-y-4">
+                  <div v-for="tool in category.tools" :key="tool.name" class="space-y-2">
+                    <div class="flex items-center justify-between text-sm">
+                      <span class="text-slate-300">{{ tool.name }}</span>
+                      <span class="text-brand-300 font-medium">{{ tool.percentage }}%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                      <div 
+                        class="h-full bg-gradient-to-r from-brand-500 to-fuchsia-500 rounded-full transition-all duration-1000 ease-out"
+                        :style="{ width: tool.percentage + '%' }"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
           <div class="mb-5">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
@@ -414,7 +404,8 @@
                 <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">React</span>
                 <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">JavaScript</span>
                 <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Tailwind CSS</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">HTML CSS</span>
+                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">HTML</span>
+                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">CSS</span>
               </div>
             </div>
             
@@ -1014,6 +1005,74 @@ const testimonialVideoEmbedUrl = computed(() => {
   if (!testimonialVideoId.value) return ''
   return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1&fs=0`
 })
+
+// Skills accordion state
+const expandedSkills = ref(['web-platforms']) // Default expanded section
+
+const toggleSkillSection = (sectionId) => {
+  if (expandedSkills.value.includes(sectionId)) {
+    expandedSkills.value = expandedSkills.value.filter(id => id !== sectionId)
+  } else {
+    expandedSkills.value.push(sectionId)
+  }
+}
+
+const skillCategories = [
+  {
+    id: 'web-platforms',
+    title: 'Web & Platforms (No-Code)',
+    tools: [
+      { name: 'WordPress', percentage: 100 },
+      { name: 'GoHighLevel', percentage: 80 },
+      { name: 'ClickFunnels', percentage: 80 },
+      { name: 'Kajabi', percentage: 80 },
+      { name: 'Skool', percentage: 80 },
+      { name: 'Mailchimp', percentage: 80 }
+    ]
+  },
+  {
+    id: 'automation-crm',
+    title: 'Automation & CRM',
+    tools: [
+      { name: 'Make.com', percentage: 80 },
+      { name: 'Airtable', percentage: 80 },
+      { name: 'Metricool', percentage: 80 },
+      { name: 'Meta Business Suite', percentage: 60 }
+    ]
+  },
+  {
+    id: 'design-creative',
+    title: 'Design & Creative Tools',
+    tools: [
+      { name: 'Canva', percentage: 80 },
+      { name: 'Photoshop', percentage: 80 },
+      { name: 'Illustrator', percentage: 80 },
+      { name: 'CapCut', percentage: 80 },
+      { name: 'Premiere Pro', percentage: 80 }
+    ]
+  },
+  {
+    id: 'hosting-management',
+    title: 'Hosting & Management',
+    tools: [
+      { name: 'GoDaddy', percentage: 80 },
+      { name: 'Namecheap', percentage: 80 },
+      { name: 'OVH', percentage: 80 },
+      { name: 'cPanel', percentage: 80 },
+      { name: 'BlueHost', percentage: 80 }
+    ]
+  },
+  {
+    id: 'ai-productivity',
+    title: 'AI & Productivity',
+    tools: [
+      { name: 'ChatGPT', percentage: 100 },
+      { name: 'Cursor AI', percentage: 80 },
+      { name: 'Google Workspace', percentage: 80 },
+      { name: 'Microsoft 365', percentage: 80 }
+    ]
+  }
+]
 
 const activeProjectCategory = ref('featured-projects')
 
