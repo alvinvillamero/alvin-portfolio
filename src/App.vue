@@ -1105,6 +1105,16 @@ const githubProjects = [
 
 const projects = [
   {
+    id: 'joseph-elisha-md',
+    title: 'Joseph Elisha MD Website',
+    description: 'Figma to Elementor WordPress website for a personal brand focused on podcasting, speaking, and book promotion.',
+    categories: ['featured-projects', 'wordpress-development'],
+    images: ['Joseph Elisha MD Website.png'],
+    tags: ['WordPress', 'Elementor', 'Responsive Design'],
+    url: 'https://josephelishamd.com/',
+    techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
+  },
+  {
     id: 'trading-signals-main',
     title: 'Trading Signals',
     description: 'Provides trading signals and automated bots for forex, crypto, and stocks markets.',
