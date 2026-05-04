@@ -389,43 +389,47 @@
           </div>
         </div>
         
-        <div class="lg:sticky lg:top-24 lg:self-start rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
-          <div class="mb-5">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
-            <h3 class="text-2xl font-semibold text-white">Development stack</h3>
-          </div>
-          <p class="text-slate-400 text-sm leading-relaxed mb-6">Core tools I use for product, web, and system builds.</p>
-          
-          <div class="space-y-4">
-            <div>
-              <p class="text-xs font-semibold text-slate-300 mb-2">Frontend</p>
-              <div class="grid grid-cols-2 gap-2">
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Vue</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">React</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">JavaScript</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Tailwind CSS</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">HTML</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">CSS</span>
+        <div class="w-full lg:w-[320px] lg:self-start">
+          <div class="sticky top-24 z-10 lg:self-start">
+            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
+              <div class="mb-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
+                <h3 class="text-2xl font-semibold text-white">Development stack</h3>
               </div>
-            </div>
-            
-            <div>
-              <p class="text-xs font-semibold text-slate-300 mb-2">Backend</p>
-              <div class="grid grid-cols-2 gap-2">
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Node.js</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Java</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">PHP</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">C#</span>
-              </div>
-            </div>
-            
-            <div>
-              <p class="text-xs font-semibold text-slate-300 mb-2">Database & APIs</p>
-              <div class="grid grid-cols-2 gap-2">
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">PostgreSQL</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">MySQL</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Firebase</span>
-                <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Supabase</span>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">Core tools I use for product, web, and system builds.</p>
+              
+              <div class="space-y-4">
+                <div>
+                  <p class="text-xs font-semibold text-slate-300 mb-2">Frontend</p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Vue</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">React</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">JavaScript</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Tailwind CSS</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">HTML</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">CSS</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <p class="text-xs font-semibold text-slate-300 mb-2">Backend</p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Node.js</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Java</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">PHP</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">C#</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <p class="text-xs font-semibold text-slate-300 mb-2">Database & APIs</p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">PostgreSQL</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">MySQL</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Firebase</span>
+                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Supabase</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
