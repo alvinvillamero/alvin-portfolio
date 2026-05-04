@@ -342,8 +342,8 @@
 
     <!-- Skills -->
     <section id="skills" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <div class="grid lg:grid-cols-[1.3fr_0.9fr] gap-10 lg:gap-16 items-start">
-        <div>
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
+        <div class="flex-1">
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Tools I use every day, grouped by category</h2>
           <p class="text-slate-400 text-base leading-relaxed mb-8">Organized by platform type so clients see exactly where my delivery strength lies—click categories to explore.</p>
@@ -389,7 +389,7 @@
           </div>
         </div>
         
-        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 sticky top-8 h-fit">
+        <div class="w-full lg:w-80 xl:w-96 rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 lg:sticky lg:top-8 lg:h-fit lg:self-start">
           <div class="mb-5">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
             <h3 class="text-2xl font-semibold text-white">Development stack</h3>
@@ -1025,7 +1025,7 @@ const skillCategories = [
       { name: 'WordPress', percentage: 100 },
       { name: 'GoHighLevel', percentage: 80 },
       { name: 'ClickFunnels', percentage: 80 },
-      { name: 'Kajabi', percentage: 80 },
+      { name: 'Kajabi', percentage: 90 },
       { name: 'Skool', percentage: 80 },
       { name: 'Mailchimp', percentage: 80 }
     ]
@@ -1044,7 +1044,7 @@ const skillCategories = [
     id: 'design-creative',
     title: 'Design & Creative Tools',
     tools: [
-      { name: 'Canva', percentage: 80 },
+      { name: 'Canva', percentage: 100 },
       { name: 'Photoshop', percentage: 80 },
       { name: 'Illustrator', percentage: 80 },
       { name: 'CapCut', percentage: 80 },
@@ -1055,11 +1055,11 @@ const skillCategories = [
     id: 'hosting-management',
     title: 'Hosting & Management',
     tools: [
-      { name: 'GoDaddy', percentage: 80 },
-      { name: 'Namecheap', percentage: 80 },
-      { name: 'OVH', percentage: 80 },
-      { name: 'cPanel', percentage: 80 },
-      { name: 'BlueHost', percentage: 80 }
+      { name: 'GoDaddy', percentage: 100 },
+      { name: 'Namecheap', percentage: 100 },
+      { name: 'OVH', percentage: 100 },
+      { name: 'cPanel', percentage: 100 },
+      { name: 'BlueHost', percentage: 100 }
     ]
   },
   {
@@ -1067,7 +1067,8 @@ const skillCategories = [
     title: 'AI & Productivity',
     tools: [
       { name: 'ChatGPT', percentage: 100 },
-      { name: 'Cursor AI', percentage: 80 },
+      { name: 'Claude AI', percentage: 100 },
+      { name: 'Cursor AI', percentage: 100 },
       { name: 'Google Workspace', percentage: 80 },
       { name: 'Microsoft 365', percentage: 80 }
     ]
