@@ -196,13 +196,12 @@
       <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
         <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">AI systems · automation · product implementation</p>
         <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
-          <span class="text-slate-100">AI-powered systems that reduce </span>
-          <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent">manual work</span>
-          <span class="text-slate-100"> and keep your business </span>
-          <span class="bg-gradient-to-r from-cyan-400 to-brand-400 bg-clip-text text-transparent">running smoothly</span>
+          <span class="text-slate-100">Web development and automation that</span>
+          <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent"> move your business forward</span>
+          <span class="text-slate-100"> with less friction.</span>
         </h1>
         <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
-          I help businesses turn messy workflows, repetitive tasks, and early-stage ideas into structured AI systems, automations, and tools that actually work in day-to-day operations.
+          I help businesses launch high-converting websites, funnels, and workflow systems that turn leads into clients, speed up delivery, and reduce manual work across marketing and operations.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
           <a
@@ -314,13 +313,13 @@
         <div class="space-y-5">
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80">About me</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
-            Systems-first builder for teams that need <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">real execution</span>
+            Web developer and growth partner for businesses that need <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">repeatable execution</span>
           </h2>
           <p class="text-slate-400 text-base leading-relaxed">
-            I&apos;m Alvin—based in Davao City, Philippines, working remotely with founders and operators worldwide. I focus on AI-powered systems, automations, chatbots, and product implementation so day-to-day work gets lighter, not louder.
+            I&apos;m Alvin, a web developer from Davao City who works with founders, coaches, and teams worldwide. I combine modern web builds, no-code platforms, automation, and AI tools to turn your digital ideas into systems that actually drive results.
           </p>
           <p class="text-slate-500 text-sm leading-relaxed">
-            Background in IT and digital delivery for international teams; I scope for security, maintainability, and how your people actually use the tools—not just a slick demo.
+            I deliver websites, funnels, dashboards, and automation stacks that are secure, easy to maintain, and built for real usage — not just polished demos. This means faster launches, smoother operations, and more predictable growth.
           </p>
           <div class="flex flex-wrap gap-3 pt-2">
             <a
