@@ -1191,6 +1191,16 @@ const projects = [
     tags: ['Holdings', 'Investment']
   },
   {
+    id: 'joseph-elisha-md',
+    title: 'Joseph Elisha MD Website',
+    description: 'Figma to Elementor WordPress website for a personal brand focused on podcasting, speaking, and book promotion.',
+    categories: ['wordpress-development'],
+    images: ['Joseph Elisha MD Website.png'],
+    tags: ['WordPress', 'Elementor', 'Responsive Design'],
+    url: 'https://josephelishamd.com/',
+    techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
+  },
+  {
     id: 'nieruchomosci',
     title: 'Nieruchomości w Kambodży',
     description: 'Polish-language platform dedicated to real estate investment opportunities in Cambodia.',
