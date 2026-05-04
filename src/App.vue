@@ -389,7 +389,7 @@
           </div>
         </div>
         
-        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
+        <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 sticky top-8 h-fit">
           <div class="mb-5">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
             <h3 class="text-2xl font-semibold text-white">Development stack</h3>
