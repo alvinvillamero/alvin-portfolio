@@ -341,98 +341,71 @@
 
     <!-- Skills -->
     <section id="skills" class="relative py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06] overflow-visible" data-aos="fade-up">
-      <div class="grid lg:grid-cols-[1fr_320px] gap-10 lg:gap-16">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Tools I use every day, grouped by category</h2>
-          <p class="text-slate-400 text-base leading-relaxed mb-8">Organized by platform type so clients see exactly where my delivery strength lies—click categories to explore.</p>
-          
-          <div class="space-y-3">
-            <div v-for="category in skillCategories" :key="category.id" class="rounded-3xl border border-white/[0.08] bg-white/[0.03] overflow-hidden">
-              <button 
-                @click="toggleSkillSection(category.id)"
-                class="w-full p-6 text-left hover:bg-white/[0.02] transition-colors duration-200 flex items-center justify-between group"
+      <div class="max-w-3xl mb-10 md:mb-12">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Platforms, tools, and technical stack</h2>
+        <p class="text-slate-400 text-base leading-relaxed">
+          A practical view of the tools I use to build websites, funnels, automations, content systems, and custom web products.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-5 md:gap-6">
+        <article
+          v-for="category in skillCategories"
+          :key="category.id"
+          class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7"
+          :class="{ 'lg:col-span-2': category.id === 'web-platforms' }"
+        >
+          <div class="flex flex-col gap-3 mb-5">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70">{{ category.kicker }}</p>
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold text-white leading-tight">{{ category.title }}</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">{{ category.description }}</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2.5">
+            <span
+              v-for="tool in category.tools"
+              :key="tool.name"
+              class="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm"
+              :class="tool.percentage === 100 ? 'border-brand-400/25 bg-brand-500/10 text-slate-100' : 'border-white/[0.08] bg-slate-950/70 text-slate-300'"
+            >
+              <span>{{ tool.name }}</span>
+              <span
+                class="text-[10px] font-semibold uppercase tracking-wide"
+                :class="tool.percentage === 100 ? 'text-brand-300' : 'text-slate-500'"
               >
-                <h3 class="text-lg font-semibold text-white group-hover:text-brand-300 transition-colors">{{ category.title }}</h3>
-                <svg 
-                  class="w-5 h-5 text-slate-400 group-hover:text-brand-300 transition-all duration-200 transform" 
-                  :class="{ 'rotate-180': expandedSkills.includes(category.id) }"
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              
-              <div 
-                class="overflow-hidden transition-all duration-300 ease-in-out"
-                :class="{ 'max-h-0': !expandedSkills.includes(category.id), 'max-h-96': expandedSkills.includes(category.id) }"
-              >
-                <div class="px-6 pb-6 space-y-4">
-                  <div v-for="tool in category.tools" :key="tool.name" class="space-y-2">
-                    <div class="flex items-center justify-between text-sm">
-                      <span class="text-slate-300">{{ tool.name }}</span>
-                      <span class="text-brand-300 font-medium">{{ tool.percentage }}%</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                      <div 
-                        class="h-full bg-gradient-to-r from-brand-500 to-fuchsia-500 rounded-full transition-all duration-1000 ease-out"
-                        :style="{ width: tool.percentage + '%' }"
-                      ></div>
-                    </div>
-                  </div>
+                {{ tool.percentage === 100 ? 'Primary' : 'Strong' }}
+              </span>
+            </span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 lg:col-span-3">
+          <div class="grid lg:grid-cols-[0.8fr_2fr] gap-6 lg:gap-10">
+            <div>
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">Tech stack</p>
+              <h3 class="text-lg md:text-xl font-semibold text-white leading-tight">Development stack</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">Core technologies I use for product, web app, and system builds.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5">
+              <div v-for="group in developmentStack" :key="group.title">
+                <p class="text-xs font-semibold text-slate-300 mb-3">{{ group.title }}</p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="tool in group.tools"
+                    :key="tool"
+                    class="rounded-lg bg-slate-950/80 border border-white/[0.08] px-3 py-2 text-xs text-slate-200"
+                  >
+                    {{ tool }}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="w-full lg:w-[320px] lg:self-start">
-          <div class="sticky top-24 z-10 lg:self-start">
-            <div class="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8">
-              <div class="mb-5">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-2">Tech stack</p>
-                <h3 class="text-2xl font-semibold text-white">Development stack</h3>
-              </div>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">Core tools I use for product, web, and system builds.</p>
-              
-              <div class="space-y-4">
-                <div>
-                  <p class="text-xs font-semibold text-slate-300 mb-2">Frontend</p>
-                  <div class="grid grid-cols-2 gap-2">
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Vue</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">React</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">JavaScript</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Tailwind CSS</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">HTML</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">CSS</span>
-                  </div>
-                </div>
-                
-                <div>
-                  <p class="text-xs font-semibold text-slate-300 mb-2">Backend</p>
-                  <div class="grid grid-cols-2 gap-2">
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Node.js</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Java</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">PHP</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">C#</span>
-                  </div>
-                </div>
-                
-                <div>
-                  <p class="text-xs font-semibold text-slate-300 mb-2">Database & APIs</p>
-                  <div class="grid grid-cols-2 gap-2">
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">PostgreSQL</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">MySQL</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Firebase</span>
-                    <span class="px-3 py-2 rounded-xl bg-slate-950 text-slate-200 text-xs">Supabase</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -1009,21 +982,12 @@ const testimonialVideoEmbedUrl = computed(() => {
   return `https://www.youtube.com/embed/${testimonialVideoId.value}?rel=0&modestbranding=1&controls=1&disablekb=1&fs=0`
 })
 
-// Skills accordion state
-const expandedSkills = ref(['web-platforms', 'automation-crm', 'design-creative', 'hosting-management', 'ai-productivity']) // All expanded by default
-
-const toggleSkillSection = (sectionId) => {
-  if (expandedSkills.value.includes(sectionId)) {
-    expandedSkills.value = expandedSkills.value.filter(id => id !== sectionId)
-  } else {
-    expandedSkills.value.push(sectionId)
-  }
-}
-
 const skillCategories = [
   {
     id: 'web-platforms',
+    kicker: 'Website builders',
     title: 'Web & Platforms (No-Code)',
+    description: 'CMS, funnels, ecommerce, and page builders for fast, maintainable client websites.',
     tools: [
       { name: 'WordPress', percentage: 100 },
       { name: 'Divi', percentage: 100 },
@@ -1041,7 +1005,9 @@ const skillCategories = [
   },
   {
     id: 'automation-crm',
+    kicker: 'Systems & workflows',
     title: 'Automation & CRM',
+    description: 'Workflow tools for lead handling, content operations, and client process automation.',
     tools: [
       { name: 'Make.com', percentage: 80 },
       { name: 'Airtable', percentage: 80 },
@@ -1051,7 +1017,9 @@ const skillCategories = [
   },
   {
     id: 'design-creative',
+    kicker: 'Creative production',
     title: 'Design & Creative Tools',
+    description: 'Design, video, and content tools for assets that support launches and campaigns.',
     tools: [
       { name: 'Canva', percentage: 100 },
       { name: 'Photoshop', percentage: 80 },
@@ -1062,7 +1030,9 @@ const skillCategories = [
   },
   {
     id: 'hosting-management',
+    kicker: 'Domains & hosting',
     title: 'Hosting & Management',
+    description: 'Hosting, domains, DNS, panels, and site management tools used in real deployments.',
     tools: [
       { name: 'GoDaddy', percentage: 100 },
       { name: 'Namecheap', percentage: 100 },
@@ -1073,7 +1043,9 @@ const skillCategories = [
   },
   {
     id: 'ai-productivity',
+    kicker: 'AI & operations',
     title: 'AI & Productivity',
+    description: 'AI and productivity platforms used for planning, drafting, building, and execution.',
     tools: [
       { name: 'ChatGPT', percentage: 100 },
       { name: 'Claude AI', percentage: 100 },
@@ -1081,6 +1053,21 @@ const skillCategories = [
       { name: 'Google Workspace', percentage: 80 },
       { name: 'Microsoft 365', percentage: 80 }
     ]
+  }
+]
+
+const developmentStack = [
+  {
+    title: 'Frontend',
+    tools: ['Vue', 'React', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS']
+  },
+  {
+    title: 'Backend',
+    tools: ['Node.js', 'Java', 'PHP', 'C#']
+  },
+  {
+    title: 'Database & APIs',
+    tools: ['PostgreSQL', 'MySQL', 'Firebase', 'Supabase']
   }
 ]
 
@@ -1111,6 +1098,16 @@ const githubProjects = [
 
 const projects = [
   {
+    id: 'ccdi-usa',
+    title: 'CCDI USA Website',
+    description: 'Full business website migration and rebuild from Showit to Elementor WordPress for a construction consulting firm.',
+    categories: ['featured-projects', 'wordpress-development'],
+    images: ['CCDI USA Website.png'],
+    tags: ['WordPress Development', 'Elementor', 'Website Migration', 'Responsive Design'],
+    url: 'https://ccdiusa.com/',
+    techStack: 'Role: WordPress Developer. Rebuilt pages, navigation, and optimized sections in Elementor for a responsive, scalable WordPress website.'
+  },
+  {
     id: 'joseph-elisha-md',
     title: 'Joseph Elisha MD Website',
     description: 'Figma to Elementor WordPress website for a personal brand focused on podcasting, speaking, and book promotion.',
@@ -1119,16 +1116,6 @@ const projects = [
     tags: ['WordPress', 'Elementor', 'Responsive Design'],
     url: 'https://josephelishamd.com/',
     techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
-  },
-  {
-    id: 'ccdi-usa',
-    title: 'CCDI USA Website',
-    description: 'Full business website migration and rebuild from Showit to Elementor WordPress for a construction consulting firm.',
-    categories: ['wordpress-development'],
-    images: ['CCDI USA Website.png'],
-    tags: ['WordPress Development', 'Elementor', 'Website Migration', 'Responsive Design'],
-    url: 'https://ccdiusa.com/',
-    techStack: 'Role: WordPress Developer. Rebuilt pages, navigation, and optimized sections in Elementor for a responsive, scalable WordPress website.'
   },
   {
     id: 'upc-vot-mintal',
@@ -1562,3 +1549,4 @@ p, h1, h2, h3, h4, h5, h6, span {
 }
 
 </style>
+
