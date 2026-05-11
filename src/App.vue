@@ -345,44 +345,68 @@
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Platforms, tools, and technical stack</h2>
         <p class="text-slate-400 text-base leading-relaxed">
-          A practical view of the tools I use to build websites, funnels, automations, content systems, and custom web products.
+          Select a category to see the platforms I work with and the level of proficiency behind each tool.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-5 md:gap-6">
-        <article
-          v-for="category in skillCategories"
-          :key="category.id"
-          class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7"
-          :class="{ 'lg:col-span-2': category.id === 'web-platforms' }"
-        >
-          <div class="flex flex-col gap-3 mb-5">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70">{{ category.kicker }}</p>
-            <div>
-              <h3 class="text-lg md:text-xl font-semibold text-white leading-tight">{{ category.title }}</h3>
-              <p class="mt-2 text-sm text-slate-400 leading-relaxed">{{ category.description }}</p>
+      <div class="grid lg:grid-cols-[330px_minmax(0,1fr)] gap-5 md:gap-6 items-start">
+        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-3">
+          <button
+            v-for="category in skillCategories"
+            :key="category.id"
+            type="button"
+            @click="activeSkillCategory = category.id"
+            class="w-full rounded-xl p-4 text-left transition-all duration-200"
+            :class="activeSkillCategory === category.id ? 'bg-brand-500/12 ring-1 ring-brand-400/25' : 'hover:bg-white/[0.04]'"
+          >
+            <span class="block text-[11px] font-semibold uppercase tracking-[0.18em]" :class="activeSkillCategory === category.id ? 'text-brand-300' : 'text-slate-500'">{{ category.kicker }}</span>
+            <span class="mt-1 flex items-center justify-between gap-3">
+              <span class="text-sm font-semibold" :class="activeSkillCategory === category.id ? 'text-white' : 'text-slate-300'">{{ category.title }}</span>
+              <span class="rounded-full bg-slate-950/80 px-2 py-1 text-[11px] font-semibold text-slate-400">{{ category.tools.length }}</span>
+            </span>
+          </button>
+        </div>
+
+        <article class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5 mb-7">
+            <div class="max-w-xl">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">{{ activeSkillCategoryData.kicker }}</p>
+              <h3 class="text-xl md:text-2xl font-semibold text-white leading-tight">{{ activeSkillCategoryData.title }}</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">{{ activeSkillCategoryData.description }}</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3 shrink-0">
+              <div class="rounded-xl border border-white/[0.08] bg-slate-950/70 px-4 py-3">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-slate-500">Tools</p>
+                <p class="mt-1 text-2xl font-semibold text-white">{{ activeSkillCategoryData.tools.length }}</p>
+              </div>
+              <div class="rounded-xl border border-white/[0.08] bg-slate-950/70 px-4 py-3">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-slate-500">Average</p>
+                <p class="mt-1 text-2xl font-semibold text-white">{{ activeSkillAverage }}%</p>
+              </div>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2.5">
-            <span
-              v-for="tool in category.tools"
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div
+              v-for="tool in activeSkillCategoryData.tools"
               :key="tool.name"
-              class="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm"
-              :class="tool.percentage === 100 ? 'border-brand-400/25 bg-brand-500/10 text-slate-100' : 'border-white/[0.08] bg-slate-950/70 text-slate-300'"
+              class="rounded-xl border border-white/[0.08] bg-slate-950/60 p-4"
             >
-              <span>{{ tool.name }}</span>
-              <span
-                class="text-[10px] font-semibold uppercase tracking-wide"
-                :class="tool.percentage === 100 ? 'text-brand-300' : 'text-slate-500'"
-              >
-                {{ tool.percentage === 100 ? 'Primary' : 'Strong' }}
-              </span>
-            </span>
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <span class="text-sm font-medium text-slate-200">{{ tool.name }}</span>
+                <span class="text-sm font-semibold text-brand-300">{{ tool.percentage }}%</span>
+              </div>
+              <div class="h-2.5 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-gradient-to-r from-brand-500 to-fuchsia-500 transition-all duration-700"
+                  :style="{ width: tool.percentage + '%' }"
+                ></div>
+              </div>
+            </div>
           </div>
         </article>
 
-        <article class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 lg:col-span-3">
+        <article class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 lg:col-span-2">
           <div class="grid lg:grid-cols-[0.8fr_2fr] gap-6 lg:gap-10">
             <div>
               <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">Tech stack</p>
@@ -1055,6 +1079,19 @@ const skillCategories = [
     ]
   }
 ]
+
+const activeSkillCategory = ref('web-platforms')
+
+const activeSkillCategoryData = computed(() => {
+  return skillCategories.find((category) => category.id === activeSkillCategory.value) || skillCategories[0]
+})
+
+const activeSkillAverage = computed(() => {
+  const tools = activeSkillCategoryData.value.tools
+  if (!tools.length) return 0
+  const total = tools.reduce((sum, tool) => sum + tool.percentage, 0)
+  return Math.round(total / tools.length)
+})
 
 const developmentStack = [
   {
