@@ -1026,6 +1026,12 @@ const skillCategories = [
     title: 'Web & Platforms (No-Code)',
     tools: [
       { name: 'WordPress', percentage: 100 },
+      { name: 'Divi', percentage: 100 },
+      { name: 'Elementor', percentage: 100 },
+      { name: 'Thrive', percentage: 100 },
+      { name: 'Shopify', percentage: 80 },
+      { name: 'Wix', percentage: 80 },
+      { name: 'Squarespace', percentage: 80 },
       { name: 'GoHighLevel', percentage: 80 },
       { name: 'ClickFunnels', percentage: 80 },
       { name: 'Kajabi', percentage: 90 },
@@ -1113,28 +1119,6 @@ const projects = [
     tags: ['WordPress', 'Elementor', 'Responsive Design'],
     url: 'https://josephelishamd.com/',
     techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
-  },
-  {
-    id: 'cvgenie-ai',
-    title: 'CVGenie AI',
-    description: 'AI-assisted CV and resume builder focused on faster drafting, edits, and export-ready outputs.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'AI'],
-    url: 'https://github.com/alvinvillamero/CVGenie-AI',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2Falvinvillamero%2FCVGenie-AI?w=1200',
-    techStack: 'AI-assisted resume generation workflows, modern web app frontend, and GitHub-based delivery.'
-  },
-  {
-    id: 'deezine',
-    title: 'Deezine',
-    description: 'AI web concept helper that generates layout and style directions from a prompt.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'AI'],
-    url: 'https://deezine.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fdeezine.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
   },
   {
     id: 'upc-vot-mintal',
