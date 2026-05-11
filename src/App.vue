@@ -1,7 +1,7 @@
 <template>
   <div class="bg-surface-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500/30 selection:text-white overflow-x-hidden w-full">
     <!-- Header -->
-    <header class="sticky top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/85 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/70">
+    <header class="fixed inset-x-0 top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/85 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/70">
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
         <a href="#" class="group">
           <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white transform transition-transform duration-300 group-hover:scale-[1.02]">
@@ -185,6 +185,8 @@
       </div>
     </header>
 
+    <div class="h-[82px] md:h-[90px]" aria-hidden="true"></div>
+
     <!-- Hero -->
     <section class="relative isolate overflow-hidden">
       <div class="pointer-events-none absolute inset-0 -z-10">
@@ -340,7 +342,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="relative py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06] overflow-visible" data-aos="fade-up">
+    <section id="skills" class="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06] overflow-visible" data-aos="fade-up">
       <div class="max-w-3xl mb-10 md:mb-12">
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Platforms, tools, and technical stack</h2>
@@ -433,14 +435,30 @@
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
+    <!-- Portfolio / sample works -->
+    <section id="portfolio" class="pt-12 pb-24 md:pt-16 md:pb-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
-        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 tracking-tight">Sample Works</h2>
+        <div class="flex flex-col gap-6 mb-10 md:mb-12">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">Sample Works</h2>
+            <a
+              href="https://drive.google.com/drive/folders/1WaEBY9yw_RxpQrTHA3QmRkfUxh44b0Wg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center justify-center gap-3 px-5 py-2.5 bg-white/5 border border-white/10 rounded-xl text-sm font-medium text-white hover:bg-white/10 hover:border-fuchsia-500/25 transition-all duration-300 sm:self-auto"
+            >
+              <span>View More Projects</span>
+              <svg
+                class="w-4 h-4 text-fuchsia-400 group-hover:translate-x-1 transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
 
-        <!-- Project Categories -->
-        <div class="flex flex-col items-center gap-6 mb-12">
-          <div class="flex flex-wrap justify-center gap-3">
+          <div class="flex flex-wrap gap-3">
             <button 
               v-for="category in projectCategories" 
               :key="category.id"
@@ -455,22 +473,6 @@
               {{ category.label }}
             </button>
           </div>
-          
-          <a 
-            href="https://drive.google.com/drive/folders/1WaEBY9yw_RxpQrTHA3QmRkfUxh44b0Wg" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="group flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-base font-medium text-white hover:bg-white/10 hover:border-fuchsia-500/25 transition-all duration-300"
-          >
-            <span>View More Projects</span>
-            <svg 
-              class="w-5 h-5 text-fuchsia-400 group-hover:translate-x-1 transition-transform" 
-              fill="currentColor" 
-              viewBox="0 0 20 20"
-            >
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-          </a>
         </div>
 
         <!-- Projects Grid -->
