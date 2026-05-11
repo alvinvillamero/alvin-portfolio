@@ -350,7 +350,7 @@
       </div>
 
       <div class="grid lg:grid-cols-[330px_minmax(0,1fr)] gap-5 md:gap-6 items-start">
-        <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-3">
+        <div class="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-3">
           <button
             v-for="category in skillCategories"
             :key="category.id"
@@ -367,14 +367,14 @@
           </button>
         </div>
 
-        <article class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5 mb-7">
-            <div class="max-w-xl">
+        <article class="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7">
+          <div class="mb-7">
+            <div class="max-w-2xl">
               <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">{{ activeSkillCategoryData.kicker }}</p>
               <h3 class="text-xl md:text-2xl font-semibold text-white leading-tight">{{ activeSkillCategoryData.title }}</h3>
               <p class="mt-2 text-sm text-slate-400 leading-relaxed">{{ activeSkillCategoryData.description }}</p>
             </div>
-            <div class="grid grid-cols-2 gap-3 shrink-0">
+            <div class="mt-5 grid grid-cols-2 gap-3 max-w-sm">
               <div class="rounded-xl border border-white/[0.08] bg-slate-950/70 px-4 py-3">
                 <p class="text-[11px] uppercase tracking-[0.16em] text-slate-500">Tools</p>
                 <p class="mt-1 text-2xl font-semibold text-white">{{ activeSkillCategoryData.tools.length }}</p>
@@ -406,7 +406,7 @@
           </div>
         </article>
 
-        <article class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 lg:col-span-2">
+        <article class="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 lg:col-span-2">
           <div class="grid lg:grid-cols-[0.8fr_2fr] gap-6 lg:gap-10">
             <div>
               <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">Tech stack</p>
