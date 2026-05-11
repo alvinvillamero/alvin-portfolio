@@ -1115,201 +1115,15 @@ const projects = [
     techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
   },
   {
-    id: 'trading-signals-main',
-    title: 'Trading Signals',
-    description: 'Provides trading signals and automated bots for forex, crypto, and stocks markets.',
-    categories: ['wordpress-development'],
-    images: ['tradingsignals.jpg'],
-    tags: ['Forex', 'Crypto', 'Stocks'],
-    problem: 'Traders needed one reliable place for signals and market coverage without constant manual follow-up.',
-    solution: 'Web platform with structured content, signal delivery flows, and account areas aligned to how users trade.',
-    outcome: 'Clearer path from signup to active use of trading content and tools.'
-  },
-  {
-    id: 'trading-signals-funnel',
-    title: 'Trading Signals - Sales Funnel',
-    description: 'High-converting sales funnel for the Trading Signals platform.',
-    categories: ['wordpress-development'],
-    images: ['tradingsignals-funnel.jpg'],
-    tags: ['Sales Funnel', 'Marketing']
-  },
-  {
-    id: 'trading-signals-old',
-    title: 'Trading Signals - Previous Version',
-    description: 'Previous version of the Trading Signals platform.',
-    categories: ['wordpress-development'],
-    images: ['tradingsignals-old.jpg'],
-    tags: ['Legacy', 'Trading']
-  },
-  {
-    id: 'volume-day-trader-main',
-    title: 'Volume Day Trader',
-    description: 'Offers Wyckoff method–based indicators and a community of active day traders.',
-    categories: ['wordpress-development'],
-    images: ['volumedaytrader.jpg'],
-    tags: ['Wyckoff Method', 'Day Trading']
-  },
-  {
-    id: 'volume-day-trader-funnel',
-    title: 'Volume Day Trader - Sales Funnel',
-    description: 'Sales funnel for the Volume Day Trader platform.',
-    categories: ['wordpress-development'],
-    images: ['volumedaytrader-funnel.jpg'],
-    tags: ['Sales Funnel', 'Marketing']
-  },
-  {
-    id: 'kopii-ai',
-    title: 'Kopii AI',
-    description: 'AI-driven trading platform born in Asia, blending hedge fund expertise with deep learning.',
-    categories: ['wordpress-development'],
-    images: ['kopii ai.jpg'],
-    tags: ['AI Trading', 'Deep Learning'],
-    problem: 'Position an AI-assisted trading product with credibility and a clear product story in a crowded market.',
-    solution: 'Product-facing site and flows that explain the AI value proposition and drive qualified interest.',
-    outcome: 'Tighter narrative from first visit to sign-up for a complex fintech offer.'
-  },
-  {
-    id: 'global-grid',
-    title: 'Global Grid Solutions',
-    description: 'Delivers digital outsourcing services specializing in BPO and virtual assistance.',
-    categories: ['wordpress-development'],
-    images: ['globalgridsolutions.jpg'],
-    tags: ['BPO', 'Virtual Assistance']
-  },
-  {
-    id: 'asia-offshore',
-    title: 'Asia Offshore Banking',
-    description: 'Assists with setting up offshore and private bank accounts across Asia.',
-    categories: ['wordpress-development'],
-    images: ['asiaoffshorebanking.jpg'],
-    tags: ['Offshore Banking', 'Financial Services']
-  },
-  {
-    id: 'adv-rangers',
-    title: 'ADV Rangers',
-      description: 'Organizes guided dirt bike tour packages across Cambodia\'s trails and countryside.',
-    categories: ['wordpress-development'],
-    images: ['advrangers.jpg'],
-    tags: ['Adventure Tours', 'Dirt Bikes']
-  },
-  {
-    id: 'jv-holdings',
-    title: 'JV Holdings Corp',
-    description: 'A visionary holding company driving growth through strategic acquisitions.',
-    categories: ['wordpress-development'],
-    images: ['jvholdingscorp.jpg'],
-    tags: ['Holdings', 'Investment']
-  },
-  {
-    id: 'joseph-elisha-md',
-    title: 'Joseph Elisha MD Website',
-    description: 'Figma to Elementor WordPress website for a personal brand focused on podcasting, speaking, and book promotion.',
-    categories: ['wordpress-development'],
-    images: ['Joseph Elisha MD Website.png'],
-    tags: ['WordPress', 'Elementor', 'Responsive Design'],
-    url: 'https://josephelishamd.com/',
-    techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
-  },
-  {
-    id: 'nieruchomosci',
-    title: 'Nieruchomości w Kambodży',
-    description: 'Polish-language platform dedicated to real estate investment opportunities in Cambodia.',
-    categories: ['wordpress-development'],
-    images: ['nieruchomosciwkambodzy.jpg'],
-    tags: ['Real Estate', 'Investment']
-  },
-  {
-    id: 'tomasz-rozmus',
-    title: 'Tomasz Rozmus',
-    description: 'Expert in stock and crypto markets; advisor on Asian opportunities.',
-    categories: ['wordpress-development'],
-    images: ['tomaszrozmus.jpg'],
-    tags: ['Trading', 'Advisory']
-  },
-  {
-    id: 'trading-financial',
-    title: 'Trading Financial Markets',
-    description: 'Education hub focused on trading strategies for forex, crypto, and global equities.',
-    categories: ['wordpress-development'],
-    images: ['tradingfinancialmarkets.jpg'],
-    tags: ['Education', 'Trading']
-  },
-  {
-    id: 'teeveefy',
-    title: 'Teeveefy',
-    description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
+    id: 'cvgenie-ai',
+    title: 'CVGenie AI',
+    description: 'AI-assisted CV and resume builder focused on faster drafting, edits, and export-ready outputs.',
     categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Android TV'],
-    url: 'https://teeveefy-app.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fteeveefy-app.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
-  },
-  {
-    id: 'castbridge',
-    title: 'CastBridge',
-    description: 'Android phone to Android TV casting app site with direct playback and mirroring fallback.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Android'],
-    url: 'https://screencast-tau.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fscreencast-tau.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, responsive layouts, and Vercel deployment.'
-  },
-  {
-    id: 'invoice-tracker',
-    title: 'Invoice Tracker',
-    description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Freelance'],
-    url: 'https://tracker-invoice-generator.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
-    techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
-  },
-  {
-    id: 'clarimed',
-    title: 'ClariMed',
-    description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Healthcare'],
-    url: 'https://clari-med-kohl.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclari-med-kohl.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, reusable section components, and Vercel deployment.'
-  },
-  {
-    id: 'pawly',
-    title: 'Pawly',
-    description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Pet Care'],
-    url: 'https://pawly-gold.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpawly-gold.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
-  },
-  {
-    id: 'asia-realty',
-    title: 'Asia Realty',
-    description: 'Property listing concept for discovering high-return real estate opportunities in Asia.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Real Estate'],
-    url: 'https://realty-property-listing.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Frealty-property-listing.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, listing-focused page architecture, and Vercel deployment.'
-  },
-  {
-    id: 'upc-vot-mintal',
-    title: 'UPC VOT Mintal',
-    description: 'Church membership QR code system landing page and login entrypoint.',
-    categories: ['featured-projects', 'web-development'],
-    images: [],
-    tags: ['Featured Project', 'Web Development', 'Church'],
-    url: 'https://www.upcvotmintal.com/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.upcvotmintal.com%2F?w=1200',
-    techStack: 'Frontend web UI, membership-system landing architecture, and production hosting.'
+    tags: ['Featured Project', 'Web Development', 'AI'],
+    url: 'https://github.com/alvinvillamero/CVGenie-AI',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2Falvinvillamero%2FCVGenie-AI?w=1200',
+    techStack: 'AI-assisted resume generation workflows, modern web app frontend, and GitHub-based delivery.'
   },
   {
     id: 'deezine',
@@ -1323,15 +1137,191 @@ const projects = [
     techStack: 'Frontend web UI, utility-first CSS styling, and Vercel deployment.'
   },
   {
-    id: 'cvgenie-ai',
-    title: 'CVGenie AI',
-    description: 'AI-assisted CV and resume builder focused on faster drafting, edits, and export-ready outputs.',
+    id: 'upc-vot-mintal',
+    title: 'UPC VOT Mintal',
+    description: 'Church membership QR code system landing page and login entrypoint.',
     categories: ['featured-projects', 'web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'AI'],
-    url: 'https://github.com/alvinvillamero/CVGenie-AI',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgithub.com%2Falvinvillamero%2FCVGenie-AI?w=1200',
-    techStack: 'AI-assisted resume generation workflows, modern web app frontend, and GitHub-based delivery.'
+    tags: ['Featured Project', 'Web Development', 'Church'],
+    url: 'https://www.upcvotmintal.com/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.upcvotmintal.com%2F?w=1200',
+    techStack: 'Frontend web UI, membership-system landing architecture, and production hosting.'
+  },
+  {
+    id: 'asia-realty',
+    title: 'Asia Realty',
+    description: 'Property listing concept for discovering high-return real estate opportunities in Asia.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Real Estate'],
+    url: 'https://realty-property-listing.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Frealty-property-listing.vercel.app%2F?w=1200',
+    techStack: 'Frontend web UI, listing-focused page architecture, and Vercel deployment.'
+  },
+  {
+    id: 'pawly',
+    title: 'Pawly',
+    description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Pet Care'],
+    url: 'https://pawly-gold.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpawly-gold.vercel.app%2F?w=1200',
+    techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
+  },
+  {
+    id: 'clarimed',
+    title: 'ClariMed',
+    description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Healthcare'],
+    url: 'https://clari-med-kohl.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclari-med-kohl.vercel.app%2F?w=1200',
+    techStack: 'Frontend web UI, reusable section components, and Vercel deployment.'
+  },
+  {
+    id: 'invoice-tracker',
+    title: 'Invoice Tracker',
+    description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Freelance'],
+    url: 'https://tracker-invoice-generator.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
+    techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
+  },
+  {
+    id: 'castbridge',
+    title: 'CastBridge',
+    description: 'Android phone to Android TV casting app site with direct playback and mirroring fallback.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Android'],
+    url: 'https://screencast-tau.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fscreencast-tau.vercel.app%2F?w=1200',
+    techStack: 'Frontend web UI, responsive layouts, and Vercel deployment.'
+  },
+  {
+    id: 'teeveefy',
+    title: 'Teeveefy',
+    description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
+    categories: ['featured-projects', 'web-development'],
+    images: [],
+    tags: ['Featured Project', 'Web Development', 'Android TV'],
+    url: 'https://teeveefy-app.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fteeveefy-app.vercel.app%2F?w=1200',
+    techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
+  },
+  {
+    id: 'trading-financial',
+    title: 'Trading Financial Markets',
+    description: 'Education hub focused on trading strategies for forex, crypto, and global equities.',
+    categories: ['wordpress-development'],
+    images: ['tradingfinancialmarkets.jpg'],
+    tags: ['Education', 'Trading']
+  },
+  {
+    id: 'tomasz-rozmus',
+    title: 'Tomasz Rozmus',
+    description: 'Expert in stock and crypto markets; advisor on Asian opportunities.',
+    categories: ['wordpress-development'],
+    images: ['tomaszrozmus.jpg'],
+    tags: ['Trading', 'Advisory']
+  },
+  {
+    id: 'nieruchomosci',
+    title: 'Nieruchomości w Kambodży',
+    description: 'Polish-language platform dedicated to real estate investment opportunities in Cambodia.',
+    categories: ['wordpress-development'],
+    images: ['nieruchomosciwkambodzy.jpg'],
+    tags: ['Real Estate', 'Investment']
+  },
+  {
+    id: 'jv-holdings',
+    title: 'JV Holdings Corp',
+    description: 'A visionary holding company driving growth through strategic acquisitions.',
+    categories: ['wordpress-development'],
+    images: ['jvholdingscorp.jpg'],
+    tags: ['Holdings', 'Investment']
+  },
+  {
+    id: 'adv-rangers',
+    title: 'ADV Rangers',
+    description: 'Organizes guided dirt bike tour packages across Cambodia\'s trails and countryside.',
+    categories: ['wordpress-development'],
+    images: ['advrangers.jpg'],
+    tags: ['Adventure Tours', 'Dirt Bikes']
+  },
+  {
+    id: 'asia-offshore',
+    title: 'Asia Offshore Banking',
+    description: 'Assists with setting up offshore and private bank accounts across Asia.',
+    categories: ['wordpress-development'],
+    images: ['asiaoffshorebanking.jpg'],
+    tags: ['Offshore Banking', 'Financial Services']
+  },
+  {
+    id: 'global-grid',
+    title: 'Global Grid Solutions',
+    description: 'Delivers digital outsourcing services specializing in BPO and virtual assistance.',
+    categories: ['wordpress-development'],
+    images: ['globalgridsolutions.jpg'],
+    tags: ['BPO', 'Virtual Assistance']
+  },
+  {
+    id: 'kopii-ai',
+    title: 'Kopii AI',
+    description: 'AI-driven trading platform born in Asia, blending hedge fund expertise with deep learning.',
+    categories: ['wordpress-development'],
+    images: ['kopii ai.jpg'],
+    tags: ['AI Trading', 'Deep Learning'],
+    problem: 'Position an AI-assisted trading product with credibility and a clear product story in a crowded market.',
+    solution: 'Product-facing site and flows that explain the AI value proposition and drive qualified interest.',
+    outcome: 'Tighter narrative from first visit to sign-up for a complex fintech offer.'
+  },
+  {
+    id: 'volume-day-trader-funnel',
+    title: 'Volume Day Trader - Sales Funnel',
+    description: 'Sales funnel for the Volume Day Trader platform.',
+    categories: ['wordpress-development'],
+    images: ['volumedaytrader-funnel.jpg'],
+    tags: ['Sales Funnel', 'Marketing']
+  },
+  {
+    id: 'volume-day-trader-main',
+    title: 'Volume Day Trader',
+    description: 'Offers Wyckoff method–based indicators and a community of active day traders.',
+    categories: ['wordpress-development'],
+    images: ['volumedaytrader.jpg'],
+    tags: ['Wyckoff Method', 'Day Trading']
+  },
+  {
+    id: 'trading-signals-old',
+    title: 'Trading Signals - Previous Version',
+    description: 'Previous version of the Trading Signals platform.',
+    categories: ['wordpress-development'],
+    images: ['tradingsignals-old.jpg'],
+    tags: ['Legacy', 'Trading']
+  },
+  {
+    id: 'trading-signals-funnel',
+    title: 'Trading Signals - Sales Funnel',
+    description: 'High-converting sales funnel for the Trading Signals platform.',
+    categories: ['wordpress-development'],
+    images: ['tradingsignals-funnel.jpg'],
+    tags: ['Sales Funnel', 'Marketing']
+  },
+  {
+    id: 'trading-signals-main',
+    title: 'Trading Signals',
+    description: 'Provides trading signals and automated bots for forex, crypto, and stocks markets.',
+    categories: ['wordpress-development'],
+    images: ['tradingsignals.jpg'],
+    tags: ['Forex', 'Crypto', 'Stocks'],
+    problem: 'Traders needed one reliable place for signals and market coverage without constant manual follow-up.',
+    solution: 'Web platform with structured content, signal delivery flows, and account areas aligned to how users trade.',
+    outcome: 'Clearer path from signup to active use of trading content and tools.'
   }
 ]
 
