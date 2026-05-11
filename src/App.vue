@@ -1,7 +1,7 @@
 <template>
   <div class="bg-surface-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500/30 selection:text-white overflow-x-hidden w-full">
     <!-- Header -->
-    <header class="sticky top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/75 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/60" data-aos="fade-down">
+    <header class="sticky top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/85 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/70">
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
         <a href="#" class="group">
           <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white transform transition-transform duration-300 group-hover:scale-[1.02]">
@@ -10,7 +10,7 @@
         </a>
       
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-10 lg:gap-12 rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-2 shadow-lg shadow-black/10 backdrop-blur-xl">
+        <nav class="hidden md:flex items-center gap-14">
           <div class="flex items-center gap-8 lg:gap-10 text-sm font-medium tracking-wide">
             <a 
               href="#about" 
@@ -436,78 +436,7 @@
     <!-- Services -->
     <section id="services" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
       <div class="relative">
-        <div class="max-w-3xl mb-12 md:mb-14">
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">What I Help Businesses Build</h2>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-5 md:gap-6">
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg md:text-xl font-semibold text-white mb-3">AI-Powered Systems</h3>
-            <p class="text-sm text-slate-400 leading-relaxed flex-grow">Custom workflows, internal tools, dashboards, and automation systems designed around how your business actually operates.</p>
-          </div>
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg md:text-xl font-semibold text-white mb-3">AI Chatbots</h3>
-            <p class="text-sm text-slate-400 leading-relaxed flex-grow">Smart conversational systems for lead capture, support, inquiries, and internal assistance — connected to your business logic.</p>
-          </div>
-          <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-8 flex flex-col">
-            <h3 class="text-lg md:text-xl font-semibold text-white mb-3">AI Concepts → Product</h3>
-            <p class="text-sm text-slate-400 leading-relaxed flex-grow">From raw idea to structured product, interface, and working MVP — built with an AI-first approach.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Problems / conversion -->
-    <section id="problems" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <div class="max-w-3xl mb-10 md:mb-12">
-        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">Where Most Businesses Get Stuck</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-5 md:gap-6">
-        <article
-          v-for="item in businessStuck"
-          :key="item.title"
-          class="rounded-2xl border border-white/[0.08] bg-black/20 p-6 md:p-7 flex flex-col gap-4"
-        >
-          <h3 class="text-base font-semibold text-white leading-snug">{{ item.title }}</h3>
-          <p class="text-sm text-slate-500 leading-relaxed">{{ item.pain }}</p>
-          <p class="text-sm text-slate-300 leading-relaxed pt-2 border-t border-white/[0.06]">
-            <span class="text-brand-400/90 mr-1.5">→</span>{{ item.fix }}
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Portfolio / case studies -->
-    <section id="portfolio" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
-      <div class="relative">
-        <div class="max-w-3xl mb-12 md:mb-14">
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">Selected Work</h2>
-          <p class="text-slate-400 text-base md:text-lg leading-relaxed">
-            Case-style snapshots with what was needed, what shipped, and the outcome—plus repos and live demos. Replace placeholders with your finalized client stories.
-          </p>
-        </div>
-
-        <!-- Example case format (replace with a real project when ready) -->
-        <div class="mb-14 md:mb-16 rounded-2xl border border-dashed border-brand-500/25 bg-brand-950/10 p-6 md:p-8">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-4">Sample case structure</p>
-          <h3 class="text-lg md:text-xl font-semibold text-white mb-5">AI Lead Handling System for Service Business</h3>
-          <dl class="space-y-3 text-sm">
-            <div>
-              <dt class="text-slate-500 font-medium mb-0.5">What was needed</dt>
-              <dd class="text-slate-300">Faster response and structured inquiry handling</dd>
-            </div>
-            <div>
-              <dt class="text-slate-500 font-medium mb-0.5">What I built</dt>
-              <dd class="text-slate-300">Chatbot + intake flow + admin routing system</dd>
-            </div>
-            <div>
-              <dt class="text-slate-500 font-medium mb-0.5">Outcome</dt>
-              <dd class="text-slate-300">Clearer lead flow and reduced manual handling</dd>
-            </div>
-          </dl>
-        </div>
-
-        <h3 class="text-lg md:text-xl font-semibold text-slate-200 text-left mb-6">Client &amp; product builds</h3>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 tracking-tight">Sample Works</h2>
 
         <!-- Project Categories -->
         <div class="flex flex-col items-center gap-6 mb-12">
