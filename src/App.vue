@@ -1,7 +1,7 @@
 <template>
   <div class="bg-surface-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500/30 selection:text-white overflow-x-hidden w-full">
     <!-- Header -->
-    <header class="sticky top-0 z-50 w-full bg-surface-950/90 border-b border-white/[0.07] backdrop-blur-md" data-aos="fade-down">
+    <header class="sticky top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/75 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/60" data-aos="fade-down">
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
         <a href="#" class="group">
           <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white transform transition-transform duration-300 group-hover:scale-[1.02]">
@@ -10,7 +10,7 @@
         </a>
       
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-14">
+        <nav class="hidden md:flex items-center gap-10 lg:gap-12 rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-2 shadow-lg shadow-black/10 backdrop-blur-xl">
           <div class="flex items-center gap-8 lg:gap-10 text-sm font-medium tracking-wide">
             <a 
               href="#about" 
@@ -350,7 +350,7 @@
       </div>
 
       <div class="grid lg:grid-cols-[330px_minmax(0,1fr)] gap-5 md:gap-6 items-start">
-        <div class="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-3">
+        <div class="min-w-0 rounded-2xl border border-white/[0.10] bg-white/[0.055] p-3 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] backdrop-blur-xl">
           <button
             v-for="category in skillCategories"
             :key="category.id"
@@ -367,30 +367,30 @@
           </button>
         </div>
 
-        <article class="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7">
-          <div class="mb-7">
+        <article class="min-w-0 rounded-2xl border border-white/[0.10] bg-white/[0.055] p-6 md:p-8 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] backdrop-blur-xl">
+          <div class="mb-8">
             <div class="max-w-2xl">
               <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">{{ activeSkillCategoryData.kicker }}</p>
               <h3 class="text-xl md:text-2xl font-semibold text-white leading-tight">{{ activeSkillCategoryData.title }}</h3>
               <p class="mt-2 text-sm text-slate-400 leading-relaxed">{{ activeSkillCategoryData.description }}</p>
             </div>
-            <div class="mt-5 grid grid-cols-2 gap-3 max-w-sm">
-              <div class="rounded-xl border border-white/[0.08] bg-slate-950/70 px-4 py-3">
-                <p class="text-[11px] uppercase tracking-[0.16em] text-slate-500">Tools</p>
-                <p class="mt-1 text-2xl font-semibold text-white">{{ activeSkillCategoryData.tools.length }}</p>
+            <div class="mt-6 grid sm:grid-cols-2 gap-4 w-full">
+              <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md md:px-6 md:py-5">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Tools</p>
+                <p class="mt-2 text-3xl font-semibold text-white">{{ activeSkillCategoryData.tools.length }}</p>
               </div>
-              <div class="rounded-xl border border-white/[0.08] bg-slate-950/70 px-4 py-3">
-                <p class="text-[11px] uppercase tracking-[0.16em] text-slate-500">Average</p>
-                <p class="mt-1 text-2xl font-semibold text-white">{{ activeSkillAverage }}%</p>
+              <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md md:px-6 md:py-5">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Average</p>
+                <p class="mt-2 text-3xl font-semibold text-white">{{ activeSkillAverage }}%</p>
               </div>
             </div>
           </div>
 
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid sm:grid-cols-2 gap-4 md:gap-5">
             <div
               v-for="tool in activeSkillCategoryData.tools"
               :key="tool.name"
-              class="rounded-xl border border-white/[0.08] bg-slate-950/60 p-4"
+              class="rounded-xl border border-white/[0.10] bg-slate-950/50 p-4 shadow-lg shadow-black/10 backdrop-blur-md md:p-5"
             >
               <div class="flex items-center justify-between gap-4 mb-3">
                 <span class="text-sm font-medium text-slate-200">{{ tool.name }}</span>
@@ -406,7 +406,7 @@
           </div>
         </article>
 
-        <article class="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 md:p-7 lg:col-span-2">
+        <article class="min-w-0 rounded-2xl border border-white/[0.10] bg-white/[0.055] p-6 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] backdrop-blur-xl md:p-7 lg:col-span-2">
           <div class="grid lg:grid-cols-[0.8fr_2fr] gap-6 lg:gap-10">
             <div>
               <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">Tech stack</p>
