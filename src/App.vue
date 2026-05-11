@@ -1121,6 +1121,16 @@ const projects = [
     techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
   },
   {
+    id: 'ccdi-usa',
+    title: 'CCDI USA Website',
+    description: 'Full business website migration and rebuild from Showit to Elementor WordPress for a construction consulting firm.',
+    categories: ['wordpress-development'],
+    images: ['CCDI USA Website.png'],
+    tags: ['WordPress Development', 'Elementor', 'Website Migration', 'Responsive Design'],
+    url: 'https://ccdiusa.com/',
+    techStack: 'Role: WordPress Developer. Rebuilt pages, navigation, and optimized sections in Elementor for a responsive, scalable WordPress website.'
+  },
+  {
     id: 'upc-vot-mintal',
     title: 'UPC VOT Mintal',
     description: 'Church membership QR code system landing page and login entrypoint.',
