@@ -34,19 +34,8 @@
                 :class="{ '!scale-x-100': activeSection === 'skills' }"
               ></span>
             </a>
-            <a 
-              href="#services" 
-              class="relative py-2 text-slate-300 hover:text-white transition-all duration-300"
-              :class="{ 'text-white': activeSection === 'services' }"
-            >
-              What we build
-              <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
-                :class="{ '!scale-x-100': activeSection === 'services' }"
-              ></span>
-            </a>
-            <a 
-              href="#portfolio" 
+            <a
+              href="#portfolio"
               class="relative py-2 text-slate-300 hover:text-white transition-all duration-300"
               :class="{ 'text-white': activeSection === 'portfolio' }"
             >
@@ -67,19 +56,8 @@
                 :class="{ '!scale-x-100': activeSection === 'process' }"
               ></span>
             </a>
-            <a 
-              href="#team" 
-              class="relative py-2 text-slate-300 hover:text-white transition-all duration-300"
-              :class="{ 'text-white': activeSection === 'team' }"
-            >
-              Team
-              <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
-                :class="{ '!scale-x-100': activeSection === 'team' }"
-              ></span>
-            </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               class="relative py-2 text-slate-300 hover:text-white transition-all duration-300"
               :class="{ 'text-white': activeSection === 'contact' }"
             >
@@ -164,17 +142,23 @@
           </a>
           <div class="w-full h-px bg-white/10 my-4"></div>
           <div class="flex items-center gap-4">
-            <a 
-              href="#" 
+            <a
+              href="https://www.linkedin.com/in/al-villamero/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+              aria-label="LinkedIn"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V9H9V17ZM7.694 7.717C6.923 7.717 6.408 7.203 6.408 6.517C6.408 5.831 6.922 5.317 7.779 5.317C8.55 5.317 9.065 5.831 9.065 6.517C9.065 7.203 8.551 7.717 7.694 7.717ZM18 17H15.558V12.577C15.558 11.432 14.767 11.077 14.362 11.077C13.957 11.077 13.014 11.315 13.014 12.577C13.014 12.815 13.014 17 13.014 17H10.477V9H13.014V10.017C13.419 9.305 14.249 9 15.478 9C16.707 9 18 9.871 18 12.577V17Z"/>
               </svg>
             </a>
-            <a 
-              href="#" 
+            <a
+              href="https://github.com/alvinvillamero"
+              target="_blank"
+              rel="noopener noreferrer"
               class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+              aria-label="GitHub"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C19.1375 20.1625 22 16.4125 22 12C22 6.475 17.525 2 12 2Z"/>
@@ -196,27 +180,35 @@
       </div>
       <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16" data-aos="fade-up">
       <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
-        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">AI systems · automation · product implementation</p>
+        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">Full-stack developer · Vue/React · Node · PostgreSQL</p>
         <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
-          <span class="text-slate-100">Web development and automation that</span>
-          <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent"> move your business forward</span>
-          <span class="text-slate-100"> with less friction.</span>
+          <span class="text-slate-100">Full-stack developer building</span>
+          <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent"> complete, working applications</span>
+          <span class="text-slate-100">, end to end.</span>
         </h1>
         <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
-          I help businesses launch high-converting websites, funnels, and workflow systems that turn leads into clients, speed up delivery, and reduce manual work across marketing and operations.
+          I design and ship real web applications — frontend, backend, databases, and auth — not just polished demos. Open to full-time full-stack roles, and available for freelance/contract work.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
           <a
-            href="#booking"
+            href="#portfolio"
             class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-all shadow-lg shadow-indigo-950/30 ring-1 ring-white/10"
           >
-            Book a Discovery Call
+            View Projects
           </a>
           <a
-            href="#portfolio"
+            href="https://drive.google.com/file/d/1caOzNy7nxAuExabEMaDAtaSQzdzwG5W9"
+            target="_blank"
+            rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-white/14 text-white text-sm font-medium hover:bg-white/[0.07] hover:border-white/25 transition-colors"
           >
-            View Case Studies
+            Download Resume
+          </a>
+          <a
+            href="#booking"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-white/14 text-white text-sm font-medium hover:bg-white/[0.07] hover:border-white/25 transition-colors"
+          >
+            Book a Call
           </a>
         </div>
         <p class="text-sm text-slate-500">Remote · Philippines · <a href="mailto:al.villamero@gmail.com" class="text-slate-400 hover:text-brand-400 transition-colors">al.villamero@gmail.com</a></p>
@@ -283,13 +275,13 @@
       <div class="max-w-5xl mx-auto px-6 sm:px-8 py-8 sm:py-10">
         <ul class="grid sm:grid-cols-3 gap-6 sm:gap-8 text-base text-slate-300 leading-snug">
           <li class="text-center sm:text-left border-l-0 sm:border-l border-brand-500/25 sm:pl-6 first:sm:border-l-0 first:sm:pl-0">
-            Built systems across websites, operations, and automation workflows
+            Real backends: auth, databases, and reporting — not just frontend demos
           </li>
           <li class="text-center sm:text-left border-l-0 sm:border-l border-brand-500/25 sm:pl-6">
-            End-to-end execution from idea to implementation
+            End-to-end execution: frontend, backend, and deployment
           </li>
           <li class="text-center sm:text-left border-l-0 sm:border-l border-brand-500/25 sm:pl-6">
-            Supporting founders, teams, and growing businesses
+            Open to full-time roles and freelance/contract work
           </li>
         </ul>
       </div>
@@ -315,13 +307,13 @@
         <div class="space-y-5">
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80">About me</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
-            Web developer and growth partner for businesses that need <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">repeatable execution</span>
+            Full-stack developer building <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">complete, working systems</span>
           </h2>
           <p class="text-slate-400 text-base leading-relaxed">
-            I&apos;m Alvin, a web developer from Davao City who works with founders, coaches, and teams worldwide. I combine modern web builds, no-code platforms, automation, and AI tools to turn your digital ideas into systems that actually drive results.
+            I&apos;m Alvin, a full-stack developer from Davao City. I build with Vue, React, and Node.js on the frontend/backend, and PostgreSQL, Supabase, or Firebase for data and auth — shipping applications with real user roles, databases, and reporting, not just UI.
           </p>
           <p class="text-slate-500 text-sm leading-relaxed">
-            I deliver websites, funnels, dashboards, and automation stacks that are secure, easy to maintain, and built for real usage — not just polished demos. This means faster launches, smoother operations, and more predictable growth.
+            I also work across no-code platforms and CMS builds (WordPress, Elementor) when that's the right tool for the job — but my core focus is building and maintaining real, secure, production-ready applications.
           </p>
           <div class="flex flex-wrap gap-3 pt-2">
             <a
@@ -403,31 +395,6 @@
                   class="h-full rounded-full bg-gradient-to-r from-brand-500 to-fuchsia-500 transition-all duration-700"
                   :style="{ width: tool.percentage + '%' }"
                 ></div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="min-w-0 rounded-2xl border border-white/[0.10] bg-white/[0.055] p-6 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] backdrop-blur-xl md:p-7 lg:col-span-2">
-          <div class="grid lg:grid-cols-[0.8fr_2fr] gap-6 lg:gap-10">
-            <div>
-              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">Tech stack</p>
-              <h3 class="text-lg md:text-xl font-semibold text-white leading-tight">Development stack</h3>
-              <p class="mt-2 text-sm text-slate-400 leading-relaxed">Core technologies I use for product, web app, and system builds.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-5">
-              <div v-for="group in developmentStack" :key="group.title">
-                <p class="text-xs font-semibold text-slate-300 mb-3">{{ group.title }}</p>
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    v-for="tool in group.tools"
-                    :key="tool"
-                    class="rounded-lg bg-slate-950/80 border border-white/[0.08] px-3 py-2 text-xs text-slate-200"
-                  >
-                    {{ tool }}
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -560,20 +527,6 @@
       </ol>
     </section>
 
-    <!-- Team -->
-    <section id="team" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
-      <div class="max-w-3xl mb-10">
-        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">When You Need More Than Systems</h2>
-        <p class="text-slate-400 text-base md:text-lg leading-relaxed">
-          For projects that require ongoing execution beyond AI systems, I also work with a team that supports content, design, editing, and admin operations.
-        </p>
-        <p class="text-xs text-slate-600 mt-4 uppercase tracking-wider">Support layer — not the main offer</p>
-      </div>
-      <div class="flex flex-wrap gap-3">
-        <span v-for="t in executionTeamTags" :key="t" class="px-4 py-2 rounded-full text-sm border border-white/10 text-slate-300 bg-black/20">{{ t }}</span>
-      </div>
-    </section>
-
     <!-- Why work with me -->
     <section id="why" class="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="max-w-3xl mb-8">
@@ -591,15 +544,15 @@
     <section id="testimonials" class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
       <div class="max-w-4xl mx-auto">
         <div class="mb-8">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Client stories</p>
-          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">Video testimonial</h2>
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">What clients say</p>
+          <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">Client feedback</h2>
         </div>
 
         <div class="rounded-3xl overflow-hidden border border-white/[0.08] bg-black/70">
           <div class="relative aspect-video bg-slate-950">
             <iframe
               :src="testimonialVideoEmbedUrl"
-              title="Testimonial video — Ben Traub"
+              title="Client feedback — Ben Traub"
               class="absolute inset-0 h-full w-full"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -608,7 +561,7 @@
           </div>
           <div class="px-6 py-5 border-t border-white/[0.08] bg-black/80">
             <p class="text-sm text-slate-200 font-semibold">Ben Traub — CEO, Student Marketing Academy</p>
-            <p class="text-xs text-slate-500 mt-2">Social media manager for content calendar, captions, and graphics — Feb 2024 to Nov 2025.</p>
+            <p class="text-xs text-slate-500 mt-2">Reliability and follow-through on a long-running working relationship, Feb 2024 to Nov 2025.</p>
           </div>
         </div>
       </div>
@@ -639,9 +592,8 @@
         <div>
           <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">Typical stack</h3>
           <p class="text-sm text-slate-400 leading-relaxed mb-4">
-            Modern front-end and back-end stacks, APIs and integrations, cloud hosting, workflow automation, and AI-assisted delivery—plus creative and marketing support when the extended team is involved.
+            Vue and React on the frontend, Node.js on the backend, PostgreSQL/Supabase/Firebase for data and auth, Git/GitHub for version control, and cloud hosting for deployment — with no-code/CMS tools brought in when that's the better fit for the project.
           </p>
-          <p class="text-xs text-slate-600">Tune this list as your positioning and case studies mature.</p>
         </div>
       </div>
     </section>
@@ -739,14 +691,14 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-fuchsia-400 transition-colors">Social Media</h3>
+                  <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-fuchsia-400 transition-colors">GitHub &amp; LinkedIn</h3>
                   <div class="flex items-center gap-4">
-                    <a href="#" class="text-slate-400 hover:text-fuchsia-400 transition-colors">
+                    <a href="https://www.linkedin.com/in/al-villamero/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-slate-400 hover:text-fuchsia-400 transition-colors">
                       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3ZM9 17H6.477V9H9V17ZM7.694 7.717C6.923 7.717 6.408 7.203 6.408 6.517C6.408 5.831 6.922 5.317 7.779 5.317C8.55 5.317 9.065 5.831 9.065 6.517C9.065 7.203 8.551 7.717 7.694 7.717ZM18 17H15.558V12.577C15.558 11.432 14.767 11.077 14.362 11.077C13.957 11.077 13.014 11.315 13.014 12.577C13.014 12.815 13.014 17 13.014 17H10.477V9H13.014V10.017C13.419 9.305 14.249 9 15.478 9C16.707 9 18 9.871 18 12.577V17Z"/>
                       </svg>
                     </a>
-                    <a href="#" class="text-slate-400 hover:text-fuchsia-400 transition-colors">
+                    <a href="https://github.com/alvinvillamero" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-400 hover:text-fuchsia-400 transition-colors">
                       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C19.1375 20.1625 22 16.4125 22 12C22 6.475 17.525 2 12 2Z"/>
                       </svg>
@@ -771,10 +723,9 @@
         </div>
         <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
           <a href="#about" class="hover:text-slate-300 transition-colors">About</a>
-          <a href="#services" class="hover:text-slate-300 transition-colors">What we build</a>
+          <a href="#skills" class="hover:text-slate-300 transition-colors">Skills</a>
           <a href="#portfolio" class="hover:text-slate-300 transition-colors">Work</a>
           <a href="#process" class="hover:text-slate-300 transition-colors">Process</a>
-          <a href="#team" class="hover:text-slate-300 transition-colors">Team</a>
           <a href="#booking" class="hover:text-slate-300 transition-colors">Calendar</a>
         </nav>
       </div>
@@ -817,65 +768,33 @@ const isModalOpen = ref(false)
 const calendlyEl = ref(null)
 const calendlyReady = ref(false)
 
-const sections = ['trust', 'about', 'skills', 'services', 'problems', 'portfolio', 'process', 'team', 'why', 'contact', 'background']
+const sections = ['trust', 'about', 'skills', 'portfolio', 'process', 'why', 'contact', 'background']
 
 const mobileNavItems = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
-  { id: 'services', label: 'What we build' },
   { id: 'portfolio', label: 'Work' },
   { id: 'process', label: 'Process' },
-  { id: 'team', label: 'Team' },
   { id: 'contact', label: 'Contact' }
-]
-
-const businessStuck = [
-  {
-    title: 'Too many repetitive tasks',
-    pain: 'Manual processes slow everything down and waste time.',
-    fix: 'I build automation systems that remove repetitive work.'
-  },
-  {
-    title: 'Leads and inquiries are messy',
-    pain: 'No structure, slow response, missed opportunities.',
-    fix: 'I design chatbot + workflow systems to handle and route leads properly.'
-  },
-  {
-    title: 'You have an AI idea but no execution',
-    pain: 'Concepts stay ideas without a system behind them.',
-    fix: 'I turn ideas into working tools, products, and systems.'
-  },
-  {
-    title: 'Your tools don\'t connect',
-    pain: 'Everything is scattered across platforms.',
-    fix: 'I create structured systems that connect workflows and simplify operations.'
-  }
 ]
 
 const processSteps = [
   { title: 'Audit', body: 'Understand your workflows, problems, and opportunities' },
   { title: 'Map', body: 'Design system logic, flows, and structure' },
-  { title: 'Build', body: 'Develop chatbot, system, or product' },
+  { title: 'Build', body: 'Develop the application: frontend, backend, database, and deployment' },
   { title: 'Refine', body: 'Improve usability and automation logic' },
-  { title: 'Support', body: 'Optional ongoing execution and team support' }
+  { title: 'Support', body: 'Optional ongoing maintenance and support' }
 ]
 
 const whyClients = [
-  'Combines AI, systems, and real business operations',
+  'Full-stack: frontend, backend, database, and deployment',
   'Focus on execution — not just ideas',
-  'From concept to working solution',
+  'From concept to working, production-ready application',
   'Builds systems that actually reduce workload',
-  'Supported by a team when needed'
+  'Can bring in trusted collaborators for content, design, or admin support if a project needs it'
 ]
 
 const padStep = (i) => String(i + 1).padStart(2, '0')
-
-const executionTeamTags = [
-  'Social media management',
-  'Video editing',
-  'Graphic design',
-  'Admin & operations support'
-]
 
 const testimonialVideoId = ref('9avGINGorzU')
 const testimonialVideoEmbedUrl = computed(() => {
@@ -885,8 +804,24 @@ const testimonialVideoEmbedUrl = computed(() => {
 
 const skillCategories = [
   {
+    id: 'full-stack-dev',
+    kicker: 'Core stack',
+    title: 'Full-Stack Development',
+    description: 'The languages, frameworks, and databases I use to build and ship complete applications.',
+    tools: [
+      { name: 'JavaScript', percentage: 90 },
+      { name: 'Vue', percentage: 90 },
+      { name: 'React', percentage: 80 },
+      { name: 'Node.js', percentage: 80 },
+      { name: 'Tailwind CSS', percentage: 90 },
+      { name: 'PostgreSQL', percentage: 75 },
+      { name: 'Supabase', percentage: 80 },
+      { name: 'Firebase', percentage: 75 }
+    ]
+  },
+  {
     id: 'web-platforms',
-    kicker: 'Website builders',
+    kicker: 'No-code / CMS',
     title: 'Web & Platforms (No-Code)',
     description: 'CMS, funnels, ecommerce, and page builders for fast, maintainable client websites.',
     tools: [
@@ -957,7 +892,7 @@ const skillCategories = [
   }
 ]
 
-const activeSkillCategory = ref('web-platforms')
+const activeSkillCategory = ref('full-stack-dev')
 
 const activeSkillCategoryData = computed(() => {
   return skillCategories.find((category) => category.id === activeSkillCategory.value) || skillCategories[0]
@@ -970,26 +905,11 @@ const activeSkillAverage = computed(() => {
   return Math.round(total / tools.length)
 })
 
-const developmentStack = [
-  {
-    title: 'Frontend',
-    tools: ['Vue', 'React', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS']
-  },
-  {
-    title: 'Backend',
-    tools: ['Node.js', 'Java', 'PHP', 'C#']
-  },
-  {
-    title: 'Database & APIs',
-    tools: ['PostgreSQL', 'MySQL', 'Firebase', 'Supabase']
-  }
-]
-
-const activeProjectCategory = ref('featured-projects')
+const activeProjectCategory = ref('full-stack-apps')
 
 const projectCategories = [
-  { id: 'featured-projects', label: 'Featured Projects' },
-  { id: 'web-development', label: 'Web Development' },
+  { id: 'full-stack-apps', label: 'Full-Stack Apps' },
+  { id: 'web-development', label: 'Frontend / Web Development' },
   { id: 'wordpress-development', label: 'WordPress Development' }
 ]
 
@@ -998,7 +918,7 @@ const projects = [
     id: 'ccdi-usa',
     title: 'CCDI USA Website',
     description: 'Full business website migration and rebuild from Showit to Elementor WordPress for a construction consulting firm.',
-    categories: ['featured-projects', 'wordpress-development'],
+    categories: ['wordpress-development'],
     images: ['CCDI USA Website.png'],
     tags: ['WordPress Development', 'Elementor', 'Website Migration', 'Responsive Design'],
     url: 'https://ccdiusa.com/',
@@ -1008,7 +928,7 @@ const projects = [
     id: 'joseph-elisha-md',
     title: 'Joseph Elisha MD Website',
     description: 'Figma to Elementor WordPress website for a personal brand focused on podcasting, speaking, and book promotion.',
-    categories: ['featured-projects', 'wordpress-development'],
+    categories: ['wordpress-development'],
     images: ['Joseph Elisha MD Website.png'],
     tags: ['WordPress', 'Elementor', 'Responsive Design'],
     url: 'https://josephelishamd.com/',
@@ -1017,79 +937,88 @@ const projects = [
   {
     id: 'upc-vot-mintal',
     title: 'UPC VOT Mintal',
-    description: 'Church membership QR code system landing page and login entrypoint.',
-    categories: ['featured-projects', 'web-development'],
+    description: 'Full-stack church membership management system with role-based access, QR attendance, and reporting.',
+    categories: ['full-stack-apps'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Church'],
+    tags: ['Full-Stack', 'PostgreSQL', 'Church Management'],
     url: 'https://www.upcvotmintal.com/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.upcvotmintal.com%2F?w=1200',
-    techStack: 'Frontend web UI, membership-system landing architecture, and production hosting.'
+    problem: 'The church had no system to track membership records, attendance, or leadership structure — everything was manual and scattered.',
+    solution: 'Built a full membership system on a PostgreSQL backend with 3 role types (admin, caregroup leader, member) and 3 membership tiers (visitor, transient, bonafide). Members are assigned to caregroups with a leader, attendance is tracked via a unique per-member QR code, admins can post a daily Bible verse visible on login, and the system generates multiple report types for leadership.',
+    outcome: 'Church leadership can now track attendance and membership status accurately and pull reports without manual record-keeping.',
+    techStack: 'PostgreSQL, role-based access control, QR-code attendance system, reporting'
   },
   {
     id: 'asia-realty',
     title: 'Asia Realty',
     description: 'Property listing concept for discovering high-return real estate opportunities in Asia.',
-    categories: ['featured-projects', 'web-development'],
+    categories: ['web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Real Estate'],
+    tags: ['Frontend Concept', 'Real Estate'],
     url: 'https://realty-property-listing.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Frealty-property-listing.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, listing-focused page architecture, and Vercel deployment.'
+    techStack: 'Frontend UI concept — listing-focused page architecture, Vercel deployment, no backend.'
   },
   {
     id: 'pawly',
     title: 'Pawly',
     description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
-    categories: ['featured-projects', 'web-development'],
+    categories: ['web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Pet Care'],
+    tags: ['Frontend Concept', 'Pet Care'],
     url: 'https://pawly-gold.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpawly-gold.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, service-first content blocks, and Vercel deployment.'
+    techStack: 'Frontend UI concept — service-first content blocks, Vercel deployment, no backend.'
   },
   {
     id: 'clarimed',
     title: 'ClariMed',
     description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
-    categories: ['featured-projects', 'web-development'],
+    categories: ['web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Healthcare'],
+    tags: ['Frontend Concept', 'Healthcare'],
     url: 'https://clari-med-kohl.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclari-med-kohl.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, reusable section components, and Vercel deployment.'
+    techStack: 'Frontend UI concept — reusable section components, Vercel deployment, no backend.'
   },
   {
     id: 'invoice-tracker',
     title: 'Invoice Tracker',
-    description: 'Invoice generation and tracking web app for freelancers managing billing workflows.',
-    categories: ['featured-projects', 'web-development'],
+    description: 'Full-stack invoice tracking and generation app for freelancers, with client-facing progress sharing.',
+    categories: ['full-stack-apps'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Freelance'],
+    tags: ['Full-Stack', 'Supabase', 'Freelance Tools'],
     url: 'https://tracker-invoice-generator.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
-    techStack: 'Frontend web app interface, invoice-tracking workflow logic, and Vercel deployment.'
+    problem: 'Freelancers needed a simple, no-fuss way to track work and generate invoices without juggling spreadsheets or heavyweight billing tools.',
+    solution: 'Built on Supabase (PostgreSQL + email/password auth), with automatic invoice generation from tracked tasks. Clients can be given visibility into shared task progress mid-work, for transparency without extra reporting overhead.',
+    outcome: 'Freelancers go from tracked hours to a sent invoice without leaving one tool.',
+    techStack: 'Vue, Supabase (PostgreSQL + Auth), automatic invoice generation, client-facing task sharing'
   },
   {
     id: 'castbridge',
     title: 'CastBridge',
     description: 'Android phone to Android TV casting app site with direct playback and mirroring fallback.',
-    categories: ['featured-projects', 'web-development'],
+    categories: ['web-development'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Android'],
+    tags: ['Frontend Concept', 'Android'],
     url: 'https://screencast-tau.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fscreencast-tau.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, responsive layouts, and Vercel deployment.'
+    techStack: 'Frontend UI concept — responsive layouts, Vercel deployment, no backend.'
   },
   {
     id: 'teeveefy',
     title: 'Teeveefy',
-    description: 'Android TV live channel app showcase with playlist support and leanback-first UI.',
-    categories: ['featured-projects', 'web-development'],
+    description: 'Full-stack M3U IPTV playlist player with a leanback-first UI for Android TV.',
+    categories: ['full-stack-apps'],
     images: [],
-    tags: ['Featured Project', 'Web Development', 'Android TV'],
+    tags: ['Full-Stack', 'Firebase', 'Android TV'],
     url: 'https://teeveefy-app.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fteeveefy-app.vercel.app%2F?w=1200',
-    techStack: 'Frontend web UI, responsive content sections, and Vercel deployment.'
+    problem: 'Existing M3U IPTV players are clunky for browsing and managing channel lists, especially on TV-first, remote-controlled interfaces.',
+    solution: 'Built a Firebase-backed playlist player that saves and syncs channel/playlist data, with a leanback-first UI designed for Android TV navigation and live channel playback.',
+    outcome: 'Simple, remote-friendly access to saved IPTV playlists without re-entering M3U URLs every session.',
+    techStack: 'Firebase, M3U playlist parsing, leanback UI for Android TV'
   },
   {
     id: 'trading-financial',
