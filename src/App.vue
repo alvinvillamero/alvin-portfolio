@@ -682,7 +682,21 @@
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Phone Number <span class="text-fuchsia-400">*</span></label>
-                  <input v-model="contactForm.phone" type="tel" required autocomplete="tel" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                  <div class="flex gap-2">
+                    <select v-model="contactPhoneCountry" class="shrink-0 rounded-lg bg-slate-950/60 border border-white/10 px-2 py-2.5 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                      <option v-for="c in countryCodes" :key="c.code" :value="c.code">{{ c.label }}</option>
+                    </select>
+                    <input
+                      :value="contactForm.phone"
+                      @input="onPhoneInput"
+                      type="tel"
+                      inputmode="numeric"
+                      required
+                      autocomplete="tel-national"
+                      placeholder="931 200 4316"
+                      class="flex-1 min-w-0 rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50"
+                    />
+                  </div>
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Current Website Address <span class="text-slate-600">(if applicable)</span></label>
@@ -822,6 +836,26 @@ const contactConsent = ref(false)
 const contactStatus = ref('idle')
 const contactError = ref('')
 
+const countryCodes = [
+  { code: '+63', label: 'PH +63' },
+  { code: '+1', label: 'US/CA +1' },
+  { code: '+44', label: 'UK +44' },
+  { code: '+61', label: 'AU +61' },
+  { code: '+65', label: 'SG +65' },
+  { code: '+91', label: 'IN +91' },
+  { code: '+81', label: 'JP +81' },
+  { code: '+49', label: 'DE +49' },
+  { code: '+33', label: 'FR +33' },
+  { code: '+971', label: 'AE +971' }
+]
+const contactPhoneCountry = ref('+63')
+
+const onPhoneInput = (event) => {
+  const digits = event.target.value.replace(/\D/g, '').slice(0, 14)
+  contactForm.value.phone = digits.replace(/(\d{3})(?=\d)/g, '$1 ').trim()
+  event.target.value = contactForm.value.phone
+}
+
 const interestOptions = [
   'Full-time / permanent full-stack role',
   'Freelance or contract project',
@@ -859,7 +893,7 @@ const submitContactForm = async () => {
       {
         name: contactForm.value.name,
         email: contactForm.value.email,
-        phone: contactForm.value.phone,
+        phone: `${contactPhoneCountry.value} ${contactForm.value.phone}`,
         website: contactForm.value.website || 'N/A',
         about: contactForm.value.about,
         interests: contactForm.value.interests.join(', '),
@@ -872,6 +906,7 @@ const submitContactForm = async () => {
     )
     contactStatus.value = 'success'
   } catch (err) {
+    console.error('Contact form submission failed:', err)
     contactStatus.value = 'error'
     contactError.value = 'Something went wrong sending your message. Please try again in a moment, or reach out via LinkedIn/GitHub above.'
   }
