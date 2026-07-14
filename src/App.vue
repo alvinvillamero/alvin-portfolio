@@ -821,10 +821,9 @@
 import emailjs from '@emailjs/browser'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { SplitText } from 'gsap/SplitText'
 import { onMounted, onUnmounted, ref, reactive, computed, nextTick, watch } from 'vue'
 
-gsap.registerPlugin(ScrollTrigger, SplitText)
+gsap.registerPlugin(ScrollTrigger)
 
 const CALENDLY_URL = 'https://calendly.com/al-villamero/30min'
 
@@ -1587,11 +1586,13 @@ onMounted(() => {
       })
 
       // Hero entrance
+      // Note: the headline contains a bg-clip-text gradient span — SplitText's char-splitting
+      // flattens that nested structure and breaks the gradient clip, so it gets a plain
+      // fade+y reveal instead of character-stagger (per the documented fallback for this case).
       const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
       if (heroKickerEl.value) tl.from(heroKickerEl.value, { opacity: 0, y: 12, duration: 0.5 })
       if (heroHeadlineEl.value) {
-        const split = new SplitText(heroHeadlineEl.value, { type: 'chars' })
-        tl.from(split.chars, { opacity: 0, y: 20, rotateX: -40, duration: 0.6, stagger: 0.015, ease: 'expo.out' }, '-=0.2')
+        tl.from(heroHeadlineEl.value, { opacity: 0, y: 24, duration: 0.7 }, '-=0.2')
       }
       const heroRest = [heroSubtextEl.value, heroCtasEl.value, heroFooterEl.value].filter(Boolean)
       if (heroRest.length) tl.from(heroRest, { opacity: 0, y: 16, duration: 0.6, stagger: 0.12 }, '-=0.2')
