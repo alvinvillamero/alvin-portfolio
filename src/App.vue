@@ -1,7 +1,7 @@
 <template>
   <div class="bg-surface-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500/30 selection:text-white overflow-x-hidden w-full">
     <!-- Header -->
-    <header class="fixed inset-x-0 top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/85 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/70">
+    <header ref="siteHeaderEl" class="fixed inset-x-0 top-0 z-50 isolate w-full border-b border-white/[0.08] bg-surface-950/85 shadow-lg shadow-black/20 backdrop-blur-xl supports-[backdrop-filter]:bg-surface-950/70 transition-shadow duration-300">
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
         <a href="#" class="group">
           <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white transform transition-transform duration-300 group-hover:scale-[1.02]">
@@ -172,25 +172,26 @@
     <div class="h-[82px] md:h-[90px]" aria-hidden="true"></div>
 
     <!-- Hero -->
-    <section class="relative isolate overflow-hidden">
+    <section ref="heroSectionEl" class="relative isolate overflow-hidden">
       <div class="pointer-events-none absolute inset-0 -z-10">
-        <div class="absolute -top-24 right-0 h-[420px] w-[420px] rounded-full bg-brand-600/20 blur-[100px]"></div>
-        <div class="absolute top-32 -left-20 h-[320px] w-[320px] rounded-full bg-cyan-500/12 blur-[90px]"></div>
+        <div ref="heroBlobAEl" class="absolute -top-24 right-0 h-[420px] w-[420px] rounded-full bg-brand-600/20 blur-[100px]"></div>
+        <div ref="heroBlobBEl" class="absolute top-32 -left-20 h-[320px] w-[320px] rounded-full bg-cyan-500/12 blur-[90px]"></div>
         <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] opacity-60"></div>
       </div>
-      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16" data-aos="fade-up">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16">
       <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
-        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">Full-stack developer · Next.js/React/Vue · Node · PostgreSQL</p>
-        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
+        <p ref="heroKickerEl" class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">Full-stack developer · Next.js/React/Vue · Node · PostgreSQL</p>
+        <h1 ref="heroHeadlineEl" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
           <span class="text-slate-100">Full-stack developer building</span>
           <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent"> complete, working applications</span>
           <span class="text-slate-100">, end to end.</span>
         </h1>
-        <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
+        <p ref="heroSubtextEl" class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
           I design and ship real web applications — frontend, backend, databases, and auth — not just polished demos. Open to full-time full-stack roles, and available for freelance/contract work.
         </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
+        <div ref="heroCtasEl" class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-1">
           <a
+            ref="heroPrimaryCtaEl"
             href="#portfolio"
             class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-all shadow-lg shadow-indigo-950/30 ring-1 ring-white/10"
           >
@@ -211,15 +212,15 @@
             Book a Call
           </a>
         </div>
-        <p class="text-sm text-slate-500">Remote · Philippines · <a href="#contact" class="text-slate-400 hover:text-brand-400 transition-colors">Get in touch</a></p>
+        <p ref="heroFooterEl" class="text-sm text-slate-500">Remote · Philippines · <a href="#contact" class="text-slate-400 hover:text-brand-400 transition-colors">Get in touch</a></p>
       </div>
 
       <!-- System / dashboard mockup (no portrait) -->
       <div class="relative w-full max-w-lg lg:max-w-[min(100%,440px)] mx-auto lg:mx-0 shrink-0 select-none" aria-hidden="true">
         <div class="absolute -inset-4 bg-gradient-to-br from-violet-600/20 via-transparent to-cyan-500/10 rounded-[2rem] blur-2xl"></div>
         <!-- Back stack -->
-        <div class="absolute top-6 right-2 w-[88%] h-48 rounded-xl border border-white/[0.07] bg-[#0c1f35] shadow-lg opacity-80"></div>
-        <div class="absolute top-3 right-6 w-[82%] h-44 rounded-xl border border-white/[0.08] bg-[#0e2438] shadow-md opacity-90"></div>
+        <div ref="heroBackStack1El" class="absolute top-6 right-2 w-[88%] h-48 rounded-xl border border-white/[0.07] bg-[#0c1f35] shadow-lg opacity-80"></div>
+        <div ref="heroBackStack2El" class="absolute top-3 right-6 w-[82%] h-44 rounded-xl border border-white/[0.08] bg-[#0e2438] shadow-md opacity-90"></div>
         <!-- Main dashboard -->
         <div class="relative rounded-xl border border-white/10 bg-[#0d2137] shadow-2xl overflow-hidden">
           <div class="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] bg-black/30">
@@ -273,7 +274,7 @@
     <!-- Trust -->
     <section id="trust" class="border-y border-white/[0.06] bg-black/20">
       <div class="max-w-5xl mx-auto px-6 sm:px-8 py-8 sm:py-10">
-        <ul class="grid sm:grid-cols-3 gap-6 sm:gap-8 text-base text-slate-300 leading-snug">
+        <ul data-reveal-stagger class="grid sm:grid-cols-3 gap-6 sm:gap-8 text-base text-slate-300 leading-snug">
           <li class="text-center sm:text-left border-l-0 sm:border-l border-brand-500/25 sm:pl-6 first:sm:border-l-0 first:sm:pl-0">
             Real backends: auth, databases, and reporting — not just frontend demos
           </li>
@@ -288,7 +289,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28" data-aos="fade-up">
+    <section id="about" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28" data-reveal>
       <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 lg:gap-16 items-center">
         <div class="relative mx-auto w-full max-w-[340px] lg:max-w-none lg:mx-0">
           <div class="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-violet-600/40 via-fuchsia-500/15 to-cyan-500/20 blur-xl opacity-80"></div>
@@ -334,8 +335,8 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06] overflow-visible" data-aos="fade-up">
-      <div class="max-w-3xl mb-10 md:mb-12">
+    <section id="skills" class="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06] overflow-visible">
+      <div data-reveal class="max-w-3xl mb-10 md:mb-12">
         <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Platforms, tools, and technical stack</h2>
         <p class="text-slate-400 text-base leading-relaxed">
@@ -371,16 +372,16 @@
             <div class="mt-6 grid sm:grid-cols-2 gap-4 w-full">
               <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md md:px-6 md:py-5">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Tools</p>
-                <p class="mt-2 text-3xl font-semibold text-white">{{ activeSkillCategoryData.tools.length }}</p>
+                <p class="mt-2 text-3xl font-semibold text-white">{{ Math.round(statCounters.tools) }}</p>
               </div>
               <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md md:px-6 md:py-5">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Average</p>
-                <p class="mt-2 text-3xl font-semibold text-white">{{ activeSkillAverage }}%</p>
+                <p class="mt-2 text-3xl font-semibold text-white">{{ Math.round(statCounters.average) }}%</p>
               </div>
             </div>
           </div>
 
-          <div class="grid sm:grid-cols-2 gap-4 md:gap-5">
+          <div ref="skillsToolGridEl" data-reveal-stagger class="grid sm:grid-cols-2 gap-4 md:gap-5">
             <div
               v-for="tool in activeSkillCategoryData.tools"
               :key="tool.name"
@@ -392,8 +393,8 @@
               </div>
               <div class="h-2.5 rounded-full bg-slate-800 overflow-hidden">
                 <div
-                  class="h-full rounded-full bg-gradient-to-r from-brand-500 to-fuchsia-500 transition-all duration-700"
-                  :style="{ width: tool.percentage + '%' }"
+                  :ref="(el) => setSkillBarRef(el, tool.name, tool.percentage)"
+                  class="h-full w-full origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-500 to-fuchsia-500"
                 ></div>
               </div>
             </div>
@@ -403,9 +404,9 @@
     </section>
 
     <!-- Portfolio / sample works -->
-    <section id="portfolio" class="pt-12 pb-24 md:pt-16 md:pb-32 px-6 sm:px-8 max-w-6xl mx-auto relative" data-aos="fade-up">
+    <section id="portfolio" class="pt-12 pb-24 md:pt-16 md:pb-32 px-6 sm:px-8 max-w-6xl mx-auto relative">
       <div class="relative">
-        <div class="flex flex-col gap-6 mb-10 md:mb-12">
+        <div data-reveal class="flex flex-col gap-6 mb-10 md:mb-12">
           <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">Sample Works</h2>
             <a
@@ -443,14 +444,12 @@
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-full">
+        <div ref="portfolioGridEl" class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-full">
           <div
-            v-for="(project, index) in filteredProjects"
+            v-for="project in filteredProjects"
             :key="project.id"
-            data-aos="fade-up"
-            :data-aos-delay="80 + ((index % 4) * 80)"
-            data-aos-duration="700"
-            class="group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-fuchsia-500/25 transition-all duration-500 transform-gpu hover:-translate-y-1.5 hover:shadow-[0_16px_40px_-20px_rgba(217,70,239,0.45)]"
+            :ref="(el) => setProjectCardRef(el, project.id)"
+            class="project-card group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-fuchsia-500/25 transition-colors duration-500 transform-gpu"
           >
             <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(130%_90%_at_50%_0%,rgba(192,132,252,0.16),transparent_62%)]"></div>
             <div class="relative p-2">
@@ -512,11 +511,11 @@
     </section>
 
     <!-- Process -->
-    <section id="process" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <div class="max-w-3xl mb-12">
+    <section id="process" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]">
+      <div data-reveal class="max-w-3xl mb-12">
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How I Work</h2>
       </div>
-      <ol class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 list-none p-0 m-0">
+      <ol data-reveal-stagger class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 list-none p-0 m-0">
         <li v-for="(step, i) in processSteps" :key="step.title" class="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6 flex flex-col gap-3">
           <span class="text-xl font-bold text-brand-500/90 tabular-nums">{{ padStep(i) }}</span>
           <div>
@@ -528,11 +527,11 @@
     </section>
 
     <!-- Why work with me -->
-    <section id="why" class="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
-      <div class="max-w-3xl mb-8">
+    <section id="why" class="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]">
+      <div data-reveal class="max-w-3xl mb-8">
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">Why Clients Work With Me</h2>
       </div>
-      <ul class="space-y-3 max-w-2xl">
+      <ul data-reveal-stagger class="space-y-3 max-w-2xl">
         <li v-for="line in whyClients" :key="line" class="flex gap-3 text-sm md:text-base text-slate-300 leading-relaxed">
           <span class="text-brand-400 shrink-0 mt-1">·</span>
           <span>{{ line }}</span>
@@ -541,7 +540,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+    <section id="testimonials" class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-reveal>
       <div class="max-w-4xl mx-auto">
         <div class="mb-8">
           <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">What clients say</p>
@@ -568,19 +567,19 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-16 md:py-20 px-6 sm:px-8 max-w-6xl mx-auto" data-aos="fade-up">
+    <section class="py-16 md:py-20 px-6 sm:px-8 max-w-6xl mx-auto" data-reveal>
       <div class="rounded-3xl border border-brand-500/25 bg-gradient-to-br from-brand-950/40 to-surface-950 px-8 py-12 md:px-12 md:py-14 text-center">
-        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need an AI system, chatbot, or product built for your business?</h2>
+        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need a full-stack web application built for your business?</h2>
         <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a href="#booking" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
+          <a ref="finalCtaEl" href="#booking" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
           <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Contact Details</a>
         </div>
       </div>
     </section>
 
     <!-- Background -->
-    <section id="background" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-aos="fade-up">
+    <section id="background" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-reveal>
       <div class="grid md:grid-cols-2 gap-12 md:gap-16">
         <div>
           <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-4">Background</h2>
@@ -671,6 +670,12 @@
           <!-- Contact Form -->
           <div class="bg-white/5 p-6 sm:p-8 rounded-2xl border border-white/10">
             <form v-if="contactStatus !== 'success'" @submit.prevent="submitContactForm" class="space-y-6">
+              <!-- Honeypot: hidden from real users, bots tend to fill every field -->
+              <div class="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
+                <label for="company_website">Leave this field empty</label>
+                <input id="company_website" v-model="honeypot" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Your Name <span class="text-fuchsia-400">*</span></label>
@@ -813,10 +818,13 @@
 </template>
 
 <script setup>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import emailjs from '@emailjs/browser'
-import { onMounted, onUnmounted, ref, computed, nextTick } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { SplitText } from 'gsap/SplitText'
+import { onMounted, onUnmounted, ref, reactive, computed, nextTick, watch } from 'vue'
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const CALENDLY_URL = 'https://calendly.com/al-villamero/30min'
 
@@ -832,6 +840,9 @@ const contactForm = ref({
   referral: '',
   comments: ''
 })
+const honeypot = ref('')
+const contactFormLoadedAt = Date.now()
+const MIN_SUBMIT_MS = 3000
 const contactConsent = ref(false)
 const contactStatus = ref('idle')
 const contactError = ref('')
@@ -878,6 +889,13 @@ const budgetOptions = [
 ]
 
 const submitContactForm = async () => {
+  // Honeypot / timing checks catch most bots — fail "successfully" so
+  // scripted spam doesn't learn to adapt, without wasting EmailJS quota.
+  if (honeypot.value || Date.now() - contactFormLoadedAt < MIN_SUBMIT_MS) {
+    contactStatus.value = 'success'
+    return
+  }
+
   contactStatus.value = 'sending'
   contactError.value = ''
   try {
@@ -1303,6 +1321,136 @@ const getProjectTechStack = (project) => {
 
 const isWordPressProject = (project) => project.categories?.includes('wordpress-development')
 
+// ---- Animations (GSAP) ----
+const heroSectionEl = ref(null)
+const heroBlobAEl = ref(null)
+const heroBlobBEl = ref(null)
+const heroKickerEl = ref(null)
+const heroHeadlineEl = ref(null)
+const heroSubtextEl = ref(null)
+const heroCtasEl = ref(null)
+const heroPrimaryCtaEl = ref(null)
+const heroFooterEl = ref(null)
+const heroBackStack1El = ref(null)
+const heroBackStack2El = ref(null)
+const skillsToolGridEl = ref(null)
+const portfolioGridEl = ref(null)
+const siteHeaderEl = ref(null)
+const finalCtaEl = ref(null)
+
+const statCounters = reactive({ tools: 0, average: 0 })
+
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+let gsapMM = null
+const cardHoverCleanups = new Map()
+const magneticCleanups = []
+const projectCardMap = new Map()
+const skillBarMap = new Map()
+
+const bindCardHover = (card) => {
+  if (!card || cardHoverCleanups.has(card)) return
+  const enter = () => gsap.to(card, { y: -6, scale: 1.02, boxShadow: '0 16px 32px -12px rgba(139,92,246,0.35)', duration: 0.25, ease: 'power2.out' })
+  const leave = () => gsap.to(card, { y: 0, scale: 1, boxShadow: '0 0px 0px rgba(0,0,0,0)', duration: 0.25, ease: 'power2.out' })
+  card.addEventListener('mouseenter', enter)
+  card.addEventListener('mouseleave', leave)
+  cardHoverCleanups.set(card, () => {
+    card.removeEventListener('mouseenter', enter)
+    card.removeEventListener('mouseleave', leave)
+  })
+}
+
+const unbindCardHover = (card) => {
+  const cleanup = cardHoverCleanups.get(card)
+  if (cleanup) {
+    cleanup()
+    cardHoverCleanups.delete(card)
+  }
+}
+
+const setProjectCardRef = (el, id) => {
+  if (el) {
+    projectCardMap.set(id, el)
+    bindCardHover(el)
+  } else {
+    const existing = projectCardMap.get(id)
+    if (existing) unbindCardHover(existing)
+    projectCardMap.delete(id)
+  }
+}
+
+const setSkillBarRef = (el, name, target) => {
+  if (el) skillBarMap.set(name, { el, target })
+  else skillBarMap.delete(name)
+}
+
+const bindMagnetic = (el) => {
+  if (!el) return
+  const xTo = gsap.quickTo(el, 'x', { duration: 0.4, ease: 'elastic.out(1,0.4)' })
+  const yTo = gsap.quickTo(el, 'y', { duration: 0.4, ease: 'elastic.out(1,0.4)' })
+  const move = (e) => {
+    const r = el.getBoundingClientRect()
+    xTo((e.clientX - r.left - r.width / 2) * 0.3)
+    yTo((e.clientY - r.top - r.height / 2) * 0.3)
+  }
+  const reset = () => { xTo(0); yTo(0) }
+  el.addEventListener('mousemove', move)
+  el.addEventListener('mouseleave', reset)
+  magneticCleanups.push(() => {
+    el.removeEventListener('mousemove', move)
+    el.removeEventListener('mouseleave', reset)
+  })
+}
+
+const animateSkillBars = () => {
+  const instant = prefersReducedMotion()
+  skillBarMap.forEach(({ el, target }) => {
+    if (instant) gsap.set(el, { scaleX: target / 100 })
+    else gsap.to(el, { scaleX: target / 100, duration: 0.9, ease: 'power2.out' })
+  })
+}
+
+const animateStatCounters = () => {
+  const target = { tools: activeSkillCategoryData.value.tools.length, average: activeSkillAverage.value }
+  if (prefersReducedMotion()) {
+    statCounters.tools = target.tools
+    statCounters.average = target.average
+    return
+  }
+  gsap.to(statCounters, { ...target, duration: 0.8, ease: 'power1.out', overwrite: true })
+}
+
+const revealPortfolioGrid = () => {
+  if (!portfolioGridEl.value) return
+  if (prefersReducedMotion()) {
+    gsap.set(portfolioGridEl.value.children, { opacity: 1, y: 0 })
+    return
+  }
+  gsap.from(portfolioGridEl.value.children, { opacity: 0, y: 20, duration: 0.5, stagger: 0.06, ease: 'power2.out', overwrite: true })
+}
+
+const revealSkillsGrid = () => {
+  if (!skillsToolGridEl.value) return
+  if (prefersReducedMotion()) {
+    gsap.set(skillsToolGridEl.value.children, { opacity: 1, y: 0 })
+    return
+  }
+  gsap.from(skillsToolGridEl.value.children, { opacity: 0, y: 20, duration: 0.5, stagger: 0.05, ease: 'power2.out', overwrite: true })
+}
+
+watch(activeProjectCategory, () => {
+  nextTick(() => revealPortfolioGrid())
+})
+
+watch(activeSkillCategory, () => {
+  nextTick(() => {
+    revealSkillsGrid()
+    animateSkillBars()
+    animateStatCounters()
+  })
+})
+
 const openImageModal = (imagePath) => {
   selectedImage.value = imagePath
   isModalOpen.value = true
@@ -1339,6 +1487,10 @@ const checkActiveSection = () => {
       }
     }
   })
+
+  if (siteHeaderEl.value) {
+    siteHeaderEl.value.classList.toggle('shadow-2xl', window.scrollY > 80)
+  }
 }
 
 const fixCalendlyIframeSize = () => {
@@ -1401,15 +1553,84 @@ const loadCalendlyScript = () => {
 }
 
 onMounted(() => {
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-out',
-    once: false,
-    offset: 100,
-    mirror: true,
-    anchorPlacement: 'top-bottom',
-    delay: 100,
-  })
+  const mm = gsap.matchMedia()
+  gsapMM = mm
+
+  mm.add(
+    {
+      reduceMotion: '(prefers-reduced-motion: reduce)',
+      fullMotion: '(prefers-reduced-motion: no-preference)'
+    },
+    (context) => {
+      const { reduceMotion } = context.conditions
+
+      if (reduceMotion) {
+        gsap.set('[data-reveal]', { opacity: 1, y: 0 })
+        gsap.utils.toArray('[data-reveal-stagger]').forEach((c) => gsap.set(c.children, { opacity: 1, y: 0 }))
+        animateSkillBars()
+        animateStatCounters()
+        return
+      }
+
+      // Generic scroll-reveal system (replaces AOS)
+      gsap.utils.toArray('[data-reveal]').forEach((el) => {
+        gsap.from(el, {
+          opacity: 0, y: 24, duration: 0.6, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none reverse' }
+        })
+      })
+      gsap.utils.toArray('[data-reveal-stagger]').forEach((container) => {
+        gsap.from(container.children, {
+          opacity: 0, y: 24, duration: 0.5, stagger: 0.06, ease: 'power2.out',
+          scrollTrigger: { trigger: container, start: 'top 85%' }
+        })
+      })
+
+      // Hero entrance
+      const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
+      if (heroKickerEl.value) tl.from(heroKickerEl.value, { opacity: 0, y: 12, duration: 0.5 })
+      if (heroHeadlineEl.value) {
+        const split = new SplitText(heroHeadlineEl.value, { type: 'chars' })
+        tl.from(split.chars, { opacity: 0, y: 20, rotateX: -40, duration: 0.6, stagger: 0.015, ease: 'expo.out' }, '-=0.2')
+      }
+      const heroRest = [heroSubtextEl.value, heroCtasEl.value, heroFooterEl.value].filter(Boolean)
+      if (heroRest.length) tl.from(heroRest, { opacity: 0, y: 16, duration: 0.6, stagger: 0.12 }, '-=0.2')
+
+      // Ambient background blobs
+      ;[heroBlobAEl.value, heroBlobBEl.value].forEach((blob, i) => {
+        if (!blob) return
+        gsap.to(blob, {
+          x: i === 0 ? -20 : 20, y: i === 0 ? 15 : -15, scale: 1.08,
+          duration: 6 + i, ease: 'sine.inOut', yoyo: true, repeat: -1
+        })
+      })
+
+      // Hero mockup parallax
+      if (heroSectionEl.value) {
+        ;[heroBackStack1El.value, heroBackStack2El.value].filter(Boolean).forEach((layer, i) => {
+          gsap.to(layer, {
+            yPercent: (i + 1) * -10, ease: 'none',
+            scrollTrigger: { trigger: heroSectionEl.value, scrub: 0.5 }
+          })
+        })
+      }
+
+      // Skill bars + stat counters fill once Skills section is scrolled into view
+      ScrollTrigger.create({
+        trigger: '#skills',
+        start: 'top 80%',
+        once: true,
+        onEnter: () => {
+          animateSkillBars()
+          animateStatCounters()
+        }
+      })
+    }
+  )
+
+  // Magnetic hover works the same regardless of reduced-motion (user-triggered, not autoplay)
+  bindMagnetic(heroPrimaryCtaEl.value)
+  bindMagnetic(finalCtaEl.value)
 
   window.addEventListener('scroll', checkActiveSection)
   checkActiveSection() // Initial check
@@ -1425,14 +1646,17 @@ onUnmounted(() => {
     calendlyEl.value.innerHTML = ''
   }
   calendlyReady.value = false
+  if (gsapMM) gsapMM.revert()
+  cardHoverCleanups.forEach((cleanup) => cleanup())
+  cardHoverCleanups.clear()
+  magneticCleanups.forEach((cleanup) => cleanup())
+  magneticCleanups.length = 0
 })
 
 </script>
 
 
 <style>
-@import 'aos/dist/aos.css';
-
 /* Global styles — fonts loaded in index.html (Outfit + Plus Jakarta Sans) */
 :root {
   scroll-behavior: smooth;
@@ -1466,7 +1690,8 @@ body {
 }
 
 /* Optional GPU hint */
-[data-aos] {
+[data-reveal],
+[data-reveal-stagger] > * {
   will-change: transform, opacity;
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
