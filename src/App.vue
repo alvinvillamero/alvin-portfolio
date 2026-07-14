@@ -69,21 +69,21 @@
             </a>
           </div>
           
-          <a 
-            href="#booking"
+          <a
+            href="#contact"
             class="bg-gradient-to-r from-brand-600 to-fuchsia-500 px-7 py-2.5 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
           >
-            Book a Discovery Call
+            Get in Touch
           </a>
       </nav>
 
         <!-- Mobile Navigation Button -->
         <div class="flex items-center gap-3 md:hidden">
-          <a 
-            href="#booking"
+          <a
+            href="#contact"
             class="bg-gradient-to-r from-brand-600 to-fuchsia-500 px-4 py-2 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 active:scale-[0.98]"
           >
-            Book a Discovery Call
+            Get in Touch
           </a>
           <button 
             @click="toggleMenu"
@@ -206,10 +206,10 @@
             Download Resume
           </a>
           <a
-            href="#booking"
+            href="#contact"
             class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-white/14 text-white text-sm font-medium hover:bg-white/[0.07] hover:border-white/25 transition-colors"
           >
-            Book a Call
+            Get in Touch
           </a>
         </div>
         <p ref="heroFooterEl" class="text-sm text-slate-500">Remote · Philippines · <a href="#contact" class="text-slate-400 hover:text-brand-400 transition-colors">Get in touch</a></p>
@@ -318,10 +318,10 @@
           </p>
           <div class="flex flex-wrap gap-3 pt-2">
             <a
-              href="#booking"
+              href="#contact"
               class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-indigo-950/20"
             >
-              Book a Discovery Call
+              Get in Touch
             </a>
             <a
               href="#portfolio"
@@ -572,8 +572,8 @@
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need a full-stack web application built for your business?</h2>
         <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a ref="finalCtaEl" href="#booking" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Book a Discovery Call</a>
-          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Contact Details</a>
+          <a ref="finalCtaEl" href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Get in Touch</a>
+          <a href="https://www.linkedin.com/in/al-villamero/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Connect on LinkedIn</a>
         </div>
       </div>
     </section>
@@ -603,22 +603,9 @@
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent pointer-events-none"></div>
       
       <div class="relative">
-        <!-- Booking -->
-        <div id="booking" class="scroll-mt-28 mb-16 md:mb-24">
-          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">Book a discovery call</h2>
-            <p class="text-slate-400 text-base leading-relaxed">Choose a 30-minute slot. You&apos;ll receive a calendar invite after you book—the same link as the header &quot;Book a Discovery Call&quot; button.</p>
-          </div>
-          <div
-            ref="calendlyEl"
-            class="calendly-widget-host w-full min-w-[320px] rounded-2xl overflow-hidden border border-white/10 bg-white shadow-xl shadow-black/20"
-            style="height: 700px; min-height: 700px;"
-          ></div>
-        </div>
-
-        <div class="flex flex-col items-center text-center mb-10 sm:mb-14 pt-4 border-t border-white/[0.06]">
+        <div class="flex flex-col items-center text-center mb-10 sm:mb-14">
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100 mb-3 sm:mb-4">Start a project conversation</h2>
-          <p class="text-slate-400 max-w-2xl text-base leading-relaxed">Book directly through Calendly or reach me via the contact options below for a fast next step.</p>
+          <p class="text-slate-400 max-w-2xl text-base leading-relaxed">Fill out the form below, or reach me via the contact options underneath, for a fast next step.</p>
         </div>
 
         <div class="max-w-3xl mx-auto">
@@ -782,14 +769,12 @@
         <p><span class="text-slate-400">© 2026 Alvin Villamero</span></p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
           <a href="#contact" class="hover:text-brand-300 transition-colors">Contact</a>
-          <a href="#booking" class="hover:text-brand-300 transition-colors">Book a call</a>
         </div>
         <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
           <a href="#about" class="hover:text-slate-300 transition-colors">About</a>
           <a href="#skills" class="hover:text-slate-300 transition-colors">Skills</a>
           <a href="#portfolio" class="hover:text-slate-300 transition-colors">Work</a>
           <a href="#process" class="hover:text-slate-300 transition-colors">Process</a>
-          <a href="#booking" class="hover:text-slate-300 transition-colors">Calendar</a>
         </nav>
       </div>
     </footer>
@@ -824,8 +809,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onMounted, onUnmounted, ref, reactive, computed, nextTick, watch } from 'vue'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const CALENDLY_URL = 'https://calendly.com/al-villamero/30min'
 
 const contactForm = ref({
   name: '',
@@ -933,10 +916,8 @@ const isMenuOpen = ref(false)
 const activeSection = ref('home')
 const selectedImage = ref(null)
 const isModalOpen = ref(false)
-const calendlyEl = ref(null)
-const calendlyReady = ref(false)
 
-const sections = ['trust', 'about', 'skills', 'portfolio', 'process', 'why', 'contact', 'background']
+const sections =['trust', 'about', 'skills', 'portfolio', 'process', 'why', 'contact', 'background']
 
 const mobileNavItems = [
   { id: 'about', label: 'About' },
@@ -1492,65 +1473,6 @@ const checkActiveSection = () => {
   }
 }
 
-const fixCalendlyIframeSize = () => {
-  const el = calendlyEl.value
-  if (!el) return
-  const apply = () => {
-    el.style.height = '700px'
-    el.style.minHeight = '700px'
-    el.querySelectorAll('div').forEach((node) => {
-      if (node.querySelector?.('iframe')) {
-        node.style.height = '700px'
-        node.style.minHeight = '700px'
-      }
-    })
-    el.querySelectorAll('iframe').forEach((iframe) => {
-      iframe.setAttribute('height', '700')
-      iframe.style.height = '700px'
-      iframe.style.minHeight = '700px'
-      iframe.style.width = '100%'
-    })
-  }
-  apply()
-  requestAnimationFrame(apply)
-  ;[100, 400, 1000].forEach((ms) => setTimeout(apply, ms))
-}
-
-const initCalendlyWidget = () => {
-  const el = calendlyEl.value
-  if (!el || calendlyReady.value) return
-  const Calendly = window.Calendly
-  if (!Calendly?.initInlineWidget) return
-  el.innerHTML = ''
-  Calendly.initInlineWidget({
-    url: CALENDLY_URL,
-    parentElement: el,
-  })
-  calendlyReady.value = true
-  fixCalendlyIframeSize()
-}
-
-const loadCalendlyScript = () => {
-  if (window.Calendly?.initInlineWidget) {
-    initCalendlyWidget()
-    return
-  }
-  const existing = document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')
-  if (existing) {
-    if (window.Calendly?.initInlineWidget) {
-      initCalendlyWidget()
-    } else {
-      existing.addEventListener('load', initCalendlyWidget, { once: true })
-    }
-    return
-  }
-  const script = document.createElement('script')
-  script.src = 'https://assets.calendly.com/assets/external/widget.js'
-  script.async = true
-  script.onload = () => initCalendlyWidget()
-  document.body.appendChild(script)
-}
-
 onMounted(() => {
   const mm = gsap.matchMedia()
   gsapMM = mm
@@ -1635,18 +1557,10 @@ onMounted(() => {
 
   window.addEventListener('scroll', checkActiveSection)
   checkActiveSection() // Initial check
-
-  nextTick(() => {
-    loadCalendlyScript()
-  })
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', checkActiveSection)
-  if (calendlyEl.value) {
-    calendlyEl.value.innerHTML = ''
-  }
-  calendlyReady.value = false
   if (gsapMM) gsapMM.revert()
   cardHoverCleanups.forEach((cleanup) => cleanup())
   cardHoverCleanups.clear()
@@ -1731,25 +1645,5 @@ p, h1, h2, h3, h4, h5, h6, span {
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
 }
-
-/* Calendly: explicit height — min-height alone lets the iframe collapse */
-.calendly-widget-host {
-  height: 700px;
-  min-height: 700px;
-  min-width: 320px;
-}
-
-.calendly-widget-host iframe {
-  width: 100% !important;
-  height: 700px !important;
-  min-height: 700px !important;
-  border: 0 !important;
-}
-
-.calendly-widget-host .calendly-inline-widget,
-.calendly-widget-host .calendly-inline-widget iframe {
-  min-height: 700px !important;
-}
-
 </style>
 
