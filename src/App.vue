@@ -674,19 +674,19 @@
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Your Name <span class="text-fuchsia-400">*</span></label>
-                  <input v-model="contactForm.name" type="text" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                  <input v-model="contactForm.name" type="text" required autocomplete="name" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Email <span class="text-fuchsia-400">*</span></label>
-                  <input v-model="contactForm.email" type="email" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                  <input v-model="contactForm.email" type="email" required autocomplete="email" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Phone Number <span class="text-fuchsia-400">*</span></label>
-                  <input v-model="contactForm.phone" type="tel" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                  <input v-model="contactForm.phone" type="tel" required autocomplete="tel" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
                 </div>
                 <div>
                   <label class="block text-sm font-medium text-slate-300 mb-1.5">Current Website Address <span class="text-slate-600">(if applicable)</span></label>
-                  <input v-model="contactForm.website" type="text" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                  <input v-model="contactForm.website" type="url" placeholder="https://" autocomplete="url" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
                 </div>
               </div>
 
