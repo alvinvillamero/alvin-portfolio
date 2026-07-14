@@ -180,7 +180,7 @@
       </div>
       <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16" data-aos="fade-up">
       <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
-        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">Full-stack developer · Vue/React · Node · PostgreSQL</p>
+        <p class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">Full-stack developer · Next.js/React/Vue · Node · PostgreSQL</p>
         <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
           <span class="text-slate-100">Full-stack developer building</span>
           <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent"> complete, working applications</span>
@@ -211,7 +211,7 @@
             Book a Call
           </a>
         </div>
-        <p class="text-sm text-slate-500">Remote · Philippines · <a href="mailto:al.villamero@gmail.com" class="text-slate-400 hover:text-brand-400 transition-colors">al.villamero@gmail.com</a></p>
+        <p class="text-sm text-slate-500">Remote · Philippines · <a href="#contact" class="text-slate-400 hover:text-brand-400 transition-colors">Get in touch</a></p>
       </div>
 
       <!-- System / dashboard mockup (no portrait) -->
@@ -310,7 +310,7 @@
             Full-stack developer building <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">complete, working systems</span>
           </h2>
           <p class="text-slate-400 text-base leading-relaxed">
-            I&apos;m Alvin, a full-stack developer from Davao City. I build with Vue, React, and Node.js on the frontend/backend, and PostgreSQL, Supabase, or Firebase for data and auth — shipping applications with real user roles, databases, and reporting, not just UI.
+            I&apos;m Alvin, a full-stack developer from Davao City. I build with TypeScript/JavaScript across Next.js, React, and Vue on the frontend, Node.js/Express on the backend, and PostgreSQL (via Prisma or Supabase) or Firebase for data and auth — shipping applications with real user roles, databases, and reporting, not just UI.
           </p>
           <p class="text-slate-500 text-sm leading-relaxed">
             I also work across no-code platforms and CMS builds (WordPress, Elementor) when that's the right tool for the job — but my core focus is building and maintaining real, secure, production-ready applications.
@@ -592,7 +592,7 @@
         <div>
           <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">Typical stack</h3>
           <p class="text-sm text-slate-400 leading-relaxed mb-4">
-            Vue and React on the frontend, Node.js on the backend, PostgreSQL/Supabase/Firebase for data and auth, Git/GitHub for version control, and cloud hosting for deployment — with no-code/CMS tools brought in when that's the better fit for the project.
+            TypeScript/JavaScript across Next.js, React, and Vue on the frontend, Node.js/Express on the backend, PostgreSQL (via Prisma or Supabase) and Firebase for data and auth, Git/GitHub for version control, and cloud hosting for deployment — with no-code/CMS tools brought in when that's the better fit for the project.
           </p>
         </div>
       </div>
@@ -624,48 +624,7 @@
 
         <div class="max-w-3xl mx-auto">
           <!-- Contact Info -->
-          <div class="space-y-6">
-            <!-- Email Card -->
-            <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-fuchsia-500/25 transition-all duration-300">
-              <div class="flex items-start gap-6">
-                <div class="bg-gradient-to-br from-brand-600 to-fuchsia-500 px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-fuchsia-400 transition-colors">Email</h3>
-                  <a href="mailto:al.villamero@gmail.com" class="text-slate-400 hover:text-fuchsia-400 transition-colors flex items-center gap-2">
-                    al.villamero@gmail.com
-                    <svg class="w-4 h-4 text-fuchsia-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Phone Card -->
-            <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-fuchsia-500/25 transition-all duration-300">
-              <div class="flex items-start gap-6">
-                <div class="bg-gradient-to-br from-brand-600 to-fuchsia-500 px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-fuchsia-400 transition-colors">Phone</h3>
-                  <a href="tel:+639312004316" class="text-slate-400 hover:text-fuchsia-400 transition-colors flex items-center gap-2">
-                    +63 931 200 4316
-                    <svg class="w-4 h-4 text-fuchsia-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
             <!-- Location Card -->
             <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-fuchsia-500/25 transition-all duration-300">
               <div class="flex items-start gap-6">
@@ -708,6 +667,92 @@
               </div>
             </div>
           </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white/5 p-6 sm:p-8 rounded-2xl border border-white/10">
+            <form v-if="contactStatus !== 'success'" @submit.prevent="submitContactForm" class="space-y-6">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-slate-300 mb-1.5">Your Name <span class="text-fuchsia-400">*</span></label>
+                  <input v-model="contactForm.name" type="text" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-300 mb-1.5">Email <span class="text-fuchsia-400">*</span></label>
+                  <input v-model="contactForm.email" type="email" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-300 mb-1.5">Phone Number <span class="text-fuchsia-400">*</span></label>
+                  <input v-model="contactForm.phone" type="tel" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-300 mb-1.5">Current Website Address <span class="text-slate-600">(if applicable)</span></label>
+                  <input v-model="contactForm.website" type="text" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-300 mb-1.5">Tell me about what you need <span class="text-fuchsia-400">*</span></label>
+                <textarea v-model="contactForm.about" required rows="4" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">I am interested in <span class="text-slate-500 font-normal">(choose all that apply)</span> <span class="text-fuchsia-400">*</span></label>
+                <div class="grid sm:grid-cols-2 gap-2.5">
+                  <label v-for="option in interestOptions" :key="option" class="flex items-start gap-2.5 text-sm text-slate-300">
+                    <input type="checkbox" :value="option" v-model="contactForm.interests" class="mt-0.5 rounded border-white/20 bg-slate-950/60 text-brand-500 focus:ring-brand-500/50" />
+                    {{ option }}
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-300 mb-2">Estimated budget for this project <span class="text-fuchsia-400">*</span></label>
+                <p class="text-xs text-slate-500 mb-2">Reaching out about a full-time role instead of a project? Choose "Not applicable."</p>
+                <div class="grid sm:grid-cols-2 gap-2">
+                  <label v-for="option in budgetOptions" :key="option" class="flex items-center gap-2.5 text-sm text-slate-300">
+                    <input type="radio" name="budget" :value="option" v-model="contactForm.budget" required class="border-white/20 bg-slate-950/60 text-brand-500 focus:ring-brand-500/50" />
+                    {{ option }}
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-slate-300 mb-1.5">When does this need to be complete? <span class="text-fuchsia-400">*</span></label>
+                  <input v-model="contactForm.timeline" type="text" required placeholder="e.g. ASAP, within a month, flexible" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-300 mb-1.5">How did you find my site? <span class="text-fuchsia-400">*</span></label>
+                  <input v-model="contactForm.referral" type="text" required class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-slate-300 mb-1.5">Additional Comments</label>
+                <textarea v-model="contactForm.comments" rows="3" class="w-full rounded-lg bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500/50"></textarea>
+              </div>
+
+              <label class="flex items-start gap-3 text-xs text-slate-500 leading-relaxed">
+                <input v-model="contactConsent" type="checkbox" required class="mt-0.5 rounded border-white/20 bg-slate-950/60 text-brand-500 focus:ring-brand-500/50" />
+                I agree to be contacted about this inquiry, and consent to my name and contact details being stored only to respond to my message — never sold or shared with third parties.
+              </label>
+
+              <p v-if="contactStatus === 'error'" class="text-sm text-red-400">{{ contactError }}</p>
+
+              <button
+                type="submit"
+                :disabled="contactStatus === 'sending'"
+                class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity disabled:opacity-60"
+              >
+                {{ contactStatus === 'sending' ? 'Sending…' : 'Send Message' }}
+              </button>
+            </form>
+
+            <div v-else class="text-center py-8">
+              <h3 class="text-xl font-semibold text-white mb-2">Thanks — message sent.</h3>
+              <p class="text-slate-400 text-sm">I'll get back to you as soon as I can.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -717,7 +762,6 @@
       <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-sm text-slate-500">
         <p><span class="text-slate-400">© 2026 Alvin Villamero</span></p>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
-          <a href="mailto:al.villamero@gmail.com" class="hover:text-brand-300 transition-colors">al.villamero@gmail.com</a>
           <a href="#contact" class="hover:text-brand-300 transition-colors">Contact</a>
           <a href="#booking" class="hover:text-brand-300 transition-colors">Book a call</a>
         </div>
@@ -757,9 +801,81 @@
 <script setup>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import emailjs from '@emailjs/browser'
 import { onMounted, onUnmounted, ref, computed, nextTick } from 'vue'
 
 const CALENDLY_URL = 'https://calendly.com/al-villamero/30min'
+
+const contactForm = ref({
+  name: '',
+  email: '',
+  phone: '',
+  website: '',
+  about: '',
+  interests: [],
+  budget: '',
+  timeline: '',
+  referral: '',
+  comments: ''
+})
+const contactConsent = ref(false)
+const contactStatus = ref('idle')
+const contactError = ref('')
+
+const interestOptions = [
+  'Full-time / permanent full-stack role',
+  'Freelance or contract project',
+  'Web application development (frontend + backend)',
+  'API integration or backend work',
+  'Website redesign or migration',
+  'Technical consulting / code review',
+  'Other (explain in comments)'
+]
+
+const budgetOptions = [
+  'Not applicable — job inquiry',
+  '$10,000 or more',
+  '$5,000 to $10,000',
+  '$3,000 to $5,000',
+  '$2,000 to $3,000',
+  '$1,000 to $2,000',
+  '$500 to $1,000',
+  '$500 or less'
+]
+
+const submitContactForm = async () => {
+  contactStatus.value = 'sending'
+  contactError.value = ''
+  try {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    if (!serviceId || !templateId || !publicKey) {
+      throw new Error('EmailJS is not configured yet.')
+    }
+    await emailjs.send(
+      serviceId,
+      templateId,
+      {
+        name: contactForm.value.name,
+        email: contactForm.value.email,
+        phone: contactForm.value.phone,
+        website: contactForm.value.website || 'N/A',
+        about: contactForm.value.about,
+        interests: contactForm.value.interests.join(', '),
+        budget: contactForm.value.budget,
+        timeline: contactForm.value.timeline,
+        referral: contactForm.value.referral,
+        comments: contactForm.value.comments || 'N/A'
+      },
+      publicKey
+    )
+    contactStatus.value = 'success'
+  } catch (err) {
+    contactStatus.value = 'error'
+    contactError.value = 'Something went wrong sending your message. Please try again in a moment, or reach out via LinkedIn/GitHub above.'
+  }
+}
 
 const isMenuOpen = ref(false)
 const activeSection = ref('home')
@@ -809,14 +925,14 @@ const skillCategories = [
     title: 'Full-Stack Development',
     description: 'The languages, frameworks, and databases I use to build and ship complete applications.',
     tools: [
+      { name: 'TypeScript', percentage: 80 },
       { name: 'JavaScript', percentage: 90 },
+      { name: 'React / Next.js', percentage: 80 },
       { name: 'Vue', percentage: 90 },
-      { name: 'React', percentage: 80 },
-      { name: 'Node.js', percentage: 80 },
+      { name: 'Node.js / Express', percentage: 80 },
+      { name: 'PostgreSQL / Prisma', percentage: 75 },
       { name: 'Tailwind CSS', percentage: 90 },
-      { name: 'PostgreSQL', percentage: 75 },
-      { name: 'Supabase', percentage: 80 },
-      { name: 'Firebase', percentage: 75 }
+      { name: 'Supabase / Firebase', percentage: 75 }
     ]
   },
   {
@@ -940,13 +1056,13 @@ const projects = [
     description: 'Full-stack church membership management system with role-based access, QR attendance, and reporting.',
     categories: ['full-stack-apps'],
     images: [],
-    tags: ['Full-Stack', 'PostgreSQL', 'Church Management'],
+    tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://www.upcvotmintal.com/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.upcvotmintal.com%2F?w=1200',
     problem: 'The church had no system to track membership records, attendance, or leadership structure — everything was manual and scattered.',
-    solution: 'Built a full membership system on a PostgreSQL backend with 3 role types (admin, caregroup leader, member) and 3 membership tiers (visitor, transient, bonafide). Members are assigned to caregroups with a leader, attendance is tracked via a unique per-member QR code, admins can post a daily Bible verse visible on login, and the system generates multiple report types for leadership.',
+    solution: 'Next.js 14 (App Router, TypeScript) frontend with Tailwind CSS and shadcn/ui, React Hook Form + Zod for validated forms, and Zustand/Context for state. A Node.js/Express API backed by PostgreSQL via Prisma handles 3 role types (admin, caregroup leader, member) and 3 membership tiers (visitor, transient, bonafide), with JWT auth and NextAuth.js. Attendance is tracked through unique per-member QR codes (generated with QRCode.js, scanned with html5-qrcode), node-cron automates attendance status updates, admins can post a daily Bible verse, and the system generates multiple report types for leadership.',
     outcome: 'Church leadership can now track attendance and membership status accurately and pull reports without manual record-keeping.',
-    techStack: 'PostgreSQL, role-based access control, QR-code attendance system, reporting'
+    techStack: 'Next.js 14, TypeScript, Tailwind CSS, shadcn/ui, Node.js/Express, PostgreSQL + Prisma, JWT/NextAuth.js, node-cron, QR generation & scanning'
   },
   {
     id: 'asia-realty',
@@ -987,13 +1103,13 @@ const projects = [
     description: 'Full-stack invoice tracking and generation app for freelancers, with client-facing progress sharing.',
     categories: ['full-stack-apps'],
     images: [],
-    tags: ['Full-Stack', 'Supabase', 'Freelance Tools'],
+    tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://tracker-invoice-generator.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
     problem: 'Freelancers needed a simple, no-fuss way to track work and generate invoices without juggling spreadsheets or heavyweight billing tools.',
-    solution: 'Built on Supabase (PostgreSQL + email/password auth), with automatic invoice generation from tracked tasks. Clients can be given visibility into shared task progress mid-work, for transparency without extra reporting overhead.',
+    solution: 'Built with Next.js (App Router, TypeScript) and Prisma against a hosted PostgreSQL database, with hosted email sign-in for auth. Invoices generate automatically from tracked tasks, and work-in-progress tasks can be shared with the client mid-project for transparency.',
     outcome: 'Freelancers go from tracked hours to a sent invoice without leaving one tool.',
-    techStack: 'Vue, Supabase (PostgreSQL + Auth), automatic invoice generation, client-facing task sharing'
+    techStack: 'Next.js (App Router), TypeScript, Prisma, hosted PostgreSQL, email sign-in, automatic invoice generation'
   },
   {
     id: 'castbridge',
