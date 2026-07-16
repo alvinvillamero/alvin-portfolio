@@ -1071,7 +1071,7 @@ const projects = [
     title: 'UPC VOT Mintal',
     description: 'Full-stack church membership management system with role-based access, QR attendance, and reporting.',
     categories: ['full-stack-apps'],
-    images: ['upc-vot-mintal.png'],
+    images: ['upc-dashboard.png'],
     tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://www.upcvotmintal.com/',
     problem: 'The church had no system to track membership records, attendance, or leadership structure — everything was manual and scattered.',
