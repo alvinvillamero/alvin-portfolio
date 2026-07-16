@@ -1084,6 +1084,20 @@ const projects = [
     techStack: 'WordPress and Elementor website build with responsive UI, fast performance, and scalable content management.'
   },
   {
+    id: 'zuqon-dashboard',
+    title: 'Zuqon Dashboard',
+    description: 'AI-powered content pipeline: scrape topics, rewrite into articles, publish to WordPress, and repurpose for social media.',
+    categories: ['full-stack-apps'],
+    images: [],
+    tags: ['Full-Stack', 'TypeScript', 'Python', 'AI'],
+    url: 'https://zuqon-dashboard.vercel.app/',
+    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fzuqon-dashboard.vercel.app%2F?w=1200',
+    problem: 'Content teams spend hours manually researching topics, writing articles, creating images, publishing to WordPress, and then repurposing everything again for social media.',
+    solution: 'Built an end-to-end AI content pipeline: the user inputs a topic, the system scrapes relevant sources from the web, rewrites them into an original article with an AI-generated thumbnail, and schedules/publishes it straight to the user\'s WordPress site. Once posted, it repurposes the article into platform-fit posts for Facebook, Twitter/X, and Instagram — with AI-generated images for the social posts too.',
+    outcome: 'One topic input becomes a published article plus ready-to-post social content, cutting a multi-hour manual workflow down to minutes.',
+    techStack: 'TypeScript, Python (scraping + AI pipeline), PostgreSQL, WordPress publishing integration, AI article rewriting, AI image generation, social media repurposing'
+  },
+  {
     id: 'upc-vot-mintal',
     title: 'UPC VOT Mintal',
     description: 'Full-stack church membership management system with role-based access, QR attendance, and reporting.',
