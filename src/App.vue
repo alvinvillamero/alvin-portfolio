@@ -1148,7 +1148,7 @@ const projects = [
     title: 'Invoice Tracker',
     description: 'Full-stack invoice tracking and generation app for freelancers, with client-facing progress sharing.',
     categories: ['full-stack-apps'],
-    images: [],
+    images: ['invoice-tracker.png'],
     tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://tracker-invoice-generator.vercel.app/',
     preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
