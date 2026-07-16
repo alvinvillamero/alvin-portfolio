@@ -1071,7 +1071,7 @@ const projects = [
     title: 'UPC VOT Mintal',
     description: 'Full-stack church membership management system with role-based access, QR attendance, and reporting.',
     categories: ['full-stack-apps'],
-    images: ['upc-vot-mintal.pngz'],
+    images: ['upc-vot-mintal.png'],
     tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://www.upcvotmintal.com/',
     problem: 'The church had no system to track membership records, attendance, or leadership structure — everything was manual and scattered.',
@@ -1084,10 +1084,9 @@ const projects = [
     title: 'Asia Realty',
     description: 'Property listing concept for discovering high-return real estate opportunities in Asia.',
     categories: ['web-development'],
-    images: [],
+    images: ['asia-realty.png'],
     tags: ['Frontend Concept', 'Real Estate'],
     url: 'https://realty-property-listing.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Frealty-property-listing.vercel.app%2F?w=1200',
     techStack: 'Frontend UI concept — listing-focused page architecture, Vercel deployment, no backend.'
   },
   {
@@ -1095,10 +1094,9 @@ const projects = [
     title: 'Pawly',
     description: 'Pet wellness and clinic website concept with services, team, and trust-focused storytelling.',
     categories: ['web-development'],
-    images: [],
+    images: ['pawly.png'],
     tags: ['Frontend Concept', 'Pet Care'],
     url: 'https://pawly-gold.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpawly-gold.vercel.app%2F?w=1200',
     techStack: 'Frontend UI concept — service-first content blocks, Vercel deployment, no backend.'
   },
   {
@@ -1106,10 +1104,9 @@ const projects = [
     title: 'ClariMed',
     description: 'Private medical clinic concept website focused on trust, clarity, and patient-first care.',
     categories: ['web-development'],
-    images: [],
+    images: ['clarimed.png'],
     tags: ['Frontend Concept', 'Healthcare'],
     url: 'https://clari-med-kohl.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fclari-med-kohl.vercel.app%2F?w=1200',
     techStack: 'Frontend UI concept — reusable section components, Vercel deployment, no backend.'
   },
   {
@@ -1130,10 +1127,9 @@ const projects = [
     title: 'CastBridge',
     description: 'Android phone to Android TV casting app site with direct playback and mirroring fallback.',
     categories: ['web-development'],
-    images: [],
+    images: ['castbridge.png'],
     tags: ['Frontend Concept', 'Android'],
     url: 'https://screencast-tau.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fscreencast-tau.vercel.app%2F?w=1200',
     techStack: 'Frontend UI concept — responsive layouts, Vercel deployment, no backend.'
   },
   {
@@ -1141,10 +1137,9 @@ const projects = [
     title: 'Teeveefy',
     description: 'Full-stack M3U IPTV playlist player with a leanback-first UI for Android TV.',
     categories: ['full-stack-apps'],
-    images: [],
+    images: ['teeveefy.png'],
     tags: ['Full-Stack', 'Firebase', 'Android TV'],
     url: 'https://teeveefy-app.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Fteeveefy-app.vercel.app%2F?w=1200',
     problem: 'Existing M3U IPTV players are clunky for browsing and managing channel lists, especially on TV-first, remote-controlled interfaces.',
     solution: 'Built a Firebase-backed playlist player that saves and syncs channel/playlist data, with a leanback-first UI designed for Android TV navigation and live channel playback.',
     outcome: 'Simple, remote-friendly access to saved IPTV playlists without re-entering M3U URLs every session.',
