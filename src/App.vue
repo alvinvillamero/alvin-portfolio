@@ -417,7 +417,7 @@
             :ref="(el) => setProjectCardRef(el, project.id)"
             class="project-card group relative bg-surface-900 rounded-xl border border-white/[0.08] overflow-hidden hover:border-fuchsia-500/25 transition-colors duration-500 transform-gpu"
           >
-            <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(130%_90%_at_50%_0%,rgba(192,132,252,0.16),transparent_62%)]"></div>
+            <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(130%_90%_at_50%_0%,rgba(232,163,61,0.10),transparent_62%)]"></div>
             <div class="relative p-2">
               <div 
                 class="aspect-[16/10] overflow-hidden cursor-pointer rounded-lg"
@@ -1355,7 +1355,7 @@ const skillBarMap = new Map()
 
 const bindCardHover = (card) => {
   if (!card || cardHoverCleanups.has(card)) return
-  const enter = () => gsap.to(card, { y: -6, scale: 1.02, boxShadow: '0 16px 32px -12px rgba(139,92,246,0.35)', duration: 0.25, ease: 'power2.out' })
+  const enter = () => gsap.to(card, { y: -6, scale: 1.02, boxShadow: '0 16px 32px -12px rgba(232,163,61,0.22)', duration: 0.25, ease: 'power2.out' })
   const leave = () => gsap.to(card, { y: 0, scale: 1, boxShadow: '0 0px 0px rgba(0,0,0,0)', duration: 0.25, ease: 'power2.out' })
   card.addEventListener('mouseenter', enter)
   card.addEventListener('mouseleave', leave)
