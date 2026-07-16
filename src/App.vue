@@ -5,7 +5,7 @@
       <div class="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
         <a href="#" class="group">
           <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white transform transition-transform duration-300 group-hover:scale-[1.02]">
-            Alvin.
+            Alvin<span class="text-brand-400">.</span>
           </div>
         </a>
       
@@ -19,7 +19,7 @@
             >
               About
               <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-500 transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'about' }"
               ></span>
             </a>
@@ -30,7 +30,7 @@
             >
               Skills
               <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-500 transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'skills' }"
               ></span>
             </a>
@@ -41,7 +41,7 @@
             >
               Work
               <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-500 transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'portfolio' }"
               ></span>
             </a>
@@ -52,7 +52,7 @@
             >
               Process
               <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-500 transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'process' }"
               ></span>
             </a>
@@ -63,7 +63,7 @@
             >
               Contact
               <span 
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-500 transform scale-x-0 transition-transform duration-300"
                 :class="{ '!scale-x-100': activeSection === 'contact' }"
               ></span>
             </a>
@@ -71,7 +71,7 @@
           
           <a
             href="#contact"
-            class="bg-gradient-to-r from-brand-600 to-fuchsia-500 px-7 py-2.5 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+            class="bg-brand-500 px-7 py-2.5 rounded-full text-sm font-semibold text-surface-950 hover:bg-brand-400 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
           >
             Get in Touch
           </a>
@@ -81,7 +81,7 @@
         <div class="flex items-center gap-3 md:hidden">
           <a
             href="#contact"
-            class="bg-gradient-to-r from-brand-600 to-fuchsia-500 px-4 py-2 rounded-full text-sm font-semibold shadow-md text-white hover:opacity-90 transition-all duration-300 active:scale-[0.98]"
+            class="bg-brand-500 px-4 py-2 rounded-full text-sm font-semibold text-surface-950 hover:bg-brand-400 transition-all duration-300 active:scale-[0.98]"
           >
             Get in Touch
           </a>
@@ -136,7 +136,7 @@
           >
             {{ item.label }}
             <span 
-              class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-brand-600 to-fuchsia-500 transform scale-x-0 transition-transform duration-300"
+              class="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-500 transform scale-x-0 transition-transform duration-300"
               :class="{ '!scale-x-100': activeSection === item.id }"
             ></span>
           </a>
@@ -174,17 +174,15 @@
     <!-- Hero -->
     <section ref="heroSectionEl" class="relative isolate overflow-hidden">
       <div class="pointer-events-none absolute inset-0 -z-10">
-        <div ref="heroBlobAEl" class="absolute -top-24 right-0 h-[420px] w-[420px] rounded-full bg-brand-600/20 blur-[100px]"></div>
-        <div ref="heroBlobBEl" class="absolute top-32 -left-20 h-[320px] w-[320px] rounded-full bg-cyan-500/12 blur-[90px]"></div>
+        <div ref="heroBlobAEl" class="absolute -top-24 right-0 h-[420px] w-[420px] rounded-full bg-brand-600/[0.13] blur-[100px]"></div>
+        <div ref="heroBlobBEl" class="absolute top-32 -left-20 h-[320px] w-[320px] rounded-full bg-slate-500/10 blur-[90px]"></div>
         <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] opacity-60"></div>
       </div>
       <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-14 md:pt-24 md:pb-20 gap-14 lg:gap-16">
       <div class="max-w-xl lg:max-w-2xl space-y-7 relative z-10">
-        <p ref="heroKickerEl" class="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-brand-300/90">Full-stack developer · Next.js/React/Vue · Node · PostgreSQL</p>
-        <h1 ref="heroHeadlineEl" class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
-          <span class="text-slate-100">Full-stack developer building</span>
-          <span class="bg-gradient-to-r from-brand-400 via-fuchsia-400 to-cyan-300 bg-clip-text text-transparent"> complete, working applications</span>
-          <span class="text-slate-100">, end to end.</span>
+        <p ref="heroKickerEl" class="font-mono text-xs sm:text-sm text-brand-400">~/full-stack-developer <span class="text-slate-600">·</span> <span class="text-slate-400">next.js · react · vue · node · postgres</span></p>
+        <h1 ref="heroHeadlineEl" class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.05]">
+          I build complete, working <span class="text-brand-400">applications</span> — end to end.
         </h1>
         <p ref="heroSubtextEl" class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
           I design and ship real web applications — frontend, backend, databases, and auth — not just polished demos. Open to full-time full-stack roles, and available for freelance/contract work.
@@ -193,7 +191,7 @@
           <a
             ref="heroPrimaryCtaEl"
             href="#portfolio"
-            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-all shadow-lg shadow-indigo-950/30 ring-1 ring-white/10"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-brand-500 text-surface-950 text-sm font-semibold hover:bg-brand-400 transition-colors"
           >
             View Projects
           </a>
@@ -215,56 +213,21 @@
         <p ref="heroFooterEl" class="text-sm text-slate-500">Remote · Philippines · <a href="#contact" class="text-slate-400 hover:text-brand-400 transition-colors">Get in touch</a></p>
       </div>
 
-      <!-- System / dashboard mockup (no portrait) -->
-      <div class="relative w-full max-w-lg lg:max-w-[min(100%,440px)] mx-auto lg:mx-0 shrink-0 select-none" aria-hidden="true">
-        <div class="absolute -inset-4 bg-gradient-to-br from-violet-600/20 via-transparent to-cyan-500/10 rounded-[2rem] blur-2xl"></div>
-        <!-- Back stack -->
-        <div ref="heroBackStack1El" class="absolute top-6 right-2 w-[88%] h-48 rounded-xl border border-white/[0.07] bg-[#0c1f35] shadow-lg opacity-80"></div>
-        <div ref="heroBackStack2El" class="absolute top-3 right-6 w-[82%] h-44 rounded-xl border border-white/[0.08] bg-[#0e2438] shadow-md opacity-90"></div>
-        <!-- Main dashboard -->
-        <div class="relative rounded-xl border border-white/10 bg-[#0d2137] shadow-2xl overflow-hidden">
-          <div class="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] bg-black/30">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/90"></span>
-              <span class="text-[11px] font-medium text-slate-400 tracking-wide">Operations console</span>
-            </div>
-            <div class="flex gap-1">
-              <span class="w-8 h-2 rounded bg-white/10"></span>
-              <span class="w-8 h-2 rounded bg-white/10"></span>
-            </div>
+      <!-- Terminal panel — real work, typed live -->
+      <div ref="heroTerminalEl" class="relative w-full max-w-lg lg:max-w-[min(100%,480px)] mx-auto lg:mx-0 shrink-0 select-none" aria-hidden="true">
+        <div class="absolute -inset-3 rounded-2xl bg-brand-500/[0.06] blur-2xl"></div>
+        <div class="relative rounded-xl border border-white/[0.08] bg-surface-900 shadow-2xl shadow-black/50 overflow-hidden">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-white/[0.08] bg-surface-950/80">
+            <span class="w-2.5 h-2.5 rounded-full bg-white/10"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white/10"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-500/80"></span>
+            <span class="ml-3 font-mono text-[11px] text-slate-500">alvin@dev — ~/projects</span>
           </div>
-          <div class="p-4 grid grid-cols-3 gap-3">
-            <div class="col-span-2 space-y-2">
-              <div class="h-24 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10 border border-white/[0.06] p-3">
-                <div class="flex justify-between items-end h-full gap-1">
-                  <span v-for="h in [40,65,35,80,50,90,45]" :key="h" class="flex-1 rounded-sm bg-violet-400/50" :style="{ height: h + '%' }"></span>
-                </div>
-              </div>
-              <div class="flex gap-2">
-                <div class="flex-1 h-10 rounded-md bg-white/[0.06] border border-white/[0.05]"></div>
-                <div class="flex-1 h-10 rounded-md bg-white/[0.06] border border-white/[0.05]"></div>
-              </div>
+          <div class="p-5 font-mono text-[12.5px] leading-[1.9] min-h-[280px]">
+            <div v-for="(line, i) in terminalDisplayed" :key="i" :class="line.startsWith('$') ? 'text-slate-200' : line.startsWith('✓') ? 'text-emerald-400/90' : 'text-slate-500'">
+              {{ line }}
             </div>
-            <div class="rounded-lg border border-white/[0.08] bg-surface-950 p-2.5 flex flex-col">
-              <span class="text-[10px] text-slate-500 uppercase tracking-wider mb-2">Flow</span>
-              <div class="space-y-1.5 flex-1">
-                <div class="h-2 w-full rounded bg-violet-500/40"></div>
-                <div class="h-2 w-[80%] rounded bg-white/10"></div>
-                <div class="h-2 w-full rounded bg-cyan-500/30"></div>
-                <div class="h-2 w-[60%] rounded bg-white/10"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Chatbot panel -->
-        <div class="absolute -bottom-2 -right-1 sm:right-0 w-[min(100%,260px)] rounded-xl border border-violet-500/25 bg-[#0f2844] shadow-xl p-3 z-10">
-          <div class="flex items-center gap-2 mb-2 pb-2 border-b border-white/[0.06]">
-            <span class="text-[10px] font-semibold text-brand-300 uppercase tracking-wider">Assistant</span>
-            <span class="ml-auto w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          </div>
-          <div class="space-y-2 text-[11px]">
-            <div class="rounded-lg bg-white/[0.06] px-2.5 py-2 text-slate-400">How can we route this lead?</div>
-            <div class="rounded-lg bg-violet-500/15 border border-violet-500/20 px-2.5 py-2 text-slate-300">→ Intake → routing → team handoff</div>
+            <span class="inline-block w-[7px] h-[15px] align-middle bg-brand-400 animate-cursor-blink"></span>
           </div>
         </div>
       </div>
@@ -292,8 +255,8 @@
     <section id="about" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28" data-reveal>
       <div class="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 lg:gap-16 items-center">
         <div class="relative mx-auto w-full max-w-[340px] lg:max-w-none lg:mx-0">
-          <div class="absolute -inset-3 rounded-[1.75rem] bg-gradient-to-br from-violet-600/40 via-fuchsia-500/15 to-cyan-500/20 blur-xl opacity-80"></div>
-          <div class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 ring-1 ring-white/10 bg-[#0f2744]">
+          <div class="absolute -inset-3 rounded-[1.75rem] bg-brand-500/10 blur-xl"></div>
+          <div class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-black/40 bg-surface-850">
             <img
               src="@/assets/img/pic.jpg"
               alt="Alvin Villamero"
@@ -306,9 +269,9 @@
           </div>
         </div>
         <div class="space-y-5">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80">About me</p>
+          <p class="font-mono text-xs text-brand-400">~/about</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
-            Full-stack developer building <span class="bg-gradient-to-r from-brand-400 to-fuchsia-400 bg-clip-text text-transparent">complete, working systems</span>
+            Full-stack developer building <span class="text-brand-400">complete, working systems</span>
           </h2>
           <p class="text-slate-400 text-base leading-relaxed">
             I&apos;m Alvin, a full-stack developer from Davao City. I build with TypeScript/JavaScript across Next.js, React, and Vue on the frontend, Node.js/Express on the backend, and PostgreSQL (via Prisma or Supabase) or Firebase for data and auth — shipping applications with real user roles, databases, and reporting, not just UI.
@@ -319,7 +282,7 @@
           <div class="flex flex-wrap gap-3 pt-2">
             <a
               href="#contact"
-              class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity shadow-lg shadow-indigo-950/20"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-500 text-surface-950 text-sm font-semibold hover:bg-brand-400 transition-colors"
             >
               Get in Touch
             </a>
@@ -337,7 +300,7 @@
     <!-- Skills -->
     <section id="skills" class="relative pt-24 pb-12 md:pt-32 md:pb-16 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06] overflow-visible">
       <div data-reveal class="max-w-3xl mb-10 md:mb-12">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">Tools & proficiency</p>
+        <p class="font-mono text-xs text-brand-400 mb-3">~/stack</p>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-5">Platforms, tools, and technical stack</h2>
         <p class="text-slate-400 text-base leading-relaxed">
           Select a category to see the platforms I work with and the level of proficiency behind each tool.
@@ -345,7 +308,7 @@
       </div>
 
       <div class="grid lg:grid-cols-[330px_minmax(0,1fr)] gap-5 md:gap-6 items-start">
-        <div class="min-w-0 rounded-2xl border border-white/[0.10] bg-white/[0.055] p-3 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] backdrop-blur-xl">
+        <div class="min-w-0 rounded-2xl border border-white/[0.08] bg-surface-900 p-3 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] ">
           <button
             v-for="category in skillCategories"
             :key="category.id"
@@ -354,7 +317,7 @@
             class="w-full rounded-xl p-4 text-left transition-all duration-200"
             :class="activeSkillCategory === category.id ? 'bg-brand-500/12 ring-1 ring-brand-400/25' : 'hover:bg-white/[0.04]'"
           >
-            <span class="block text-[11px] font-semibold uppercase tracking-[0.18em]" :class="activeSkillCategory === category.id ? 'text-brand-300' : 'text-slate-500'">{{ category.kicker }}</span>
+            <span class="block font-mono text-[10px] uppercase tracking-[0.14em]" :class="activeSkillCategory === category.id ? 'text-brand-400' : 'text-slate-500'">{{ category.kicker }}</span>
             <span class="mt-1 flex items-center justify-between gap-3">
               <span class="text-sm font-semibold" :class="activeSkillCategory === category.id ? 'text-white' : 'text-slate-300'">{{ category.title }}</span>
               <span class="rounded-full bg-slate-950/80 px-2 py-1 text-[11px] font-semibold text-slate-400">{{ category.tools.length }}</span>
@@ -362,19 +325,19 @@
           </button>
         </div>
 
-        <article class="min-w-0 rounded-2xl border border-white/[0.10] bg-white/[0.055] p-6 md:p-8 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] backdrop-blur-xl">
+        <article class="min-w-0 rounded-2xl border border-white/[0.08] bg-surface-900 p-6 md:p-8 shadow-2xl shadow-black/20 ring-1 ring-white/[0.03] ">
           <div class="mb-8">
             <div class="max-w-2xl">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-300/70 mb-3">{{ activeSkillCategoryData.kicker }}</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.14em] text-brand-400/80 mb-3">{{ activeSkillCategoryData.kicker }}</p>
               <h3 class="text-xl md:text-2xl font-semibold text-white leading-tight">{{ activeSkillCategoryData.title }}</h3>
               <p class="mt-2 text-sm text-slate-400 leading-relaxed">{{ activeSkillCategoryData.description }}</p>
             </div>
             <div class="mt-6 grid sm:grid-cols-2 gap-4 w-full">
-              <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md md:px-6 md:py-5">
+              <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10  md:px-6 md:py-5">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Tools</p>
                 <p class="mt-2 text-3xl font-semibold text-white">{{ Math.round(statCounters.tools) }}</p>
               </div>
-              <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md md:px-6 md:py-5">
+              <div class="rounded-xl border border-white/[0.10] bg-slate-950/55 px-5 py-4 shadow-lg shadow-black/10  md:px-6 md:py-5">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Average</p>
                 <p class="mt-2 text-3xl font-semibold text-white">{{ Math.round(statCounters.average) }}%</p>
               </div>
@@ -385,7 +348,7 @@
             <div
               v-for="tool in activeSkillCategoryData.tools"
               :key="tool.name"
-              class="rounded-xl border border-white/[0.10] bg-slate-950/50 p-4 shadow-lg shadow-black/10 backdrop-blur-md md:p-5"
+              class="rounded-xl border border-white/[0.10] bg-slate-950/50 p-4 shadow-lg shadow-black/10  md:p-5"
             >
               <div class="flex items-center justify-between gap-4 mb-3">
                 <span class="text-sm font-medium text-slate-200">{{ tool.name }}</span>
@@ -394,7 +357,7 @@
               <div class="h-2.5 rounded-full bg-slate-800 overflow-hidden">
                 <div
                   :ref="(el) => setSkillBarRef(el, tool.name, tool.percentage)"
-                  class="h-full w-full origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-500 to-fuchsia-500"
+                  class="h-full w-full origin-left scale-x-0 rounded-full bg-brand-500"
                 ></div>
               </div>
             </div>
@@ -408,7 +371,10 @@
       <div class="relative">
         <div data-reveal class="flex flex-col gap-6 mb-10 md:mb-12">
           <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">Sample Works</h2>
+            <div>
+              <p class="font-mono text-xs text-brand-400 mb-3">~/work</p>
+              <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">Sample Works</h2>
+            </div>
             <a
               href="https://drive.google.com/drive/folders/1WaEBY9yw_RxpQrTHA3QmRkfUxh44b0Wg"
               target="_blank"
@@ -434,7 +400,7 @@
               :class="[
                 'px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300',
                 activeProjectCategory === category.id
-                  ? 'bg-gradient-to-r from-brand-600 to-fuchsia-500 text-white hover:opacity-90'
+                  ? 'bg-brand-500 text-surface-950 hover:bg-brand-400'
                   : 'bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-fuchsia-500/25'
               ]"
             >
@@ -449,7 +415,7 @@
             v-for="project in filteredProjects"
             :key="project.id"
             :ref="(el) => setProjectCardRef(el, project.id)"
-            class="project-card group relative bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-fuchsia-500/25 transition-colors duration-500 transform-gpu"
+            class="project-card group relative bg-surface-900 rounded-xl border border-white/[0.08] overflow-hidden hover:border-fuchsia-500/25 transition-colors duration-500 transform-gpu"
           >
             <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(130%_90%_at_50%_0%,rgba(192,132,252,0.16),transparent_62%)]"></div>
             <div class="relative p-2">
@@ -470,7 +436,7 @@
                 <span 
                   v-for="tag in project.tags" 
                   :key="tag"
-                  class="px-2 sm:px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-fuchsia-400"
+                  class="px-2 sm:px-3 py-1 bg-brand-500/10 border border-brand-500/20 rounded-full font-mono text-[11px] text-brand-300"
                 >
                   {{ tag }}
                 </span>
@@ -513,6 +479,7 @@
     <!-- Process -->
     <section id="process" class="py-24 md:py-32 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]">
       <div data-reveal class="max-w-3xl mb-12">
+        <p class="font-mono text-xs text-brand-400 mb-3">~/process</p>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">How I Work</h2>
       </div>
       <ol data-reveal-stagger class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 list-none p-0 m-0">
@@ -529,6 +496,7 @@
     <!-- Why work with me -->
     <section id="why" class="py-20 md:py-24 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]">
       <div data-reveal class="max-w-3xl mb-8">
+        <p class="font-mono text-xs text-brand-400 mb-3">~/why</p>
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">Why Clients Work With Me</h2>
       </div>
       <ul data-reveal-stagger class="space-y-3 max-w-2xl">
@@ -543,7 +511,7 @@
     <section id="testimonials" class="py-20 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-reveal>
       <div class="max-w-4xl mx-auto">
         <div class="mb-8">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300/80 mb-3">What clients say</p>
+          <p class="font-mono text-xs text-brand-400 mb-3">~/feedback</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">Client feedback</h2>
         </div>
 
@@ -572,7 +540,7 @@
         <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto leading-snug">Need a full-stack web application built for your business?</h2>
         <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm md:text-base">Let's map out what you actually need and turn it into something real.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a ref="finalCtaEl" href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity">Get in Touch</a>
+          <a ref="finalCtaEl" href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-brand-500 text-surface-950 text-sm font-semibold hover:bg-brand-400 transition-colors">Get in Touch</a>
           <a href="https://www.linkedin.com/in/al-villamero/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg border border-white/15 text-white text-sm font-medium hover:bg-white/[0.06] transition-colors">Connect on LinkedIn</a>
         </div>
       </div>
@@ -582,6 +550,7 @@
     <section id="background" class="py-20 md:py-28 px-6 sm:px-8 max-w-6xl mx-auto border-t border-white/[0.06]" data-reveal>
       <div class="grid md:grid-cols-2 gap-12 md:gap-16">
         <div>
+          <p class="font-mono text-xs text-brand-400 mb-3">~/background</p>
           <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-4">Background</h2>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
             BS Information Technology (University of Mindanao, 2020). Prior roles across IT infrastructure, support, and digital delivery for international teams—experience that informs how I scope secure, maintainable systems today.
@@ -600,10 +569,11 @@
 
     <!-- Contact -->
     <section id="contact" class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 max-w-6xl mx-auto relative scroll-mt-28">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#8000FF]/5 to-transparent pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-500/[0.04] to-transparent pointer-events-none"></div>
       
       <div class="relative">
         <div class="flex flex-col items-center text-center mb-10 sm:mb-14">
+          <p class="font-mono text-xs text-brand-400 mb-3">~/contact</p>
           <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100 mb-3 sm:mb-4">Start a project conversation</h2>
           <p class="text-slate-400 max-w-2xl text-base leading-relaxed">Fill out the form below, or reach me via the contact options underneath, for a fast next step.</p>
         </div>
@@ -612,9 +582,9 @@
           <!-- Contact Info -->
           <div class="grid sm:grid-cols-2 gap-4 mb-8">
             <!-- Location Card -->
-            <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-fuchsia-500/25 transition-all duration-300">
+            <div class="group bg-surface-900 p-6 rounded-xl border border-white/[0.08] hover:border-fuchsia-500/25 transition-all duration-300">
               <div class="flex items-start gap-6">
-                <div class="bg-gradient-to-br from-brand-600 to-fuchsia-500 px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
+                <div class="bg-brand-500/15 border border-brand-500/30 px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
                   <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
                   </svg>
@@ -628,9 +598,9 @@
             </div>
 
             <!-- Social Links -->
-            <div class="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-fuchsia-500/25 transition-all duration-300">
+            <div class="group bg-surface-900 p-6 rounded-xl border border-white/[0.08] hover:border-fuchsia-500/25 transition-all duration-300">
               <div class="flex items-start gap-6">
-                <div class="bg-gradient-to-br from-brand-600 to-fuchsia-500 px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
+                <div class="bg-brand-500/15 border border-brand-500/30 px-2 py-1.5 rounded-lg group-hover:scale-110 transition-transform">
                   <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
                   </svg>
@@ -748,7 +718,7 @@
               <button
                 type="submit"
                 :disabled="contactStatus === 'sending'"
-                class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-gradient-to-r from-brand-600 to-violet-600 text-white text-sm font-semibold hover:opacity-95 transition-opacity disabled:opacity-60"
+                class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-brand-500 text-surface-950 text-sm font-semibold hover:bg-brand-400 transition-colors disabled:opacity-60"
               >
                 {{ contactStatus === 'sending' ? 'Sending…' : 'Send Message' }}
               </button>
@@ -1101,7 +1071,7 @@ const projects = [
     title: 'UPC VOT Mintal',
     description: 'Full-stack church membership management system with role-based access, QR attendance, and reporting.',
     categories: ['full-stack-apps'],
-    images: ['upc-vot-mintal.png'],
+    images: ['upc-vot-mintal.pngz'],
     tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://www.upcvotmintal.com/',
     problem: 'The church had no system to track membership records, attendance, or leadership structure — everything was manual and scattered.',
@@ -1322,8 +1292,7 @@ const heroSubtextEl = ref(null)
 const heroCtasEl = ref(null)
 const heroPrimaryCtaEl = ref(null)
 const heroFooterEl = ref(null)
-const heroBackStack1El = ref(null)
-const heroBackStack2El = ref(null)
+const heroTerminalEl = ref(null)
 const skillsToolGridEl = ref(null)
 const portfolioGridEl = ref(null)
 const siteHeaderEl = ref(null)
@@ -1333,6 +1302,50 @@ const statCounters = reactive({ tools: 0, average: 0 })
 
 const prefersReducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+// ---- Hero terminal (signature element) ----
+const terminalScript = [
+  { cmd: '$ git push origin main', out: ['✓ deploy — upcvotmintal.com is live'] },
+  { cmd: '$ npx prisma migrate deploy', out: ['✓ 12 migrations applied'] },
+  { cmd: '$ npm run build', out: ['✓ compiled — 0 errors'] },
+  { cmd: '$ python pipeline.py --publish', out: ['✓ article drafted → posted to WordPress'] }
+]
+const terminalDisplayed = ref([])
+let terminalTimers = []
+
+const clearTerminalTimers = () => {
+  terminalTimers.forEach(clearTimeout)
+  terminalTimers = []
+}
+
+const tSet = (fn, ms) => {
+  terminalTimers.push(setTimeout(fn, ms))
+}
+
+const terminalStaticTranscript = () =>
+  terminalScript.flatMap(({ cmd, out }) => [cmd, ...out])
+
+const runTerminal = () => {
+  clearTerminalTimers()
+  terminalDisplayed.value = []
+  let t = 500
+  terminalScript.forEach(({ cmd, out }) => {
+    tSet(() => terminalDisplayed.value.push(''), t)
+    for (let c = 1; c <= cmd.length; c++) {
+      const partial = cmd.slice(0, c)
+      tSet(() => {
+        terminalDisplayed.value[terminalDisplayed.value.length - 1] = partial
+      }, t + c * 26)
+    }
+    t += cmd.length * 26 + 320
+    out.forEach((line) => {
+      tSet(() => terminalDisplayed.value.push(line), t)
+      t += 260
+    })
+    t += 480
+  })
+  tSet(runTerminal, t + 3600)
+}
 
 let gsapMM = null
 const cardHoverCleanups = new Map()
@@ -1501,8 +1514,12 @@ onMounted(() => {
         gsap.utils.toArray('[data-reveal-stagger]').forEach((c) => gsap.set(c.children, { opacity: 1, y: 0 }))
         animateSkillBars()
         animateStatCounters()
+        clearTerminalTimers()
+        terminalDisplayed.value = terminalStaticTranscript()
         return
       }
+
+      runTerminal()
 
       // Generic scroll-reveal system (replaces AOS)
       gsap.utils.toArray('[data-reveal]').forEach((el) => {
@@ -1519,9 +1536,6 @@ onMounted(() => {
       })
 
       // Hero entrance
-      // Note: the headline contains a bg-clip-text gradient span — SplitText's char-splitting
-      // flattens that nested structure and breaks the gradient clip, so it gets a plain
-      // fade+y reveal instead of character-stagger (per the documented fallback for this case).
       const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
       if (heroKickerEl.value) tl.from(heroKickerEl.value, { opacity: 0, y: 12, duration: 0.5 })
       if (heroHeadlineEl.value) {
@@ -1529,6 +1543,7 @@ onMounted(() => {
       }
       const heroRest = [heroSubtextEl.value, heroCtasEl.value, heroFooterEl.value].filter(Boolean)
       if (heroRest.length) tl.from(heroRest, { opacity: 0, y: 16, duration: 0.6, stagger: 0.12 }, '-=0.2')
+      if (heroTerminalEl.value) tl.from(heroTerminalEl.value, { opacity: 0, y: 20, duration: 0.7 }, '-=0.5')
 
       // Ambient background blobs
       ;[heroBlobAEl.value, heroBlobBEl.value].forEach((blob, i) => {
@@ -1538,16 +1553,6 @@ onMounted(() => {
           duration: 6 + i, ease: 'sine.inOut', yoyo: true, repeat: -1
         })
       })
-
-      // Hero mockup parallax
-      if (heroSectionEl.value) {
-        ;[heroBackStack1El.value, heroBackStack2El.value].filter(Boolean).forEach((layer, i) => {
-          gsap.to(layer, {
-            yPercent: (i + 1) * -10, ease: 'none',
-            scrollTrigger: { trigger: heroSectionEl.value, scrub: 0.5 }
-          })
-        })
-      }
 
       // Skill bars + stat counters fill once Skills section is scrolled into view
       ScrollTrigger.create({
@@ -1573,6 +1578,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', checkActiveSection)
   if (gsapMM) gsapMM.revert()
+  clearTerminalTimers()
   cardHoverCleanups.forEach((cleanup) => cleanup())
   cardHoverCleanups.clear()
   magneticCleanups.forEach((cleanup) => cleanup())
@@ -1583,7 +1589,7 @@ onUnmounted(() => {
 
 
 <style>
-/* Global styles — fonts loaded in index.html (Outfit + Plus Jakarta Sans) */
+/* Global styles — fonts loaded in index.html (Space Grotesk + Inter + JetBrains Mono) */
 :root {
   scroll-behavior: smooth;
   /* Type scale reference: body 16px · sm 14px · lg 18px · h2 clamp 2xl→4xl · h1 3xl→5xl */
@@ -1594,7 +1600,7 @@ html {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -1655,6 +1661,12 @@ p, h1, h2, h3, h4, h5, h6, span {
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cursor-blink {
+    animation: none;
+  }
 }
 </style>
 
