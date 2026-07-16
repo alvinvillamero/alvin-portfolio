@@ -1151,7 +1151,6 @@ const projects = [
     images: ['invoice-tracker.png'],
     tags: ['Full-Stack', 'Next.js', 'TypeScript'],
     url: 'https://tracker-invoice-generator.vercel.app/',
-    preview: 'https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftracker-invoice-generator.vercel.app%2F?w=1200',
     problem: 'Freelancers needed a simple, no-fuss way to track work and generate invoices without juggling spreadsheets or heavyweight billing tools.',
     solution: 'Built with Next.js (App Router, TypeScript) and Prisma against a hosted PostgreSQL database, with hosted email sign-in for auth. Invoices generate automatically from tracked tasks, and work-in-progress tasks can be shared with the client mid-project for transparency.',
     outcome: 'Freelancers go from tracked hours to a sent invoice without leaving one tool.',
