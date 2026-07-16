@@ -1085,7 +1085,7 @@ const projects = [
   },
   {
     id: 'zuqon-dashboard',
-    title: 'Zuqon Dashboard',
+    title: 'Zuqon AI',
     description: 'AI-powered content pipeline: scrape topics, rewrite into articles, publish to WordPress, and repurpose for social media.',
     categories: ['full-stack-apps'],
     images: ['zuqon-dashboard.png'],
