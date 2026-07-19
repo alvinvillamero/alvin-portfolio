@@ -221,11 +221,11 @@
             <span class="w-2.5 h-2.5 rounded-full bg-white/10"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-white/10"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-brand-500/80"></span>
-            <span class="ml-3 font-mono text-[11px] text-slate-500">alvin@dev — ~/projects</span>
+            <span class="ml-3 font-mono text-[11px] text-slate-500">alvin@dev — ~</span>
           </div>
           <div class="p-5 font-mono text-[12.5px] leading-[1.9] min-h-[280px]">
-            <div v-for="(line, i) in terminalDisplayed" :key="i" :class="line.startsWith('$') ? 'text-slate-200' : line.startsWith('✓') ? 'text-emerald-400/90' : 'text-slate-500'">
-              {{ line }}
+            <div v-for="(line, i) in terminalDisplayed" :key="i" class="whitespace-pre-wrap" :class="{ cmd: 'text-slate-200', ok: 'text-emerald-400/90', dir: 'text-brand-400', plain: 'text-slate-400' }[line.tone]">
+              {{ line.text }}
             </div>
             <span class="inline-block w-[7px] h-[15px] align-middle bg-brand-400 animate-cursor-blink"></span>
           </div>
@@ -1300,10 +1300,10 @@ const prefersReducedMotion = () =>
 
 // ---- Hero terminal (signature element) ----
 const terminalScript = [
-  { cmd: '$ git push origin main', out: ['✓ deploy — upcvotmintal.com is live'] },
-  { cmd: '$ npx prisma migrate deploy', out: ['✓ 12 migrations applied'] },
-  { cmd: '$ npm run build', out: ['✓ compiled — 0 errors'] },
-  { cmd: '$ python pipeline.py --publish', out: ['✓ article drafted → posted to WordPress'] }
+  { cmd: '$ whoami', out: [{ text: 'alvin villamero — full-stack developer · davao city, ph', tone: 'plain' }] },
+  { cmd: '$ ls ~/projects', out: [{ text: 'zuqon-ai/   upcvotmintal.com/   invoice-tracker/   teeveefy/', tone: 'dir' }] },
+  { cmd: '$ cat stack.txt', out: [{ text: 'typescript · next.js · vue · node.js · postgresql · python', tone: 'plain' }] },
+  { cmd: '$ ./contact --hire', out: [{ text: '✓ opening contact form…', tone: 'ok' }] }
 ]
 const terminalDisplayed = ref([])
 let terminalTimers = []
@@ -1318,18 +1318,18 @@ const tSet = (fn, ms) => {
 }
 
 const terminalStaticTranscript = () =>
-  terminalScript.flatMap(({ cmd, out }) => [cmd, ...out])
+  terminalScript.flatMap(({ cmd, out }) => [{ text: cmd, tone: 'cmd' }, ...out])
 
 const runTerminal = () => {
   clearTerminalTimers()
   terminalDisplayed.value = []
   let t = 500
   terminalScript.forEach(({ cmd, out }) => {
-    tSet(() => terminalDisplayed.value.push(''), t)
+    tSet(() => terminalDisplayed.value.push({ text: '', tone: 'cmd' }), t)
     for (let c = 1; c <= cmd.length; c++) {
       const partial = cmd.slice(0, c)
       tSet(() => {
-        terminalDisplayed.value[terminalDisplayed.value.length - 1] = partial
+        terminalDisplayed.value[terminalDisplayed.value.length - 1] = { text: partial, tone: 'cmd' }
       }, t + c * 26)
     }
     t += cmd.length * 26 + 320
