@@ -1,0 +1,32 @@
+# Alvin Villamero — Full-Stack Developer
+
+> Alvin Villamero is a full-stack developer based in Davao City, Philippines, building complete web applications — frontend, backend, databases, and authentication — with TypeScript, Next.js, React, Vue, Node.js, and PostgreSQL. Open to full-time roles and available for remote freelance/contract work worldwide.
+
+## About
+
+- Full-stack developer, BS Information Technology (University of Mindanao, 2020)
+- Location: Davao City, Philippines — remote-ready worldwide
+- Core stack: TypeScript, JavaScript, Next.js, React, Vue, Node.js/Express, PostgreSQL (Prisma, Supabase), Firebase, Python, Tailwind CSS
+- Also works with WordPress/Elementor and no-code platforms when they fit the project
+- Prior background in IT infrastructure, support, and digital delivery for international teams
+
+## Shipped full-stack projects
+
+- [Zuqon AI](https://zuqon-dashboard.vercel.app/): AI-powered content pipeline — scrapes user-input topics from the web, rewrites them into original articles with AI-generated thumbnails, schedules/publishes to WordPress, then repurposes each article into Facebook, Twitter/X, and Instagram posts with AI-generated social images. TypeScript (75%), Python (24%), PostgreSQL.
+- [UPC VOT Mintal](https://www.upcvotmintal.com/): church membership management system — 3 user roles (admin, caregroup leader, member), 3 membership tiers, unique per-member QR-code attendance, automated attendance status updates (node-cron), daily verse feature, and multi-format reporting. Next.js 14 (App Router, TypeScript), Tailwind, shadcn/ui, Node.js/Express, PostgreSQL + Prisma, NextAuth.js/JWT.
+- [Invoice Tracker](https://tracker-invoice-generator.vercel.app/): invoice tracking and automatic generation for freelancers, with client-facing shared task progress for transparency. Next.js (App Router, TypeScript), Prisma, hosted PostgreSQL, email sign-in.
+- [Teeveefy](https://teeveefy-app.vercel.app/): M3U IPTV playlist player with leanback-first UI for Android TV. Firebase.
+
+## Services
+
+- Full-stack web application development (frontend, backend, database, auth, deployment)
+- API integration and backend work
+- Website redesign or migration
+- WordPress development
+- Technical consulting / code review
+
+## Contact
+
+- [Portfolio & contact form](https://my-portfolio-liart-iota-44.vercel.app/#contact)
+- [LinkedIn](https://www.linkedin.com/in/al-villamero/)
+- [GitHub](https://github.com/alvinvillamero)
